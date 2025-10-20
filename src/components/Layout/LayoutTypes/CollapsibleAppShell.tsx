@@ -5,7 +5,7 @@ import AuthorityCheck from '@/route/AuthorityCheck';
 import { LinksGroup } from '@/components/Layout/LinksGroup';
 import { Link, useNavigate } from 'react-router-dom';
 import classes from '@/components/Layout/LayoutTypes/SimpleSideBar.module.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAppSelector } from '@/store';
 import { useTranslation } from 'react-i18next';
 import { MantineLogo } from '@mantinex/mantine-logo';
@@ -20,6 +20,11 @@ export default function CollapsibleAppShell() {
   const [active, setActive] = useState('');
   const navigate = useNavigate();
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const currentPath = location.pathname.split('/')[1];
+    setActive(currentPath);
+  }, [location.pathname]);
 
   const links = navigationConfig.map((item, index) => {
     let links = [];
