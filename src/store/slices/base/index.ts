@@ -1,14 +1,11 @@
-import { combineReducers } from '@reduxjs/toolkit'
-import common, { CommonState } from './commonSlice'
-
-const reducer = combineReducers({
-  common,
-})
+import { initialCommonState, CommonState } from './commonSlice'
 
 export type BaseState = {
   common: CommonState
 }
 
-export * from './commonSlice'
+export const initialBaseState: BaseState = {
+  common: initialCommonState,
+}
 
-export default reducer
+export * from './commonSlice'

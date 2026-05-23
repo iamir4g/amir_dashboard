@@ -1,8 +1,6 @@
 import { useEffect, useCallback } from 'react'
 import {
   setCurrentRouteKey,
-  useAppSelector,
-  useAppDispatch,
 } from '@/store'
 import { useLocation } from 'react-router-dom'
 import type { ComponentType } from 'react'
@@ -19,14 +17,9 @@ const AppRoute = <T extends Record<string, unknown>>({
 }: AppRouteProps<T>) => {
   const location = useLocation()
 
-  const dispatch = useAppDispatch()
-
-
   const handleLayoutChange = useCallback(() => {
-    dispatch(setCurrentRouteKey(routeKey))
-
-
-  }, [dispatch, routeKey])
+    setCurrentRouteKey(routeKey)
+  }, [routeKey])
 
   useEffect(() => {
     handleLayoutChange()

@@ -1,13 +1,6 @@
-import { combineReducers } from '@reduxjs/toolkit'
-import session, { SessionState } from './sessionSlice'
-import user, { UserState } from './userSlice'
-import userInfo, { UserInfoState } from './userInfoSlice'
-
-const reducer = combineReducers({
-  session,
-  user,
-  userInfo
-})
+import { initialSessionState, SessionState } from './sessionSlice'
+import { initialUserState, UserState } from './userSlice'
+import { initialUserInfoState, UserInfoState } from './userInfoSlice'
 
 export type AuthState = {
   session: SessionState
@@ -15,8 +8,12 @@ export type AuthState = {
   userInfo: UserInfoState,
 }
 
+export const initialAuthState: AuthState = {
+  session: initialSessionState,
+  user: initialUserState,
+  userInfo: initialUserInfoState,
+}
+
 export * from './sessionSlice'
 export * from './userSlice'
 export * from './userInfoSlice'
-
-export default reducer

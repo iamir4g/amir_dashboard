@@ -3,7 +3,8 @@ import {
   signInSuccess,
   signOutSuccess,
   useAppSelector,
-  useAppDispatch, setUserInfo, setUserId
+  setUserInfo,
+  setUserId
 } from '@/store'
 import appConfig from '@/configs/app.config'
 import {REDIRECT_URL_KEY} from '@/constants/app.constant'
@@ -15,7 +16,6 @@ import useQuery from './useQuery'
 type Status = 'success' | 'failed'
 
 function useAuth() {
-  const dispatch = useAppDispatch()
   const navigate = useNavigate()
   const {
     token,
@@ -35,29 +35,24 @@ function useAuth() {
   > => {
     try {
       const resp = await AuthService.signIn(values.email, values.password)
-      dispatch(setUserId(resp.id))
+      setUserId(resp.id)
       const {
         access_token,
-        id,
         email,
         fullName,
         phoneNumber
       } = resp
-      dispatch(signInSuccess({
+      signInSuccess({
         token: access_token,
         refreshToken: '',
         expireTime: 0
-      }))
-      dispatch(
-        setUser(
-          {
-            fullName: fullName,
-            email: email,
-            role: resp.authority,
-            phoneNumber: phoneNumber
-          }
-        )
-      )
+      })
+      setUser({
+        fullName: fullName,
+        email: email,
+        role: resp.authority,
+        phoneNumber: phoneNumber
+      })
       const redirectUrl = query.get(REDIRECT_URL_KEY)
       navigate(redirectUrl ? redirectUrl : appConfig.authenticatedEntryPath)
       return {
@@ -89,21 +84,19 @@ function useAuth() {
   }
 
   const handleSignOut = () => {
-    dispatch(signOutSuccess())
-    dispatch(setUserInfo({
+    signOutSuccess()
+    setUserInfo({
       googleLogin: false,
       name: '',
       role: '',
       email: '',
       userId: userId
-    }))
-    dispatch(
-      setUser({
-        fullName: '',
-        role: [],
-        email: ''
-      })
-    )
+    })
+    setUser({
+      fullName: '',
+      role: [],
+      email: ''
+    })
     navigate(appConfig.unAuthenticatedEntryPath)
   }
 
