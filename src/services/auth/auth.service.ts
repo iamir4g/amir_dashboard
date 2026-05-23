@@ -9,5 +9,12 @@ export const AuthService = {
       data: {email, password}
     })
     return res.data;
-  }
+  },
+  async signOut(): Promise<boolean> {
+    const res = await ApiService.fetchData<undefined, boolean>({
+      url: '/sign-out',
+      method: 'POST',
+    })
+    return res.data
+  },
 }

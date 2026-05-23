@@ -9,6 +9,19 @@ import { mockServer } from './mock/mock';
 import { ModalsProvider } from '@mantine/modals';
 import './index.css';
 import { Notifications } from '@mantine/notifications';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retry: false,
+    },
+    mutations: {
+      retry: false,
+    },
+  },
+});
 
 export default function App() {
   /**
@@ -22,10 +35,12 @@ export default function App() {
   return (
     <MantineProvider theme={theme}>
       <ModalsProvider>
-        <BrowserRouter>
-          <Notifications />
-          <Layout />
-        </BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+            <Notifications />
+            <Layout />
+          </BrowserRouter>
+        </QueryClientProvider>
       </ModalsProvider>
     </MantineProvider>
   );

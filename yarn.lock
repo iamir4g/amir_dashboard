@@ -4272,6 +4272,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.100.13":
+  version: 5.100.13
+  resolution: "@tanstack/query-core@npm:5.100.13"
+  checksum: 10c0/74fe49afa493d18915341c6182e825c7178dd6f6a40620c33f1b0b9a88fdeb88e8d43fddb3734973801b0f4fac98bfdd79bbd5b90f182894be9f6b66b87c154c
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.83.0":
+  version: 5.100.13
+  resolution: "@tanstack/react-query@npm:5.100.13"
+  dependencies:
+    "@tanstack/query-core": "npm:5.100.13"
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 10c0/7e3bdb17fb878e5c16dd25455386dcb941792078246af1c2b07d3de1bb9cc309d254f73fe65859afc3c6cfc6e35ae42842be52945d3cb5db8b38760d537baff1
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:^9.0.0":
   version: 9.3.3
   resolution: "@testing-library/dom@npm:9.3.3"
@@ -9794,6 +9812,7 @@ __metadata:
     "@storybook/react-vite": "npm:^8.0.0"
     "@storybook/testing-library": "npm:^0.2.2"
     "@tabler/icons-react": "npm:^3.1.0"
+    "@tanstack/react-query": "npm:^5.83.0"
     "@testing-library/dom": "npm:^9.3.4"
     "@testing-library/jest-dom": "npm:^6.4.2"
     "@testing-library/react": "npm:^14.2.1"

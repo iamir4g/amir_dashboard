@@ -10,13 +10,16 @@ import appConfig from '@/configs/app.config'
 import {REDIRECT_URL_KEY} from '@/constants/app.constant'
 import {useNavigate} from 'react-router-dom'
 import {SignInCredential, SignUpCredential} from '@/@types/auth'
-import {AuthService} from "@/services/auth/auth.service";
 import useQuery from './useQuery'
+import { useSignInMutation } from '@/apis/auth/signIn'
+import { useSignOutMutation } from '@/apis/auth/signOut'
 
 type Status = 'success' | 'failed'
 
 function useAuth() {
   const navigate = useNavigate()
+  const signInMutation = useSignInMutation()
+  const signOutMutation = useSignOutMutation()
   const {
     token,
     signedIn
@@ -34,7 +37,7 @@ function useAuth() {
     | undefined
   > => {
     try {
-      const resp = await AuthService.signIn(values.email, values.password)
+      const resp = await signInMutation.mutateAsync(values)
       setUserId(resp.id)
       const {
         access_token,
@@ -101,8 +104,11 @@ function useAuth() {
   }
 
   const signOut = async () => {
-    // await apiSignOut()
-    handleSignOut()
+    try {
+      await signOutMutation.mutateAsync()
+    } finally {
+      handleSignOut()
+    }
   }
 
   return {
