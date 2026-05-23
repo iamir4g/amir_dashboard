@@ -1,8 +1,9 @@
-import {useEffect, useState} from 'react';
-import {Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, rem} from '@mantine/core';
-import {IconCalendarStats, IconChevronRight} from '@tabler/icons-react';
-import classes from './LayoutTypes/SimpleSideBar.module.css';
-import {useNavigate} from "react-router-dom";
+import { useEffect, useMemo, useState } from 'react';
+import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, rem } from '@mantine/core';
+import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
+import classes from './LinksGroup.module.css';
+import { useNavigate } from 'react-router-dom';
+import { useAppSelector } from '@/store';
 
 interface LinksGroupProps {
   icon: React.FC<any>;
@@ -21,6 +22,10 @@ export function LinksGroup({
   const [opened, setOpened] = useState(initiallyOpened || false);
   const navigate = useNavigate();
   const [active, setActive] = useState('');
+  const locale = useAppSelector((state) => state.locale.currentLang);
+  const isRtl = locale.toLowerCase().startsWith('fa');
+  const ChevronIcon = useMemo(() => (isRtl ? IconChevronLeft : IconChevronRight), [isRtl]);
+  const openedRotation = isRtl ? 'rotate(90deg)' : 'rotate(-90deg)';
 
   useEffect(() => {
     const currentPath = location.pathname;
@@ -57,16 +62,16 @@ export function LinksGroup({
                 height: rem(18)
               }}/>
             </ThemeIcon>
-            <Box ml="md">{label}</Box>
+            <Box style={{ marginInlineStart: rem(16) }}>{label}</Box>
           </Box>
           {hasLinks && (
-            <IconChevronRight
+            <ChevronIcon
               className={classes.chevron}
               stroke={1.5}
               style={{
                 width: rem(16),
                 height: rem(16),
-                transform: opened ? 'rotate(-90deg)' : 'none',
+                transform: opened ? openedRotation : 'none',
               }}
             />
           )}

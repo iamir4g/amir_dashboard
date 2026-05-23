@@ -16,6 +16,8 @@ function DeckedSideBarContent() {
   const location = useLocation();
   const { t } = useTranslation();
   const userAuthority = useAppSelector((state) => state.auth.user.role);
+  const locale = useAppSelector((state) => state.locale.currentLang);
+  const isRtl = locale.toLowerCase().startsWith('fa');
 
   useEffect(() => {
     const currentPath = location.pathname.split('/');
@@ -24,7 +26,13 @@ function DeckedSideBarContent() {
 
     setActiveMainLink(currentMainLink);
     setActiveSubLink(currentSubLink);
-    setTitle(currentMainLink.toUpperCase());
+    const currentMainPath = `/${currentMainLink}`;
+    const navItem = navigationConfig.find((i) => i.path === currentMainPath);
+    if (navItem) {
+      setTitle(navItem.translateKey ? t(navItem.translateKey) : navItem.title);
+    } else {
+      setTitle(currentMainLink);
+    }
   }, [location.pathname]);
 
   const handleMainLinkClick = (mainLink: string, title: string, translateKey: string) => {
@@ -47,7 +55,7 @@ function DeckedSideBarContent() {
               >
                 <Tooltip
                   label={link.translateKey ? t(link.translateKey) : link.title}
-                  position="right"
+                  position={isRtl ? 'left' : 'right'}
                   withArrow
                   transitionProps={{ duration: 0 }}
                   key={index}
@@ -74,7 +82,7 @@ function DeckedSideBarContent() {
           <div>
             <div className={classes.stickyTitle}>
               <Title order={4} className={classes.title}>
-                {title.toUpperCase()}
+                {title}
               </Title>
             </div>
             <div>
@@ -116,12 +124,16 @@ function DeckedSideBarContent() {
 }
 
 export default function DeckedSideBar() {
+  const locale = useAppSelector((state) => state.locale.currentLang);
+  const isRtl = locale.toLowerCase().startsWith('fa');
+
   return (
     <div
       style={{
         overflow: 'hidden',
         backgroundColor: 'rgb(236,236,236)',
         display: 'flex',
+        flexDirection: isRtl ? 'row-reverse' : 'row',
         flex: '1 1 auto',
         height: '100vh',
       }}

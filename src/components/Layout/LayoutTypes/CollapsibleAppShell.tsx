@@ -1,22 +1,23 @@
-import { AppShell, AppShellSection, Box, Burger, Card, Group } from '@mantine/core';
+import { AppShell, AppShellSection, Box, Burger, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import navigationConfig from '@/configs/navigation.config';
 import AuthorityCheck from '@/route/AuthorityCheck';
 import { LinksGroup } from '@/components/Layout/LinksGroup';
 import { Link, useNavigate } from 'react-router-dom';
 import classes from '@/components/Layout/LayoutTypes/SimpleSideBar.module.css';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppSelector } from '@/store';
 import { useTranslation } from 'react-i18next';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import Views from '@/components/Layout/Views';
-import App from '@/App';
 import CollapsibleAppShellBottomContent from '@/components/Layout/LayoutTypes/CollapsibleAppShellBottomContent';
 
 export default function CollapsibleAppShell() {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
   const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
   const userAuthority = useAppSelector((state) => state.auth.user.role);
+  const locale = useAppSelector((state) => state.locale.currentLang);
+  const isRtl = locale.toLowerCase().startsWith('fa');
   const [active, setActive] = useState('');
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -39,11 +40,11 @@ export default function CollapsibleAppShell() {
 
       return (
         <AuthorityCheck userAuthority={userAuthority || []} authority={item.authority} key={index}>
-          <Box ml={10} my={10}>
+          <Box style={{ marginInlineStart: 10 }} my={10}>
             <LinksGroup
               initiallyOpened={isAnyLinkActive}
               icon={item.icon}
-              label={item.title}
+              label={item.translateKey ? t(item.translateKey) : item.title}
               links={links}
             />
           </Box>
@@ -73,7 +74,7 @@ export default function CollapsibleAppShell() {
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={{
+      aside={{
         width: 300,
         breakpoint: 'sm',
         collapsed: {
@@ -82,21 +83,34 @@ export default function CollapsibleAppShell() {
         },
       }}
       padding="md"
+      style={{ direction: isRtl ? 'rtl' : 'ltr' }}
     >
       <AppShell.Header>
-        <Group h="100%" px="md">
-          <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
-          <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
-          <MantineLogo size={30} />
+        <Group
+          h="100%"
+          px="md"
+          style={{
+            width: '100%',
+            flexDirection:  'row-reverse',
+            justifyContent: '',
+          }}
+        >
+          <div className=''>
+           <MantineLogo size={30} />
+           <>
+              <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
+              <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
+             </>
+            </div>
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar p="md">
+      <AppShell.Aside p="md">
         <AppShell.Section grow>{links}</AppShell.Section>
         <AppShell.Section>
           <CollapsibleAppShellBottomContent />
         </AppShell.Section>
-      </AppShell.Navbar>
-      <AppShell.Main>
+      </AppShell.Aside>
+      <AppShell.Main style={{ direction: isRtl ? 'rtl' : 'ltr' }}>
         <div
           style={{
             padding: '2rem',
@@ -106,6 +120,9 @@ export default function CollapsibleAppShell() {
             display: 'flex',
             flexDirection: 'column',
             height: '100%',
+            direction: isRtl ? 'rtl' : 'ltr',
+            textAlign: isRtl ? 'right' : 'left',
+            width: '100%',
           }}
         >
           <Views />

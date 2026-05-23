@@ -74,11 +74,15 @@ function CollapsedSideBarContent() {
 }
 
 export default function CollapsedSideBar() {
+  const locale = useAppSelector((state) => state.locale.currentLang);
+  const isRtl = locale.toLowerCase().startsWith('fa');
+
   return (
     <>
       <div
         style={{
           display: 'flex',
+          flexDirection: isRtl ? 'row-reverse' : 'row',
           flex: ' 1 1 auto',
           backgroundColor: 'rgb(241,240,240)',
         }}

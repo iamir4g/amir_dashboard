@@ -10,18 +10,20 @@ import classes from './SignIn.module.css';
 import * as yup from 'yup';
 import {useForm, yupResolver} from "@mantine/form";
 import useAuth from "@/utils/hooks/useAuth";
+import { useTranslation } from 'react-i18next';
 
 export default function SignIn() {
   const [loading, setLoading] = useState<boolean>(false)
   const {signIn} = useAuth()
+  const { t } = useTranslation()
   const schema = yup.object().shape({
     email: yup
       .string()
-      .required('Please enter a email')
-      .email('Invalid email'),
+      .required(t('validation.emailRequired'))
+      .email(t('validation.emailInvalid')),
     password: yup
       .string()
-      .required('Please enter a password')
+      .required(t('validation.passwordRequired'))
   });
 
   const form = useForm({
@@ -49,18 +51,18 @@ export default function SignIn() {
         <div className={classes.wrapper}>
           <Paper className={classes.form} radius={0} p={30}>
             <Title order={2} className={classes.title} ta="center" mt="md" mb={50}>
-              Welcome to Mantine Template
+              {t('auth.welcomeTitle')}
             </Title>
             <Text ta="center" mt="md" mb={50}>
-              To get more information about the template please check the <a
-              href={'https://github.com/auronvila/mantine-template/wiki'}>documentation</a>
+              {t('auth.welcomeSubtitle')}{' '}
+              <a href={'https://github.com/auronvila/mantine-template/wiki'}>مستندات</a>
             </Text>
-            <TextInput {...form.getInputProps('email')} name={'email'} label="Email address" withAsterisk
+            <TextInput {...form.getInputProps('email')} name={'email'} label={t('auth.emailLabel')} withAsterisk
                        placeholder="hello@gmail.com" size="md"/>
-            <PasswordInput {...form.getInputProps('password')} name={'password'} label="Password"
-                           placeholder="Your password" mt="md" size="md"/>
+            <PasswordInput {...form.getInputProps('password')} name={'password'} label={t('auth.passwordLabel')}
+                           placeholder={t('auth.passwordLabel')} mt="md" size="md"/>
             <Button loading={loading} type={'submit'} fullWidth mt="xl" size="md">
-              Login
+              {t('auth.login')}
             </Button>
             {/*<Text ta="center" mt="md">*/}
             {/*  Don&apos;t have an account?{' '}*/}

@@ -40,11 +40,11 @@ function SideBar() {
           authority={item.authority}
           key={index}
         >
-          <Box ml={10} my={10}>
+          <Box style={{ marginInlineStart: 10 }} my={10}>
           <LinksGroup
             initiallyOpened={isAnyLinkActive}
             icon={item.icon}
-            label={item.title}
+            label={item.translateKey ? t(item.translateKey) : item.title}
             links={links}
           />
           </Box>
@@ -89,12 +89,16 @@ function SideBar() {
 }
 
 export default function SimpleSideBar() {
+  const locale = useAppSelector((state) => state.locale.currentLang);
+  const isRtl = locale.toLowerCase().startsWith('fa');
+
   return (
     <div
       style={{
         overflow: 'hidden',
         backgroundColor: 'rgb(236,236,236)',
         display: 'flex',
+        flexDirection: isRtl ? 'row-reverse' : 'row',
         flex: '1 1 auto',
         height: '100vh',
       }}

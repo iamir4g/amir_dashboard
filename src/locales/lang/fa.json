@@ -1,0 +1,15 @@
+{
+  "nav.dashboard": "داشبورد",
+  "nav.users": "کاربران",
+  "pages.dashboard": "داشبورد",
+  "pages.users": "کاربران",
+  "auth.welcomeTitle": "به قالب مانتین خوش آمدید",
+  "auth.welcomeSubtitle": "برای اطلاعات بیشتر درباره قالب، مستندات را بررسی کنید",
+  "auth.emailLabel": "ایمیل",
+  "auth.passwordLabel": "رمز عبور",
+  "auth.login": "ورود",
+  "validation.emailRequired": "لطفاً ایمیل را وارد کنید",
+  "validation.emailInvalid": "ایمیل نامعتبر است",
+  "validation.passwordRequired": "لطفاً رمز عبور را وارد کنید",
+  "ui.profileHint": "برای تغییر تنظیمات، موقعیت و فاصله را تنظیم کنید"
+}

@@ -1,17 +1,19 @@
-import {Button, Popover, Text} from "@mantine/core";
-import {useState} from "react";
+import { Popover } from '@mantine/core';
+import { useState } from 'react';
 import { IconUserCircle } from '@tabler/icons-react';
 import CollapsedUserPopOverContent from "@/components/UserPopOver/CollapsedUserPopOverContent";
+import { useAppSelector } from '@/store';
 
 export default function CollapsedSideBarUserPopOver() {
   const [displayPopOver, setDisplayPopOver] = useState<boolean>(false);
-
+  const locale = useAppSelector((state) => state.locale.currentLang);
+  const isRtl = locale.toLowerCase().startsWith('fa');
 
   return (
     <div>
       <Popover
         width={200}
-        position="right"
+        position={isRtl ? 'left' : 'right'}
         opened={displayPopOver}
         offset={{mainAxis: 13, crossAxis: 0}}
       >

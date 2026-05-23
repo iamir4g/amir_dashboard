@@ -5,9 +5,11 @@ import appConfig from '@/configs/app.config'
 import en from './lang/en.json'
 import es from './lang/es.json'
 import tr from './lang/tr.json'
+import fa from './lang/fa.json'
 import errEn from './lang/errors/en.json'
 import errTr from './lang/errors/tr.json'
 import errEs from './lang/errors/es.json'
+import errFa from './lang/errors/fa.json'
 
 const resources = {
   en: {
@@ -18,6 +20,9 @@ const resources = {
   },
   tr: {
     translation: { ...tr, ...errTr }
+  },
+  fa: {
+    translation: { ...fa, ...errFa }
   }
 }
 i18n.use(initReactI18next).init({
@@ -34,7 +39,8 @@ export const dateLocales: {
 } = {
   en: () => import('dayjs/locale/en'),
   es: () => import('dayjs/locale/es'),
-  tr: () => import('dayjs/locale/tr')
+  tr: () => import('dayjs/locale/tr'),
+  fa: () => import('dayjs/locale/fa')
 }
 
 export default i18n
