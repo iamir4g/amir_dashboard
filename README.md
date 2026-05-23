@@ -8,7 +8,8 @@ This template comes with the following features:
 
 - [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Redux-toolkit](https://redux-toolkit.js.org/) with redux-persist
+- [Zustand](https://zustand.docs.pmnd.rs/) state management with persistence
+- [TanStack Query (React Query)](https://tanstack.com/query/latest) for server-state and request handling
 - [Storybook](https://storybook.js.org/)
 - [Vitest](https://vitest.dev/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
@@ -16,8 +17,15 @@ This template comes with the following features:
 - Custom auth hooks
 - App configuration
 - [Yup](https://www.npmjs.com/package/yup) schema validation
-- [Axios](https://axios-http.com/docs/intro) setup
+- [Axios](https://axios-http.com/docs/intro) setup with an interceptor-based http service
 - [React Router](https://reactrouter.com/en/main) Setup
+
+## HTTP + API hooks structure
+
+- HTTP client (axios instance + interceptors): `src/core/http-service.ts`
+- API services (thin wrappers around the HTTP client): `src/services/*`
+- Each API has its own React Query hook (query/mutation): `src/apis/**`
+  - Example: `src/apis/auth/signIn.ts`, `src/apis/auth/signOut.ts`
 
 ## Getting Started
 ___
