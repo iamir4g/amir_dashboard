@@ -1,10 +1,10 @@
-import appConfig from '@/configs/app.config'
-import {LayoutTypes} from "@/@types/layout";
+import appConfig from '@/configs/app.config';
+import { LayoutTypes } from '@/@types/layout';
 
 export type ThemeState = {
-  currentLayout: LayoutTypes
-}
+  currentLayout: LayoutTypes;
+};
 
 export const initialThemeState: ThemeState = {
   currentLayout: appConfig.layoutType,
-}
+};

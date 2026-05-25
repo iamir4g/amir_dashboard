@@ -4,14 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    zoom: 1;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  zoom: 1;
 }
 
-html[dir="rtl"] body {
-    direction: rtl;
-    text-align: right;
+html {
+  direction: rtl !important;
+}
+
+body {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+#root {
+  direction: rtl;
 }

@@ -4,71 +4,63 @@ import {
   signOutSuccess,
   useAppSelector,
   setUserInfo,
-  setUserId
-} from '@/store'
-import appConfig from '@/configs/app.config'
-import {REDIRECT_URL_KEY} from '@/constants/app.constant'
-import {useNavigate} from 'react-router-dom'
-import {SignInCredential, SignUpCredential} from '@/@types/auth'
-import useQuery from './useQuery'
-import { useSignInMutation } from '@/apis/auth/signIn'
-import { useSignOutMutation } from '@/apis/auth/signOut'
+  setUserId,
+} from '@/store';
+import appConfig from '@/configs/app.config';
+import { REDIRECT_URL_KEY } from '@/constants/app.constant';
+import { useNavigate } from 'react-router-dom';
+import { SignInCredential, SignUpCredential } from '@/@types/auth';
+import useQuery from './useQuery';
+import { useSignInMutation } from '@/apis/auth/signIn';
+import { useSignOutMutation } from '@/apis/auth/signOut';
 
-type Status = 'success' | 'failed'
+type Status = 'success' | 'failed';
 
 function useAuth() {
-  const navigate = useNavigate()
-  const signInMutation = useSignInMutation()
-  const signOutMutation = useSignOutMutation()
-  const {
-    token,
-    signedIn
-  } = useAppSelector((state) => state.auth.session)
-  const userId = useAppSelector(state => state.auth.userInfo.userId)
-  const query = useQuery()
+  const navigate = useNavigate();
+  const signInMutation = useSignInMutation();
+  const signOutMutation = useSignOutMutation();
+  const { token, signedIn } = useAppSelector((state) => state.auth.session);
+  const userId = useAppSelector((state) => state.auth.userInfo.userId);
+  const query = useQuery();
 
   const signIn = async (
     values: SignInCredential
   ): Promise<
     | {
-    status: Status
-    message: string
-  }
+        status: Status;
+        message: string;
+      }
     | undefined
   > => {
     try {
-      const resp = await signInMutation.mutateAsync(values)
-      setUserId(resp.id)
-      const {
-        access_token,
-        email,
-        fullName,
-        phoneNumber
-      } = resp
+      const resp = await signInMutation.mutateAsync(values);
+      setUserId(resp.id);
+      const { access_token, email, fullName, phoneNumber } = resp;
       signInSuccess({
         token: access_token,
         refreshToken: '',
-        expireTime: 0
-      })
+        expireTime: 0,
+      });
       setUser({
         fullName: fullName,
         email: email,
         role: resp.authority,
-        phoneNumber: phoneNumber
-      })
-      const redirectUrl = query.get(REDIRECT_URL_KEY)
-      navigate(redirectUrl ? redirectUrl : appConfig.authenticatedEntryPath)
+        phoneNumber: phoneNumber,
+      });
+      const redirectUrl = query.get(REDIRECT_URL_KEY);
+      navigate(redirectUrl ? redirectUrl : appConfig.authenticatedEntryPath);
       return {
         status: 'success',
-        message: ''
-      }
+        message: '',
+      };
     } catch (errors: any) {
       return {
         status: 'failed',
-        message: errors?.response?.data?.description || errors.toString()
-      }
+        message: errors?.response?.data?.description || errors.toString(),
+      };
     }
-  }
+  };
 
   const signUp = async (values: SignUpCredential) => {
     // try {
@@ -84,39 +76,39 @@ function useAuth() {
     //     message: errors?.response?.data?.description || errors.toString()
     //   }
     // }
-  }
+  };
 
   const handleSignOut = () => {
-    signOutSuccess()
+    signOutSuccess();
     setUserInfo({
       googleLogin: false,
       name: '',
       role: '',
       email: '',
-      userId: userId
-    })
+      userId: userId,
+    });
     setUser({
       fullName: '',
       role: [],
-      email: ''
-    })
-    navigate(appConfig.unAuthenticatedEntryPath)
-  }
+      email: '',
+    });
+    navigate(appConfig.unAuthenticatedEntryPath);
+  };
 
   const signOut = async () => {
     try {
-      await signOutMutation.mutateAsync()
+      await signOutMutation.mutateAsync();
     } finally {
-      handleSignOut()
+      handleSignOut();
     }
-  }
+  };
 
   return {
     authenticated: token && signedIn,
     signIn,
     signUp,
     signOut,
-  }
+  };
 }
 
-export default useAuth
+export default useAuth;

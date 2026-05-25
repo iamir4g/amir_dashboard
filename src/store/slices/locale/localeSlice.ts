@@ -1,9 +1,9 @@
-import appConfig from '@/configs/app.config'
+import appConfig from '@/configs/app.config';
 
 export type LocaleState = {
-  currentLang: string
-}
+  currentLang: string;
+};
 
 export const initialLocaleState: LocaleState = {
   currentLang: appConfig.locale,
-}
+};

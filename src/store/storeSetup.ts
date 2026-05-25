@@ -1,45 +1,45 @@
-import { create } from 'zustand'
-import { persist, createJSONStorage } from 'zustand/middleware'
-import type { StateStorage } from 'zustand/middleware'
-import { PERSIST_STORE_NAME } from '@/constants/app.constant'
-import type { RootState } from './rootReducer'
-import { initialAuthState } from './slices/auth'
-import type { UserState } from './slices/auth/userSlice'
-import type { UserInfoState } from './slices/auth/userInfoSlice'
-import { initialBaseState } from './slices/base'
-import { initialLocaleState } from './slices/locale/localeSlice'
-import { initialThemeState } from './slices/theme/themeSlice'
-import type { LayoutTypes } from '@/@types/layout'
+import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
+import type { StateStorage } from 'zustand/middleware';
+import { PERSIST_STORE_NAME } from '@/constants/app.constant';
+import type { RootState } from './rootReducer';
+import { initialAuthState } from './slices/auth';
+import type { UserState } from './slices/auth/userSlice';
+import type { UserInfoState } from './slices/auth/userInfoSlice';
+import { initialBaseState } from './slices/base';
+import { initialLocaleState } from './slices/locale/localeSlice';
+import { initialThemeState } from './slices/theme/themeSlice';
+import type { LayoutTypes } from '@/@types/layout';
 
 const deepParseJson = (value: unknown): unknown => {
   if (typeof value !== 'string') {
-    return value
+    return value;
   }
   try {
-    const parsed = JSON.parse(value) as unknown
-    return deepParseJson(parsed)
+    const parsed = JSON.parse(value) as unknown;
+    return deepParseJson(parsed);
   } catch {
-    return value
+    return value;
   }
-}
+};
 
 const reduxPersistCompatibleStorage: StateStorage = {
   getItem: (name) => {
-    const raw = localStorage.getItem(name)
+    const raw = localStorage.getItem(name);
     if (!raw) {
-      return null
+      return null;
     }
 
     try {
-      const parsed = JSON.parse(raw) as any
+      const parsed = JSON.parse(raw) as any;
 
       if (parsed && typeof parsed === 'object' && 'state' in parsed) {
-        return raw
+        return raw;
       }
 
       if (parsed && typeof parsed === 'object' && ('auth' in parsed || 'locale' in parsed)) {
-        const auth = deepParseJson(parsed.auth) as RootState['auth'] | undefined
-        const locale = deepParseJson(parsed.locale) as RootState['locale'] | undefined
+        const auth = deepParseJson(parsed.auth) as RootState['auth'] | undefined;
+        const locale = deepParseJson(parsed.locale) as RootState['locale'] | undefined;
 
         const migrated = {
           state: {
@@ -49,23 +49,23 @@ const reduxPersistCompatibleStorage: StateStorage = {
             theme: initialThemeState,
           },
           version: 1,
-        }
+        };
 
-        return JSON.stringify(migrated)
+        return JSON.stringify(migrated);
       }
 
-      return null
+      return null;
     } catch {
-      return null
+      return null;
     }
   },
   setItem: (name, value) => {
-    localStorage.setItem(name, value)
+    localStorage.setItem(name, value);
   },
   removeItem: (name) => {
-    localStorage.removeItem(name)
+    localStorage.removeItem(name);
   },
-}
+};
 
 export const useAppStore = create<RootState>()(
   persist(
@@ -83,15 +83,15 @@ export const useAppStore = create<RootState>()(
         locale: state.locale,
       }),
       storage: createJSONStorage(() => reduxPersistCompatibleStorage),
-    },
-  ),
-)
+    }
+  )
+);
 
 export type SignInSuccessPayload = {
-  token: string
-  expireTime: number
-  refreshToken: string
-}
+  token: string;
+  expireTime: number;
+  refreshToken: string;
+};
 
 export const signInSuccess = (payload: SignInSuccessPayload) => {
   useAppStore.setState((state) => ({
@@ -105,8 +105,8 @@ export const signInSuccess = (payload: SignInSuccessPayload) => {
         refreshToken: payload.refreshToken,
       },
     },
-  }))
-}
+  }));
+};
 
 export const signOutSuccess = () => {
   useAppStore.setState((state) => ({
@@ -120,8 +120,8 @@ export const signOutSuccess = () => {
         expireTime: -1,
       },
     },
-  }))
-}
+  }));
+};
 
 export const updateSession = (payload: SignInSuccessPayload) => {
   useAppStore.setState((state) => ({
@@ -134,8 +134,8 @@ export const updateSession = (payload: SignInSuccessPayload) => {
         refreshToken: payload.refreshToken,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setUser = (payload: UserState) => {
   useAppStore.setState((state) => ({
@@ -149,8 +149,8 @@ export const setUser = (payload: UserState) => {
         phoneNumber: payload?.phoneNumber,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setUserRole = (role: string[]) => {
   useAppStore.setState((state) => ({
@@ -161,8 +161,8 @@ export const setUserRole = (role: string[]) => {
         role,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setUserName = (fullName: string) => {
   useAppStore.setState((state) => ({
@@ -173,8 +173,8 @@ export const setUserName = (fullName: string) => {
         fullName,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setUserInfo = (payload: UserInfoState) => {
   useAppStore.setState((state) => ({
@@ -193,8 +193,8 @@ export const setUserInfo = (payload: UserInfoState) => {
         isTwoFaEnabled: payload?.isTwoFaEnabled,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setLanguage = (language: string) => {
   useAppStore.setState((state) => ({
@@ -205,8 +205,8 @@ export const setLanguage = (language: string) => {
         language,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setUserInfoRole = (role: string) => {
   useAppStore.setState((state) => ({
@@ -217,8 +217,8 @@ export const setUserInfoRole = (role: string) => {
         role,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setDisplayName = (name: string) => {
   useAppStore.setState((state) => ({
@@ -229,8 +229,8 @@ export const setDisplayName = (name: string) => {
         name,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setWalletAddress = (walletAddress: string) => {
   useAppStore.setState((state) => ({
@@ -241,8 +241,8 @@ export const setWalletAddress = (walletAddress: string) => {
         walletAddress,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setUserId = (userId: string) => {
   useAppStore.setState((state) => ({
@@ -253,8 +253,8 @@ export const setUserId = (userId: string) => {
         userId,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setNotificationCount = (notificationCount: number) => {
   useAppStore.setState((state) => ({
@@ -265,8 +265,8 @@ export const setNotificationCount = (notificationCount: number) => {
         notificationCount,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setTwoFactorAuth = (isTwoFaEnabled: boolean) => {
   useAppStore.setState((state) => ({
@@ -277,8 +277,8 @@ export const setTwoFactorAuth = (isTwoFaEnabled: boolean) => {
         isTwoFaEnabled,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setCurrentRouteKey = (currentRouteKey: string) => {
   useAppStore.setState((state) => ({
@@ -289,8 +289,8 @@ export const setCurrentRouteKey = (currentRouteKey: string) => {
         currentRouteKey,
       },
     },
-  }))
-}
+  }));
+};
 
 export const setLang = (currentLang: string) => {
   useAppStore.setState((state) => ({
@@ -298,8 +298,8 @@ export const setLang = (currentLang: string) => {
       ...state.locale,
       currentLang,
     },
-  }))
-}
+  }));
+};
 
 export const setLayout = (currentLayout: LayoutTypes) => {
   useAppStore.setState((state) => ({
@@ -307,7 +307,7 @@ export const setLayout = (currentLayout: LayoutTypes) => {
       ...state.theme,
       currentLayout,
     },
-  }))
-}
+  }));
+};
 
-export default useAppStore
+export default useAppStore;

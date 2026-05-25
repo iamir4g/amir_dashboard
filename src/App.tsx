@@ -10,7 +10,6 @@ import { ModalsProvider } from '@mantine/modals';
 import './index.css';
 import { Notifications } from '@mantine/notifications';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { useAppSelector } from '@/store';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -25,9 +24,6 @@ const queryClient = new QueryClient({
 });
 
 export default function App() {
-  const locale = useAppSelector((state) => state.locale.currentLang);
-  const dir = locale.toLowerCase().startsWith('fa') ? 'rtl' : 'ltr';
-
   /**
    * Set enableMock(Default true) to true at configs/app.config.js
    * If you wish to enable mock api
@@ -37,7 +33,7 @@ export default function App() {
   }
 
   return (
-    <DirectionProvider key={dir} initialDirection={dir} detectDirection={false}>
+    <DirectionProvider initialDirection='rtl' detectDirection={false}>
       <MantineProvider theme={theme}>
         <ModalsProvider>
           <QueryClientProvider client={queryClient}>

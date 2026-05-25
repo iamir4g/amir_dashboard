@@ -1,39 +1,39 @@
-import axios from 'axios'
-import appConfig from '@/configs/app.config'
-import { TOKEN_TYPE, REQUEST_HEADER_AUTH_KEY } from '@/constants/api.constant'
-import store, { signOutSuccess } from '@/store'
+import axios from 'axios';
+import appConfig from '@/configs/app.config';
+import { TOKEN_TYPE, REQUEST_HEADER_AUTH_KEY } from '@/constants/api.constant';
+import store, { signOutSuccess } from '@/store';
 
-const unauthorizedCode = [401]
+const unauthorizedCode = [401];
 
 const httpService = axios.create({
   timeout: 60000,
   baseURL: appConfig.apiPrefix,
-})
+});
 
 httpService.interceptors.request.use(
   (config) => {
-    const { auth } = store.getState()
-    const accessToken = auth.session.token
+    const { auth } = store.getState();
+    const accessToken = auth.session.token;
 
     if (accessToken) {
-      config.headers[REQUEST_HEADER_AUTH_KEY] = `${TOKEN_TYPE}${accessToken}`
+      config.headers[REQUEST_HEADER_AUTH_KEY] = `${TOKEN_TYPE}${accessToken}`;
     }
-    return config
+    return config;
   },
-  (error) => Promise.reject(error),
-)
+  (error) => Promise.reject(error)
+);
 
 httpService.interceptors.response.use(
   (response) => response,
   (error) => {
-    const { response } = error
+    const { response } = error;
 
     if (response && unauthorizedCode.includes(response.status)) {
-      signOutSuccess()
+      signOutSuccess();
     }
 
-    return Promise.reject(error)
-  },
-)
+    return Promise.reject(error);
+  }
+);
 
-export default httpService
+export default httpService;

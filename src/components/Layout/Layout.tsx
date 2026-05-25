@@ -31,7 +31,7 @@ export function Layout() {
   return (
     <Suspense
       fallback={
-        <div className="flex flex-auto flex-col h-[100vh]">
+        <div className='flex flex-auto flex-col h-[100vh]'>
           <LoadingScreen />
         </div>
       }

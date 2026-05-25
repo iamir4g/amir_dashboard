@@ -23,8 +23,8 @@ const AllRoutes = (props: AllRoutesProps) => {
 
   return (
     <Routes>
-      <Route path="/" element={<ProtectedRoute />}>
-        <Route path="/" element={<Navigate replace to={authenticatedEntryPath} />} />
+      <Route path='/' element={<ProtectedRoute />}>
+        <Route path='/' element={<Navigate replace to={authenticatedEntryPath} />} />
         {protectedRoutes.map((route, index) => {
           return (
             <Route
@@ -38,9 +38,9 @@ const AllRoutes = (props: AllRoutesProps) => {
             />
           );
         })}
-        <Route path="*" element={<Navigate replace to="/" />} />
+        <Route path='*' element={<Navigate replace to='/' />} />
       </Route>
-      <Route path="/" element={<PublicRoute />}>
+      <Route path='/' element={<PublicRoute />}>
         {publicRoutes.map((route) => (
           <Route
             key={route.path}
@@ -54,16 +54,13 @@ const AllRoutes = (props: AllRoutesProps) => {
 };
 
 const Views = (props: ViewsProps) => {
-  const locale = useAppSelector((state) => state.locale.currentLang);
-  const isRtl = locale.toLowerCase().startsWith('fa');
-
   return (
     <Suspense fallback={<LoadingScreen />}>
       <div
         style={{
           width: '100%',
-          direction: isRtl ? 'rtl' : 'ltr',
-          textAlign: isRtl ? 'right' : 'left',
+          direction: 'rtl',
+          textAlign: 'right',
         }}
       >
         <AllRoutes {...props} />

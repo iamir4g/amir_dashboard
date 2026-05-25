@@ -4,16 +4,16 @@ import { Box, Container } from '@mantine/core';
 export default function PlainLayout() {
   return (
     <Box
-      bg="#ececec"
+      bg='#ececec'
       style={{
         overflowX: 'hidden',
         height: '100vh',
         display: 'flex',
         justifyContent: 'center',
       }}
-      p="xl"
+      p='xl'
     >
-        <Views />
+      <Views />
     </Box>
   );
 }

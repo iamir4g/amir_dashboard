@@ -1,11 +1,11 @@
-import { initialCommonState, CommonState } from './commonSlice'
+import { initialCommonState, CommonState } from './commonSlice';
 
 export type BaseState = {
-  common: CommonState
-}
+  common: CommonState;
+};
 
 export const initialBaseState: BaseState = {
   common: initialCommonState,
-}
+};
 
-export * from './commonSlice'
+export * from './commonSlice';

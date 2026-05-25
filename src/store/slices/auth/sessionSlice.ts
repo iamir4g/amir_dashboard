@@ -1,13 +1,13 @@
 export interface SessionState {
-  signedIn: boolean
-  token: string | null
-  expireTime: number
+  signedIn: boolean;
+  token: string | null;
+  expireTime: number;
   refreshToken: string | null;
 }
 
 export const initialSessionState: SessionState = {
   signedIn: false,
-  token:null,
+  token: null,
   expireTime: 0,
-  refreshToken: null
-}
+  refreshToken: null,
+};

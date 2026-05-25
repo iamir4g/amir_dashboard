@@ -1,13 +1,13 @@
 export interface UserInfoState {
-  email: string
-  userId: string
-  isTwoFaEnabled?: boolean
-  name?: string
-  walletAddress?: string
-  language?: string
-  role: string,
-  googleLogin?: boolean,
-  notificationCount?: number
+  email: string;
+  userId: string;
+  isTwoFaEnabled?: boolean;
+  name?: string;
+  walletAddress?: string;
+  language?: string;
+  role: string;
+  googleLogin?: boolean;
+  notificationCount?: number;
 }
 
 export const initialUserInfoState: UserInfoState = {
@@ -19,5 +19,5 @@ export const initialUserInfoState: UserInfoState = {
   language: '',
   role: '',
   googleLogin: false,
-  notificationCount: 0
-}
+  notificationCount: 0,
+};

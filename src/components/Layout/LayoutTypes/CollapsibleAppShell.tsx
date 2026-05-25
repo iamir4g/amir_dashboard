@@ -15,8 +15,6 @@ export default function CollapsibleAppShell() {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
   const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
   const userAuthority = useAppSelector((state) => state.auth.user.role);
-  const locale = useAppSelector((state) => state.locale.currentLang);
-  const isRtl = locale.toLowerCase().startsWith('fa');
   const [active, setActive] = useState('');
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -73,7 +71,7 @@ export default function CollapsibleAppShell() {
   return (
     <AppShell
       header={{ height: 60 }}
-      aside={{
+      navbar={{
         width: 300,
         breakpoint: 'sm',
         collapsed: {
@@ -82,7 +80,7 @@ export default function CollapsibleAppShell() {
         },
       }}
       padding="md"
-      style={{ direction: isRtl ? 'rtl' : 'ltr' }}
+      style={{ direction: 'rtl' }}
     >
       <AppShell.Header>
         <Group
@@ -90,7 +88,7 @@ export default function CollapsibleAppShell() {
           px="md"
           style={{
             width: '100%',
-            flexDirection: isRtl ? 'row-reverse' : 'row',
+            flexDirection: 'row',
             justifyContent: 'flex-start',
           }}
         >
@@ -103,13 +101,13 @@ export default function CollapsibleAppShell() {
           <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
         </Group>
       </AppShell.Header>
-      <AppShell.Aside p="md">
+      <AppShell.Navbar p="md">
         <AppShell.Section grow>{links}</AppShell.Section>
         <AppShell.Section>
           <CollapsibleAppShellBottomContent />
         </AppShell.Section>
-      </AppShell.Aside>
-      <AppShell.Main style={{ direction: isRtl ? 'rtl' : 'ltr' }}>
+      </AppShell.Navbar>
+      <AppShell.Main style={{ direction: 'rtl' }}>
         <div
           style={{
             padding: '2rem',
@@ -119,8 +117,8 @@ export default function CollapsibleAppShell() {
             display: 'flex',
             flexDirection: 'column',
             height: '100%',
-            direction: isRtl ? 'rtl' : 'ltr',
-            textAlign: isRtl ? 'right' : 'left',
+            direction: 'rtl',
+            textAlign: 'right',
             width: '100%',
           }}
         >

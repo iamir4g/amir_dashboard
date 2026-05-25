@@ -1,13 +1,13 @@
-import {LayoutTypes} from "@/@types/layout";
+import { LayoutTypes } from '@/@types/layout';
 
 export type AppConfig = {
-  apiPrefix: string
-  authenticatedEntryPath: string
-  unAuthenticatedEntryPath: string
-  enableMock: boolean
-  locale: string
-  layoutType: LayoutTypes,
-}
+  apiPrefix: string;
+  authenticatedEntryPath: string;
+  unAuthenticatedEntryPath: string;
+  enableMock: boolean;
+  locale: string;
+  layoutType: LayoutTypes;
+};
 
 const appConfig: AppConfig = {
   layoutType: LayoutTypes.CollapsibleAppShell,
@@ -16,6 +16,6 @@ const appConfig: AppConfig = {
   unAuthenticatedEntryPath: '/sign-in',
   enableMock: true,
   locale: 'fa',
-}
+};
 
-export default appConfig
+export default appConfig;
