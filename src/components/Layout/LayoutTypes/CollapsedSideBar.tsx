@@ -9,7 +9,6 @@ import useAuth from '@/utils/hooks/useAuth';
 import CollapsedSideBarUserPopOver from '@/components/UserPopOver/CollapsedSideBarUserPopOver';
 import AuthorityCheck from '@/route/AuthorityCheck';
 import { useAppSelector } from '@/store';
-import { MantineLogo } from '@mantinex/mantine-logo';
 
 function CollapsedSideBarBottomContent() {
   const { signOut } = useAuth();
@@ -61,7 +60,7 @@ function CollapsedSideBarContent() {
   return (
     <nav className={classes.navbar}>
       <Center>
-        <MantineLogo type={'mark'} size={'3rem'} />
+        <img src="/logo/carmode.jpeg" alt="carmode" style={{ height: 32, width: 'auto' }} />
       </Center>
       <div className={classes.navbarMain}>
         <Stack justify="center" gap={10}>

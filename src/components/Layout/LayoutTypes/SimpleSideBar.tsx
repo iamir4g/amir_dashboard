@@ -4,12 +4,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import navigationConfig from '@/configs/navigation.config';
 import { LinksGroup } from '@/components/Layout/LinksGroup';
 import classes from '@/components/Layout/LayoutTypes/SimpleSideBar.module.css';
-import {Box, Card, Group} from '@mantine/core';
+import { Box, Card, Group } from '@mantine/core';
 import SimpleSideBarBottomContent from '@/components/Layout/LayoutTypes/SimpleSideBarBottomContent';
 import { useTranslation } from 'react-i18next';
 import AuthorityCheck from '@/route/AuthorityCheck';
 import { useAppSelector } from '@/store';
-import { MantineLogo } from '@mantinex/mantine-logo';
 
 function SideBar() {
   const navigate = useNavigate();
@@ -35,28 +34,20 @@ function SideBar() {
       const isAnyLinkActive = links.some((link) => location.pathname.includes(link.link));
 
       return (
-        <AuthorityCheck
-          userAuthority={userAuthority || []}
-          authority={item.authority}
-          key={index}
-        >
+        <AuthorityCheck userAuthority={userAuthority || []} authority={item.authority} key={index}>
           <Box style={{ marginInlineStart: 10 }} my={10}>
-          <LinksGroup
-            initiallyOpened={isAnyLinkActive}
-            icon={item.icon}
-            label={item.translateKey ? t(item.translateKey) : item.title}
-            links={links}
-          />
+            <LinksGroup
+              initiallyOpened={isAnyLinkActive}
+              icon={item.icon}
+              label={item.translateKey ? t(item.translateKey) : item.title}
+              links={links}
+            />
           </Box>
         </AuthorityCheck>
       );
     } else {
       return (
-        <AuthorityCheck
-          userAuthority={userAuthority || []}
-          authority={item.authority}
-          key={index}
-        >
+        <AuthorityCheck userAuthority={userAuthority || []} authority={item.authority} key={index}>
           <Link
             className={classes.link}
             data-active={item.path.split('/')[1] === active ? 'true' : undefined}
@@ -79,11 +70,11 @@ function SideBar() {
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
         <Group className={classes.header} justify="space-between">
-          <MantineLogo type={'mark'} size={'9rem'} />
+          <img src="/logo/carmode.jpeg" alt="carmode" style={{ height: 44, width: 'auto' }} />
         </Group>
         {links}
       </div>
-        <SimpleSideBarBottomContent />
+      <SimpleSideBarBottomContent />
     </nav>
   );
 }

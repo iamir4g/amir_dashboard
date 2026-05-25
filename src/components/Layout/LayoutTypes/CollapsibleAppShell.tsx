@@ -8,7 +8,6 @@ import classes from '@/components/Layout/LayoutTypes/SimpleSideBar.module.css';
 import { useEffect, useState } from 'react';
 import { useAppSelector } from '@/store';
 import { useTranslation } from 'react-i18next';
-import { MantineLogo } from '@mantinex/mantine-logo';
 import Views from '@/components/Layout/Views';
 import CollapsibleAppShellBottomContent from '@/components/Layout/LayoutTypes/CollapsibleAppShellBottomContent';
 
@@ -91,17 +90,17 @@ export default function CollapsibleAppShell() {
           px="md"
           style={{
             width: '100%',
-            flexDirection:  'row-reverse',
-            justifyContent: '',
+            flexDirection: isRtl ? 'row-reverse' : 'row',
+            justifyContent: 'flex-start',
           }}
         >
-          <div className=''>
-           <MantineLogo size={30} />
-           <>
-              <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
-              <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
-             </>
-            </div>
+          <img
+            src="/logo/carmode.jpeg"
+            alt="carmode"
+            style={{ height: 30, width: 'auto', display: 'block' }}
+          />
+          <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
+          <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
         </Group>
       </AppShell.Header>
       <AppShell.Aside p="md">

@@ -50,6 +50,9 @@ export default function SignIn() {
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <div className={classes.wrapper}>
           <Paper className={classes.form} radius={0} p={30}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
+              <img src="/logo/carmode.jpeg" alt="carmode" style={{ height: 64, width: 'auto' }} />
+            </div>
             <Title order={2} className={classes.title} ta="center" mt="md" mb={50}>
               {t('auth.welcomeTitle')}
             </Title>
