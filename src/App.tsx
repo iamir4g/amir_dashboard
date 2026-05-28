@@ -2,7 +2,7 @@ import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import { DirectionProvider, MantineProvider } from '@mantine/core';
 import { theme } from './theme';
-import { Layout } from '@/components/Layout/Layout';
+import { Layout } from '@/layouts/Layout';
 import { BrowserRouter } from 'react-router-dom';
 import appConfig from './configs/app.config';
 import { mockServer } from './mock/mock';

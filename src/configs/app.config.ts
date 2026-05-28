@@ -1,4 +1,4 @@
-import { LayoutTypes } from '@/@types/layout';
+import { LayoutTypes } from '@/types/layout';
 
 export type AppConfig = {
   apiPrefix: string;

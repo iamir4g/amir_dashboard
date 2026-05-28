@@ -9,7 +9,7 @@ import type { UserInfoState } from './slices/auth/userInfoSlice';
 import { initialBaseState } from './slices/base';
 import { initialLocaleState } from './slices/locale/localeSlice';
 import { initialThemeState } from './slices/theme/themeSlice';
-import type { LayoutTypes } from '@/@types/layout';
+import type { LayoutTypes } from '@/types/layout';
 
 const deepParseJson = (value: unknown): unknown => {
   if (typeof value !== 'string') {

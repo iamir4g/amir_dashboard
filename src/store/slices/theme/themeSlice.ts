@@ -1,5 +1,5 @@
 import appConfig from '@/configs/app.config';
-import { LayoutTypes } from '@/@types/layout';
+import { LayoutTypes } from '@/types/layout';
 
 export type ThemeState = {
   currentLayout: LayoutTypes;
