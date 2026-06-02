@@ -9,12 +9,17 @@ export type AppConfig = {
   layoutType: LayoutTypes;
 };
 
+const getApiPrefix = (): string => {
+  const raw = (import.meta.env.VITE_API_BASE_URL as string | undefined) ?? '';
+  return raw.replace(/\/+$/, '');
+};
+
 const appConfig: AppConfig = {
   layoutType: LayoutTypes.CollapsibleAppShell,
-  apiPrefix: '',
+  apiPrefix: getApiPrefix(),
   authenticatedEntryPath: '/dashboard',
   unAuthenticatedEntryPath: '/sign-in',
-  enableMock: true,
+  enableMock: (import.meta.env.VITE_ENABLE_MOCK as string | undefined) === 'true',
   locale: 'fa',
 };
 

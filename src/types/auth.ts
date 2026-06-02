@@ -1,28 +1,65 @@
 export type SignInCredential = {
-  email: string;
-  password: string;
+  phone: string;
 };
 
-export type ForgotPasswordReq = {
-  email: string;
+export type SendOtpRQ = {
+  phone: string;
+  meta?: OTPMeta;
 };
 
-export interface SignInResponse {
-  id: string;
-  fullName: string;
-  authority: [];
-  phoneNumber: string;
-  email: string;
+export type SendOtpRS = {
+  is_registered?: boolean;
+  token?: string;
+};
+
+export type VerifyOtpRQ = {
+  code: string;
+  token: string;
+  fcm_token?: string;
+  first_name?: string;
+  last_name?: string;
+  nickname?: string;
+  meta?: UserMeta;
+};
+
+export type VerifyOtpRS = {
+  access_token?: string;
+  refresh_token?: string;
+  user_info?: UserInfo;
+};
+
+export type OTPMeta = {
+  token?: string;
+};
+
+export type UserMeta = {
+  [key: string]: unknown;
+};
+
+export type UserInfo = {
+  first_name?: string;
+  id?: number;
+  is_deposit_locked?: boolean;
+  is_deposit_verified?: boolean;
+  kyc?: boolean;
+  last_name?: string;
+  nickname?: string;
+  phone?: string;
+  status?: string;
+  type?: string;
+};
+
+export type AuthStorageData = {
   access_token: string;
-}
+  refresh_token: string;
+  user_info: UserInfo;
+};
 
 export interface ResponseInfoObject {
   status: 'success' | 'failed';
   error_code?: number;
   message?: string;
 }
-
-export type SignUpResponse = SignInResponse;
 
 export type SignUpCredential = {
   name: string;

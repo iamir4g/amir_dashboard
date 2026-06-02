@@ -1,19 +1,20 @@
 import ApiService from '@/services/ApiService';
-import { SignInResponse } from '@/types/auth';
+import type { SendOtpRQ, SendOtpRS, VerifyOtpRQ, VerifyOtpRS } from '@/types/auth';
 
 export const AuthService = {
-  async signIn(email: string, password: string): Promise<SignInResponse> {
-    const res = await ApiService.fetchData<{ email: string; password: string }, SignInResponse>({
-      url: '/users/sign-in',
+  async login(payload: SendOtpRQ): Promise<SendOtpRS> {
+    const res = await ApiService.fetchData<SendOtpRQ, SendOtpRS>({
+      url: '/auth/login',
       method: 'POST',
-      data: { email, password },
+      data: payload,
     });
     return res.data;
   },
-  async signOut(): Promise<boolean> {
-    const res = await ApiService.fetchData<undefined, boolean>({
-      url: '/sign-out',
+  async verify(payload: VerifyOtpRQ): Promise<VerifyOtpRS> {
+    const res = await ApiService.fetchData<VerifyOtpRQ, VerifyOtpRS>({
+      url: '/auth/verify',
       method: 'POST',
+      data: payload,
     });
     return res.data;
   },
