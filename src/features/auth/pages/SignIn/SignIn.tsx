@@ -4,12 +4,14 @@ import classes from './SignIn.module.css';
 import * as yup from 'yup';
 import { useForm, yupResolver } from '@mantine/form';
 import useAuth from '@/features/auth/hooks/useAuth';
+import { usePostLoginMutation } from '../../api/login';
 import { useTranslation } from 'react-i18next';
 
 export default function SignIn() {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>('');
+  // const [loading, setLoading] = useState<boolean>(false);
+  // const [error, setError] = useState<string>('');
   const { signIn } = useAuth();
+  const { isPending: loading, error, data } = usePostLoginMutation();
   const { t } = useTranslation();
   const schema = useMemo(
     () =>
@@ -27,17 +29,17 @@ export default function SignIn() {
   });
 
   async function handleSubmit(values: { phone: string }) {
-    setLoading(true);
-    setError('');
+    // setLoading(true);
+    // setError('');
     try {
       const res = await signIn(values);
-      if (res?.status === 'failed') {
-        setError(res.message);
-      }
+      // if (res?.status === 'failed') {
+      //   setError(res.message);
+      // }
     } catch (e) {
-      setError(String(e));
+      // setError(String(e));
     } finally {
-      setLoading(false);
+      // setLoading(false);
     }
   }
 
@@ -58,7 +60,7 @@ export default function SignIn() {
             </Text>
             {error ? (
               <Text c='red' ta='center' mb='md'>
-                {error}
+                {/* {error.message || error} */}
               </Text>
             ) : null}
             <TextInput
@@ -73,12 +75,6 @@ export default function SignIn() {
             <Button loading={loading} type={'submit'} fullWidth mt='xl' size='md'>
               {'دریافت کد ورود'}
             </Button>
-            {/*<Text ta="center" mt="md">*/}
-            {/*  Don&apos;t have an account?{' '}*/}
-            {/*  <Anchor<'a'> href="#" fw={700} onClick={(event) => event.preventDefault()}>*/}
-            {/*    Register*/}
-            {/*  </Anchor>*/}
-            {/*</Text>*/}
           </Paper>
         </div>
       </form>

@@ -1,11 +1,17 @@
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, UseMutationResult } from '@tanstack/react-query';
 import type { VerifyOtpRQ, VerifyOtpRS } from '@/types/auth';
-import { AuthService } from '@/features/auth/services/auth.service';
+import { createData } from '@/core/http-service';
 
-export const verifyOtpMutationKey = ['auth', 'verify-otp'] as const;
+const verifyOtp = (variables: VerifyOtpRQ): Promise<VerifyOtpRS> => {
+  const url = `/auth/verify`;
+  return createData(url, variables, undefined, true);
+};
 
-export const useVerifyOtpMutation = () =>
-  useMutation({
-    mutationKey: verifyOtpMutationKey,
-    mutationFn: (variables: VerifyOtpRQ): Promise<VerifyOtpRS> => AuthService.verify(variables),
+export const useVerifyOtpMutation = (): UseMutationResult<VerifyOtpRS, Error, VerifyOtpRQ> => {
+  const mutation = useMutation({
+    mutationKey: ['auth', 'verify-otp'],
+    mutationFn: verifyOtp,
   });
+
+  return mutation;
+};

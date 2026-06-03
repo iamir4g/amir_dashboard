@@ -1,3 +1,5 @@
+import { BaseResponse } from './global/base-response';
+
 export type SignInCredential = {
   phone: string;
 };
@@ -7,10 +9,11 @@ export type SendOtpRQ = {
   meta?: OTPMeta;
 };
 
-export type SendOtpRS = {
+export type SendOtp = {
   is_registered?: boolean;
   token?: string;
 };
+export type SendOtpRS = BaseResponse<SendOtp>;
 
 export type VerifyOtpRQ = {
   code: string;

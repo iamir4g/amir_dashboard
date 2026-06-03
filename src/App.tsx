@@ -2,7 +2,7 @@ import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import { DirectionProvider, MantineProvider } from '@mantine/core';
 import { theme } from './theme';
-import { Layout } from '@/layouts/Layout';
+// import { Layout } from '@/components/Layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
 import appConfig from './configs/app.config';
 import { mockServer } from './mock/mock';
@@ -10,6 +10,7 @@ import { ModalsProvider } from '@mantine/modals';
 import './index.css';
 import { Notifications } from '@mantine/notifications';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Layout } from './layouts/Layout';
 
 const queryClient = new QueryClient({
   defaultOptions: {

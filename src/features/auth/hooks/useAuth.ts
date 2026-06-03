@@ -7,11 +7,15 @@ import {
   setUserId,
 } from '@/store';
 import appConfig from '@/configs/app.config';
-import { AUTH_DATA_STORAGE_KEY, AUTH_OTP_TOKEN_STORAGE_KEY, REDIRECT_URL_KEY } from '@/constants/app.constant';
+import {
+  AUTH_DATA_STORAGE_KEY,
+  AUTH_OTP_TOKEN_STORAGE_KEY,
+  REDIRECT_URL_KEY,
+} from '@/constants/app.constant';
 import { useNavigate } from 'react-router-dom';
 import type { AuthStorageData, SignInCredential } from '@/types/auth';
 import useQuery from '@/utils/hooks/useQuery';
-import { useSignInMutation } from '@/features/auth/api/signIn';
+import { usePostLoginMutation } from '@/features/auth/api/login';
 import { useSignOutMutation } from '@/features/auth/api/signOut';
 import { useVerifyOtpMutation } from '@/features/auth/api/verifyOtp';
 
@@ -19,7 +23,7 @@ type Status = 'success' | 'failed';
 
 function useAuth() {
   const navigate = useNavigate();
-  const signInMutation = useSignInMutation();
+  const signInMutation = usePostLoginMutation();
   const signOutMutation = useSignOutMutation();
   const verifyOtpMutation = useVerifyOtpMutation();
   const { token, signedIn } = useAppSelector((state) => state.auth.session);
@@ -38,23 +42,26 @@ function useAuth() {
     try {
       const resp = await signInMutation.mutateAsync(values);
 
-      if (!resp.is_registered) {
+      console.log('aaaa: ', resp);
+      if (!resp.data.is_registered) {
         return {
           status: 'failed',
           message: 'کاربر یافت نشد',
         };
       }
 
-      if (!resp.token) {
+      if (!resp.data.token) {
         return {
           status: 'failed',
           message: 'خطا در دریافت توکن',
         };
       }
 
-      localStorage.setItem(AUTH_OTP_TOKEN_STORAGE_KEY, resp.token);
+      localStorage.setItem(AUTH_OTP_TOKEN_STORAGE_KEY, resp.data.token);
       const redirectUrl = query.get(REDIRECT_URL_KEY);
-      navigate(`/verify-otp${redirectUrl ? `?${REDIRECT_URL_KEY}=${encodeURIComponent(redirectUrl)}` : ''}`);
+      navigate(
+        `/verify-otp${redirectUrl ? `?${REDIRECT_URL_KEY}=${encodeURIComponent(redirectUrl)}` : ''}`
+      );
       return {
         status: 'success',
         message: '',
