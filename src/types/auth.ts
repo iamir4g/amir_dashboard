@@ -25,11 +25,12 @@ export type VerifyOtpRQ = {
   meta?: UserMeta;
 };
 
-export type VerifyOtpRS = {
+export type VerifyOtp = {
   access_token?: string;
   refresh_token?: string;
   user_info?: UserInfo;
 };
+export type VerifyOtpRS = BaseResponse<VerifyOtp>;
 
 export type OTPMeta = {
   token?: string;
@@ -50,6 +51,7 @@ export type UserInfo = {
   phone?: string;
   status?: string;
   type?: string;
+  role?: string[];
 };
 
 export type AuthStorageData = {

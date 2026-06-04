@@ -143,10 +143,10 @@ export const setUser = (payload: UserState) => {
       ...state.auth,
       user: {
         ...state.auth.user,
-        email: payload?.email,
-        fullName: payload?.fullName,
+
         role: payload?.role,
-        phoneNumber: payload?.phoneNumber,
+        firstName: payload?.firstName,
+        lastName: payload?.lastName,
       },
     },
   }));
@@ -180,18 +180,6 @@ export const setUserInfo = (payload: UserInfoState) => {
   useAppStore.setState((state) => ({
     auth: {
       ...state.auth,
-      userInfo: {
-        ...state.auth.userInfo,
-        userId: payload?.userId,
-        email: payload?.email,
-        language: payload?.language,
-        role: payload?.role,
-        walletAddress: payload?.walletAddress,
-        name: payload?.name,
-        googleLogin: payload.googleLogin,
-        notificationCount: payload?.notificationCount,
-        isTwoFaEnabled: payload?.isTwoFaEnabled,
-      },
     },
   }));
 };
@@ -201,7 +189,6 @@ export const setLanguage = (language: string) => {
     auth: {
       ...state.auth,
       userInfo: {
-        ...state.auth.userInfo,
         language,
       },
     },
@@ -213,7 +200,6 @@ export const setUserInfoRole = (role: string) => {
     auth: {
       ...state.auth,
       userInfo: {
-        ...state.auth.userInfo,
         role,
       },
     },
@@ -224,10 +210,6 @@ export const setDisplayName = (name: string) => {
   useAppStore.setState((state) => ({
     auth: {
       ...state.auth,
-      userInfo: {
-        ...state.auth.userInfo,
-        name,
-      },
     },
   }));
 };
@@ -236,10 +218,6 @@ export const setWalletAddress = (walletAddress: string) => {
   useAppStore.setState((state) => ({
     auth: {
       ...state.auth,
-      userInfo: {
-        ...state.auth.userInfo,
-        walletAddress,
-      },
     },
   }));
 };
@@ -248,10 +226,6 @@ export const setUserId = (userId: string) => {
   useAppStore.setState((state) => ({
     auth: {
       ...state.auth,
-      userInfo: {
-        ...state.auth.userInfo,
-        userId,
-      },
     },
   }));
 };
@@ -260,10 +234,6 @@ export const setNotificationCount = (notificationCount: number) => {
   useAppStore.setState((state) => ({
     auth: {
       ...state.auth,
-      userInfo: {
-        ...state.auth.userInfo,
-        notificationCount,
-      },
     },
   }));
 };
@@ -272,10 +242,6 @@ export const setTwoFactorAuth = (isTwoFaEnabled: boolean) => {
   useAppStore.setState((state) => ({
     auth: {
       ...state.auth,
-      userInfo: {
-        ...state.auth.userInfo,
-        isTwoFaEnabled,
-      },
     },
   }));
 };

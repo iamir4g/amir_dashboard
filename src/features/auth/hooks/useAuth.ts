@@ -27,7 +27,7 @@ function useAuth() {
   const signOutMutation = useSignOutMutation();
   const verifyOtpMutation = useVerifyOtpMutation();
   const { token, signedIn } = useAppSelector((state) => state.auth.session);
-  const userId = useAppSelector((state) => state.auth.userInfo.userId);
+  // const userId = useAppSelector((state) => state.auth.userInfo.userId);
   const query = useQuery();
 
   const signIn = async (
@@ -94,7 +94,7 @@ function useAuth() {
     try {
       const resp = await verifyOtpMutation.mutateAsync({ code, token: otpToken });
 
-      if (!resp.access_token || !resp.refresh_token || !resp.user_info) {
+      if (!resp.data.access_token || !resp.data.refresh_token) {
         return {
           status: 'failed',
           message: 'پاسخ سرور ناقص است',
@@ -102,38 +102,50 @@ function useAuth() {
       }
 
       const authData: AuthStorageData = {
-        access_token: resp.access_token,
-        refresh_token: resp.refresh_token,
-        user_info: resp.user_info,
+        access_token: resp.data.access_token,
+        refresh_token: resp.data.refresh_token,
+        user_info: resp.data.user_info || {},
       };
 
       localStorage.setItem(AUTH_DATA_STORAGE_KEY, JSON.stringify(authData));
       localStorage.removeItem(AUTH_OTP_TOKEN_STORAGE_KEY);
 
       signInSuccess({
-        token: resp.access_token,
-        refreshToken: resp.refresh_token,
+        token: resp.data.access_token,
+        refreshToken: resp.data.refresh_token,
         expireTime: 0,
       });
 
-      const fullName =
-        [resp.user_info.first_name, resp.user_info.last_name].filter(Boolean).join(' ') ||
-        resp.user_info.nickname ||
-        '';
+      // const fullName =
+      //   [resp.data.user_info?.first_name, resp.data.user_info?.last_name]
+      //     .filter(Boolean)
+      //     .join(' ') ||
+      //   resp.data.user_info?.nickname ||
+      //   '';
 
-      if (resp.user_info.id !== undefined) {
-        setUserId(String(resp.user_info.id));
+      if (resp.data.user_info?.id !== undefined) {
+        setUserId(String(resp.data.user_info?.id));
       }
 
       setUser({
-        fullName,
-        email: '',
-        role: [],
-        phoneNumber: resp.user_info.phone ?? '',
+        firstName: resp.data.user_info?.first_name,
+        lastName: resp.data.user_info?.last_name,
+        phone: resp.data.user_info?.phone ?? '',
+        nickname: resp.data.user_info?.nickname,
+        type: resp.data.user_info?.type,
+        isDepositVerified: resp.data.user_info?.is_deposit_verified,
+        isDepositLocked: resp.data.user_info?.is_deposit_locked,
+        status: resp.data.user_info?.status,
+        kyc: resp.data.user_info?.kyc,
+        role: resp.data.user_info?.role || [],
       });
 
       const redirectUrl = query.get(REDIRECT_URL_KEY);
-      navigate(redirectUrl ? redirectUrl : appConfig.authenticatedEntryPath);
+      navigate(
+        resp.data.user_info?.is_deposit_verified
+          ? redirectUrl || appConfig.authenticatedEntryPath
+          : `/kyc${redirectUrl ? `?${REDIRECT_URL_KEY}=${encodeURIComponent(redirectUrl)}` : ''}`
+      );
       return {
         status: 'success',
         message: '',
@@ -150,17 +162,18 @@ function useAuth() {
     signOutSuccess();
     localStorage.removeItem(AUTH_DATA_STORAGE_KEY);
     localStorage.removeItem(AUTH_OTP_TOKEN_STORAGE_KEY);
-    setUserInfo({
-      googleLogin: false,
-      name: '',
-      role: '',
-      email: '',
-      userId: userId,
-    });
+
     setUser({
-      fullName: '',
+      firstName: '',
+      lastName: '',
+      phone: '',
+      nickname: '',
+      type: '',
+      isDepositVerified: false,
+      isDepositLocked: false,
+      status: '',
+      kyc: false,
       role: [],
-      email: '',
     });
     navigate(appConfig.unAuthenticatedEntryPath);
   };

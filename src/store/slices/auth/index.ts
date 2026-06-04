@@ -5,13 +5,13 @@ import { initialUserInfoState, UserInfoState } from './userInfoSlice';
 export type AuthState = {
   session: SessionState;
   user: UserState;
-  userInfo: UserInfoState;
+  // userInfo: UserInfoState;
 };
 
 export const initialAuthState: AuthState = {
   session: initialSessionState,
   user: initialUserState,
-  userInfo: initialUserInfoState,
+  // userInfo: initialUserInfoState,
 };
 
 export * from './sessionSlice';

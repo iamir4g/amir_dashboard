@@ -12,14 +12,14 @@ import { AUTH_DATA_STORAGE_KEY, AUTH_OTP_TOKEN_STORAGE_KEY } from '@/constants/a
 import { ApiError } from '@/core/ApiError';
 
 const BASE_URLS = {
-  Base: import.meta.env.VITE_BASE_URL,
+  Base: import.meta.env.VITE_API_BASE_URL,
 };
 
 const unauthorizedCode = [401];
 
 const httpService = axios.create({
   timeout: 60000,
-  baseURL: import.meta.env.VITE_BASE_URL,
+  baseURL: BASE_URLS.Base,
 });
 
 httpService.interceptors.request.use(

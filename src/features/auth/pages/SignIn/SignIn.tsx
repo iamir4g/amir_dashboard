@@ -56,7 +56,7 @@ export default function SignIn() {
             </Title>
             <Text ta='center' mt='md' mb={50}>
               {t('auth.welcomeSubtitle')}{' '}
-              <a href={'https://github.com/auronvila/mantine-template/wiki'}>مستندات</a>
+              {/* <a href={'https://github.com/auronvila/mantine-template/wiki'}>مستندات</a> */}
             </Text>
             {error ? (
               <Text c='red' ta='center' mb='md'>
