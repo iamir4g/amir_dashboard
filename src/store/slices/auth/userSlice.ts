@@ -1,4 +1,5 @@
 export interface UserState {
+  id: number;
   firstName?: string;
   lastName?: string;
   phone?: string;
@@ -16,6 +17,7 @@ export interface UserState {
 }
 
 export const initialUserState: UserState = {
+  id: 0,
   firstName: '',
   lastName: '',
   phone: '',

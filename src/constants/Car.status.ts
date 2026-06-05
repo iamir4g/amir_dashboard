@@ -1,7 +1,7 @@
 export const WAITING = 'WAITING';
 export const RULE_REJECTED = 'RULE_REJECTED';
 export const INSPECTION_BOOKED = 'INSPECTION_BOOKED';
-export const DMIN_APPROVED = 'DMIN_APPROVED';
+export const ADMIN_APPROVED = 'ADMIN_APPROVED';
 export const ADMIN_REJECTED = 'ADMIN_REJECTED';
 export const INSPECTED = 'INSPECTED';
 export const INSPECTION_REJECTED = 'INSPECTION_REJECTED';
@@ -27,7 +27,7 @@ export type CarsStatus =
   | typeof WAITING
   | typeof RULE_REJECTED
   | typeof INSPECTION_BOOKED
-  | typeof DMIN_APPROVED
+  | typeof ADMIN_APPROVED
   | typeof ADMIN_REJECTED
   | typeof INSPECTED
   | typeof INSPECTION_REJECTED

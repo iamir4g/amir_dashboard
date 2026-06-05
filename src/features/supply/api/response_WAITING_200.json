@@ -1,0 +1,6372 @@
+{
+  "data": [
+    {
+      "id": 78,
+      "created_at": "2026-06-03T08:01:24.322127Z",
+      "updated_at": "2026-06-03T08:01:24.322127Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "پراید صندوق دار",
+      "description": "",
+      "brand_id": 15,
+      "model_id": 47,
+      "make_year": 1388,
+      "trim_id": null,
+      "mileage": 0,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 6,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "257513",
+      "color": "white",
+      "city_id": 301,
+      "lead_score": 55,
+      "badges": [],
+      "admin_id": null,
+      "channel": "MASHINAAA",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 15,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:38:44.927512Z",
+        "deleted_at": null,
+        "name_en": "pride",
+        "name_fa": "پراید",
+        "keywords": [
+          "pride",
+          "پراید",
+          "peride",
+          "سدان صندوقدار",
+          "پراید صندوق دار پراید صندوقدار",
+          "پراید وانت وانت پراید",
+          "هاچبک 111",
+          "پراید صندوقدار پراید صندوق دار"
+        ],
+        "description": "پراید (Pride) به قطع شناخته‌شده‌ترین خودرو در ایران است. این خودرو از سال 1372 تا 1399 در انواع مختلف در ایران تولید می‌شد. پلتفرم ابتدایی پراید از خودرو فورد فستیوا (Ford Festiva) یا مزدا 121 (که به سفارش شرکت فورد ساخته شده بود) گرفته شده است. پراید در ابتدا توسط شرکت کیا موتورز کره (Kia Motors) در سال‌های 1987 تا 2000 ساخته می‌شد و پس از آن حق تولید این خودرو به همراه پلتفرم آن، توسط سایپا خریداری شد. از ابتدای شروع تولید پراید در ایران، دو مدل سدان و هاچبک پراید به ترتیب با عناوین صبا و نسیم به فروش می‌رسیدند. این نام‌گذاری پس از افزوده‌شدن مدل‌های بیشتر تغییر کرد که به شرح زیر است: • پراید 131 (سایپا صبا – سدان) • پراید 132 (سدان) • پراید 111 (هاچ‌بک) • پراید 141 (بک‌لیفت – تغییر فقط در ظاهر صندوق عقب) • پراید 151 (وانت پراید)",
+        "logo": "pride.svg",
+        "priority": 2,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 47,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "sedan",
+        "name_fa": "صندوق دار",
+        "keywords": ["سدان صندوقدار"],
+        "description": "ندارد",
+        "brand_id": 15,
+        "priority": 241,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": null,
+      "body_condition": [
+        {
+          "id": 2695,
+          "key_en": "colored",
+          "key_fa": "رنگ شدگی",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2696,
+          "key_en": "replaced_room",
+          "key_fa": "اتاق تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2697,
+          "key_en": "replaced_kapoot",
+          "key_fa": "کاپوت تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2698,
+          "key_en": "replaced_saghf",
+          "key_fa": "سقف تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2699,
+          "key_en": "replaced_sandogh",
+          "key_fa": "صندوق عقب تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2700,
+          "key_en": "replaced_sotoon",
+          "key_fa": "ستون تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2701,
+          "key_en": "replaced_door_fl",
+          "key_fa": "درب راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2702,
+          "key_en": "replaced_door_fr",
+          "key_fa": "درب شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2703,
+          "key_en": "replaced_door_bl",
+          "key_fa": "درب عقب سمت راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2704,
+          "key_en": "replaced_door_br",
+          "key_fa": "درب عقب سمت شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2705,
+          "key_en": "replaced_mudguard_fl",
+          "key_fa": "گلگیر جلو سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2706,
+          "key_en": "replaced_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2707,
+          "key_en": "replaced_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2708,
+          "key_en": "replaced_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2709,
+          "key_en": "colored_full",
+          "key_fa": "تمام رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2710,
+          "key_en": "colored_around",
+          "key_fa": "دور رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2711,
+          "key_en": "colored_kapoot",
+          "key_fa": "کاپوت رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2712,
+          "key_en": "colored_saghf",
+          "key_fa": "سقف رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2713,
+          "key_en": "colored_sandogh",
+          "key_fa": "صندوق عقب رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2714,
+          "key_en": "colored_door_fl",
+          "key_fa": "درب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2715,
+          "key_en": "colored_door_fr",
+          "key_fa": "درب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2716,
+          "key_en": "colored_door_bl",
+          "key_fa": "درب عقب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2717,
+          "key_en": "colored_door_br",
+          "key_fa": "درب عقب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2718,
+          "key_en": "colored_mudguard_fl",
+          "key_fa": "گلگیر جلوی سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2719,
+          "key_en": "colored_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2720,
+          "key_en": "colored_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2721,
+          "key_en": "colored_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2722,
+          "key_en": "colored_rekab_r",
+          "key_fa": "رکاب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2723,
+          "key_en": "colored_rekab_l",
+          "key_fa": "رکاب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2724,
+          "key_en": "color_less_refinement_kapoot",
+          "key_fa": "کاپوت صافکاری بدون رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2725,
+          "key_en": "color_less_refinement_saghf",
+          "key_fa": "صافکاری بدون رنگ سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2726,
+          "key_en": "color_less_refinement_sandogh",
+          "key_fa": "صافکاری بدون رنگ صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2727,
+          "key_en": "color_less_refinement_bottom_sandogh",
+          "key_fa": "صافکاری بدون رنگ زیر صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2728,
+          "key_en": "color_less_refinement_door_fl",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2729,
+          "key_en": "color_less_refinement_door_fr",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2730,
+          "key_en": "color_less_refinement_door_bl",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2731,
+          "key_en": "color_less_refinement_door_br",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2732,
+          "key_en": "color_less_refinement_mudguard_fl",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2733,
+          "key_en": "color_less_refinement_mudguard_fr",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2734,
+          "key_en": "color_less_refinement_mudguard_bl",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2735,
+          "key_en": "color_less_refinement_mudguard_br",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2736,
+          "key_en": "hit_chassis_fl",
+          "key_fa": "ضربه شاسی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2737,
+          "key_en": "hit_chassis_fr",
+          "key_fa": "ضربه شاسی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2738,
+          "key_en": "hit_chassis_bl",
+          "key_fa": "ضربه شاسی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2739,
+          "key_en": "hit_chassis_br",
+          "key_fa": "ضربه شاسی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2740,
+          "key_en": "hit_sini_fl",
+          "key_fa": "ضربه سینی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2741,
+          "key_en": "hit_sini_fr",
+          "key_fa": "ضربه سینی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2742,
+          "key_en": "hit_sini_bl",
+          "key_fa": "ضربه سینی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2743,
+          "key_en": "hit_sini_br",
+          "key_fa": "ضربه سینی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2744,
+          "key_en": "hit_sotoon_fl",
+          "key_fa": "ضربه ستون جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2745,
+          "key_en": "hit_sotoon_fr",
+          "key_fa": "ضربه ستون جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2746,
+          "key_en": "hit_sotoon_bl",
+          "key_fa": "ضربه ستون عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2747,
+          "key_en": "hit_sotoon_br",
+          "key_fa": "ضربه ستون عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2748,
+          "key_en": "hit_sotoon_ml",
+          "key_fa": "ضربه ستون وسط سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2749,
+          "key_en": "hit_sotoon_mr",
+          "key_fa": "ضربه ستون وسط سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2750,
+          "key_en": "hit_kalaf_l",
+          "key_fa": "ضربه کلاف چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2751,
+          "key_en": "hit_kalaf_r",
+          "key_fa": "ضربه کلاف راست",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2752,
+          "key_en": "rot_kapoot",
+          "key_fa": "پوسیدگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2753,
+          "key_en": "rot_chassis",
+          "key_fa": "پوسیدگی شاسی",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2754,
+          "key_en": "rot_sandogh",
+          "key_fa": "پوسیدگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2755,
+          "key_en": "rot_floor",
+          "key_fa": "پوسیدگی کف",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2756,
+          "key_en": "rot_rekab",
+          "key_fa": "پوسیدگی رکاب",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2757,
+          "key_en": "rot_mudguard",
+          "key_fa": "پوسیدگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2758,
+          "key_en": "sunburn_kapoot",
+          "key_fa": "آفتاب سوختگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2759,
+          "key_en": "sunburn_saghf",
+          "key_fa": "آفتاب سوختگی سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2760,
+          "key_en": "sunburn_sandogh",
+          "key_fa": "آفتاب سوختگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        },
+        {
+          "id": 2761,
+          "key_en": "sunburn_mudguard",
+          "key_fa": "آفتاب سوختگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 78,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 66,
+        "car_id": 78,
+        "estimated": "",
+        "user_suggest": "",
+        "sales_person_upper": "",
+        "sales_person_lower": "",
+        "estimated_in_market": "",
+        "lower_suggest": "",
+        "upper_suggest": "",
+        "final": "",
+        "final_customer": "",
+        "kh_suggest_for_buy": "",
+        "kh_suggest_for_sell": "",
+        "revenue": "",
+        "created_at": "2026-06-03T08:01:24.32665Z",
+        "updated_at": "2026-06-03T08:01:24.32665Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 6,
+        "created_at": "2026-02-16T13:25:59.434036Z",
+        "updated_at": "2026-05-26T14:25:47.344827Z",
+        "deleted_at": null,
+        "first_name": "امیررضا",
+        "last_name": "سالاری",
+        "nickname": "امیر",
+        "email": null,
+        "password": "",
+        "phone": "09117409005",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "MP",
+      "labels": null
+    },
+    {
+      "id": 76,
+      "created_at": "2026-06-03T08:00:36.886285Z",
+      "updated_at": "2026-06-03T08:00:36.886285Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "پژو 206",
+      "description": "",
+      "brand_id": 52,
+      "model_id": 1319,
+      "make_year": 1401,
+      "trim_id": 237,
+      "mileage": 0,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 6,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "502415",
+      "color": "black",
+      "city_id": 301,
+      "lead_score": 95,
+      "badges": [],
+      "admin_id": null,
+      "channel": "MASHINAAA",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 52,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:38:23.915159Z",
+        "deleted_at": null,
+        "name_en": "peugeot",
+        "name_fa": "پژو",
+        "keywords": [
+          "peugeot",
+          "پژو",
+          "دویست و هفت ۲۰۷ 207",
+          "دویست و شش پژو۲۰۶ پژو ٢٠٦",
+          "پرشیا پژوپارس",
+          "چهارصد و پنج پژو405 پژو۴۰۵",
+          "دویست و شش صندوقدار پژو۲۰۶ 206 پژو ٢٠٦ ۲۰۶ اس دی ۲۰۶ اس د ۲۰۶ اس دی پژو اس دی",
+          "دو هزار و هشت 2008 پژو2008",
+          "آر دی",
+          "آر دی ار دی",
+          "چارصد و هفت چهارصد و هفت",
+          "پانصد و هشت پونصد و هشت",
+          "دویست و هفت پژو اس دی 207",
+          "پژو405 پژو۴۰۵",
+          "سیصد و یک",
+          "دویست و شش ۲۰۶ ٢٠٦ 206",
+          "206 روباز",
+          "پونصد و پنج"
+        ],
+        "description": "پژو شرکت خودروسازی فرانسوی است، که در سال 1810 توسط خانوادهٔ پژو جهت ساخت آسیاب‌های قهوه، در شهر فرانش-کنته، فرانسه تأسیس شد ولی ورود رسمی پژو به صنعت خودروسازی با تولید دوچرخه «گراند بای» توسط آرمان پژو در سال 1882 آغاز شد. نخستین خودروی پژو که خودرویی سه‌چرخ بود، در سال 1889 توسط آرمان پژو و با همکاری گوتلیب دایملر تولید شد.",
+        "logo": "peugeot.svg",
+        "priority": 1,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 1319,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "206ir",
+        "name_fa": "206",
+        "keywords": ["دویست و شش پژو۲۰۶ پژو ٢٠٦"],
+        "description": "ندارد",
+        "brand_id": 52,
+        "priority": 2,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": {
+        "id": 237,
+        "created_at": "2024-05-26T14:43:08.686579Z",
+        "updated_at": "2024-05-26T14:43:08.686579Z",
+        "deleted_at": null,
+        "name_en": "type2",
+        "name_fa": "تیپ 2",
+        "keywords": [],
+        "description": "/",
+        "model_id": 1319
+      },
+      "body_condition": [
+        {
+          "id": 2561,
+          "key_en": "colored",
+          "key_fa": "رنگ شدگی",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2562,
+          "key_en": "replaced_room",
+          "key_fa": "اتاق تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2563,
+          "key_en": "replaced_kapoot",
+          "key_fa": "کاپوت تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2564,
+          "key_en": "replaced_saghf",
+          "key_fa": "سقف تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2565,
+          "key_en": "replaced_sandogh",
+          "key_fa": "صندوق عقب تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2566,
+          "key_en": "replaced_sotoon",
+          "key_fa": "ستون تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2567,
+          "key_en": "replaced_door_fl",
+          "key_fa": "درب راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2568,
+          "key_en": "replaced_door_fr",
+          "key_fa": "درب شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2569,
+          "key_en": "replaced_door_bl",
+          "key_fa": "درب عقب سمت راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2570,
+          "key_en": "replaced_door_br",
+          "key_fa": "درب عقب سمت شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2571,
+          "key_en": "replaced_mudguard_fl",
+          "key_fa": "گلگیر جلو سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2572,
+          "key_en": "replaced_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2573,
+          "key_en": "replaced_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2574,
+          "key_en": "replaced_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2575,
+          "key_en": "colored_full",
+          "key_fa": "تمام رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2576,
+          "key_en": "colored_around",
+          "key_fa": "دور رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2577,
+          "key_en": "colored_kapoot",
+          "key_fa": "کاپوت رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2578,
+          "key_en": "colored_saghf",
+          "key_fa": "سقف رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2579,
+          "key_en": "colored_sandogh",
+          "key_fa": "صندوق عقب رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2580,
+          "key_en": "colored_door_fl",
+          "key_fa": "درب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2581,
+          "key_en": "colored_door_fr",
+          "key_fa": "درب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2582,
+          "key_en": "colored_door_bl",
+          "key_fa": "درب عقب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2583,
+          "key_en": "colored_door_br",
+          "key_fa": "درب عقب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2584,
+          "key_en": "colored_mudguard_fl",
+          "key_fa": "گلگیر جلوی سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2585,
+          "key_en": "colored_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2586,
+          "key_en": "colored_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2587,
+          "key_en": "colored_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2588,
+          "key_en": "colored_rekab_r",
+          "key_fa": "رکاب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2589,
+          "key_en": "colored_rekab_l",
+          "key_fa": "رکاب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2590,
+          "key_en": "color_less_refinement_kapoot",
+          "key_fa": "کاپوت صافکاری بدون رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2591,
+          "key_en": "color_less_refinement_saghf",
+          "key_fa": "صافکاری بدون رنگ سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2592,
+          "key_en": "color_less_refinement_sandogh",
+          "key_fa": "صافکاری بدون رنگ صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2593,
+          "key_en": "color_less_refinement_bottom_sandogh",
+          "key_fa": "صافکاری بدون رنگ زیر صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2594,
+          "key_en": "color_less_refinement_door_fl",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2595,
+          "key_en": "color_less_refinement_door_fr",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2596,
+          "key_en": "color_less_refinement_door_bl",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2597,
+          "key_en": "color_less_refinement_door_br",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2598,
+          "key_en": "color_less_refinement_mudguard_fl",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2599,
+          "key_en": "color_less_refinement_mudguard_fr",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2600,
+          "key_en": "color_less_refinement_mudguard_bl",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2601,
+          "key_en": "color_less_refinement_mudguard_br",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2602,
+          "key_en": "hit_chassis_fl",
+          "key_fa": "ضربه شاسی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2603,
+          "key_en": "hit_chassis_fr",
+          "key_fa": "ضربه شاسی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2604,
+          "key_en": "hit_chassis_bl",
+          "key_fa": "ضربه شاسی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2605,
+          "key_en": "hit_chassis_br",
+          "key_fa": "ضربه شاسی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2606,
+          "key_en": "hit_sini_fl",
+          "key_fa": "ضربه سینی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2607,
+          "key_en": "hit_sini_fr",
+          "key_fa": "ضربه سینی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2608,
+          "key_en": "hit_sini_bl",
+          "key_fa": "ضربه سینی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2609,
+          "key_en": "hit_sini_br",
+          "key_fa": "ضربه سینی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2610,
+          "key_en": "hit_sotoon_fl",
+          "key_fa": "ضربه ستون جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2611,
+          "key_en": "hit_sotoon_fr",
+          "key_fa": "ضربه ستون جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2612,
+          "key_en": "hit_sotoon_bl",
+          "key_fa": "ضربه ستون عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2613,
+          "key_en": "hit_sotoon_br",
+          "key_fa": "ضربه ستون عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2614,
+          "key_en": "hit_sotoon_ml",
+          "key_fa": "ضربه ستون وسط سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2615,
+          "key_en": "hit_sotoon_mr",
+          "key_fa": "ضربه ستون وسط سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2616,
+          "key_en": "hit_kalaf_l",
+          "key_fa": "ضربه کلاف چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2617,
+          "key_en": "hit_kalaf_r",
+          "key_fa": "ضربه کلاف راست",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2618,
+          "key_en": "rot_kapoot",
+          "key_fa": "پوسیدگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2619,
+          "key_en": "rot_chassis",
+          "key_fa": "پوسیدگی شاسی",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2620,
+          "key_en": "rot_sandogh",
+          "key_fa": "پوسیدگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2621,
+          "key_en": "rot_floor",
+          "key_fa": "پوسیدگی کف",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2622,
+          "key_en": "rot_rekab",
+          "key_fa": "پوسیدگی رکاب",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2623,
+          "key_en": "rot_mudguard",
+          "key_fa": "پوسیدگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2624,
+          "key_en": "sunburn_kapoot",
+          "key_fa": "آفتاب سوختگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2625,
+          "key_en": "sunburn_saghf",
+          "key_fa": "آفتاب سوختگی سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2626,
+          "key_en": "sunburn_sandogh",
+          "key_fa": "آفتاب سوختگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        },
+        {
+          "id": 2627,
+          "key_en": "sunburn_mudguard",
+          "key_fa": "آفتاب سوختگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 76,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 64,
+        "car_id": 76,
+        "estimated": "",
+        "user_suggest": "",
+        "sales_person_upper": "",
+        "sales_person_lower": "",
+        "estimated_in_market": "",
+        "lower_suggest": "",
+        "upper_suggest": "",
+        "final": "",
+        "final_customer": "",
+        "kh_suggest_for_buy": "",
+        "kh_suggest_for_sell": "",
+        "revenue": "",
+        "created_at": "2026-06-03T08:00:36.897136Z",
+        "updated_at": "2026-06-03T08:00:36.897136Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 6,
+        "created_at": "2026-02-16T13:25:59.434036Z",
+        "updated_at": "2026-05-26T14:25:47.344827Z",
+        "deleted_at": null,
+        "first_name": "امیررضا",
+        "last_name": "سالاری",
+        "nickname": "امیر",
+        "email": null,
+        "password": "",
+        "phone": "09117409005",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "MP",
+      "labels": null
+    },
+    {
+      "id": 73,
+      "created_at": "2026-06-02T09:58:28.688667Z",
+      "updated_at": "2026-06-02T09:58:28.688667Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "دنا معمولی",
+      "description": "",
+      "brand_id": 99,
+      "model_id": 771,
+      "make_year": 1400,
+      "trim_id": null,
+      "mileage": 0,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 6,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "685920",
+      "color": "white",
+      "city_id": 301,
+      "lead_score": 92,
+      "badges": [],
+      "admin_id": null,
+      "channel": "MASHINAAA",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 99,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:39:51.69126Z",
+        "deleted_at": null,
+        "name_en": "dena",
+        "name_fa": "دنا",
+        "keywords": ["dena", "دنا", "دناپلاس"],
+        "description": "ندارد",
+        "logo": "dena.svg",
+        "priority": 3,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 771,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "1.7",
+        "name_fa": "معمولی",
+        "keywords": [],
+        "description": "ندارد",
+        "brand_id": 99,
+        "priority": 238,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": null,
+      "body_condition": [
+        {
+          "id": 2360,
+          "key_en": "colored",
+          "key_fa": "رنگ شدگی",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2361,
+          "key_en": "replaced_room",
+          "key_fa": "اتاق تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2362,
+          "key_en": "replaced_kapoot",
+          "key_fa": "کاپوت تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2363,
+          "key_en": "replaced_saghf",
+          "key_fa": "سقف تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2364,
+          "key_en": "replaced_sandogh",
+          "key_fa": "صندوق عقب تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2365,
+          "key_en": "replaced_sotoon",
+          "key_fa": "ستون تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2366,
+          "key_en": "replaced_door_fl",
+          "key_fa": "درب راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2367,
+          "key_en": "replaced_door_fr",
+          "key_fa": "درب شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2368,
+          "key_en": "replaced_door_bl",
+          "key_fa": "درب عقب سمت راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2369,
+          "key_en": "replaced_door_br",
+          "key_fa": "درب عقب سمت شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2370,
+          "key_en": "replaced_mudguard_fl",
+          "key_fa": "گلگیر جلو سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2371,
+          "key_en": "replaced_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2372,
+          "key_en": "replaced_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2373,
+          "key_en": "replaced_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2374,
+          "key_en": "colored_full",
+          "key_fa": "تمام رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2375,
+          "key_en": "colored_around",
+          "key_fa": "دور رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2376,
+          "key_en": "colored_kapoot",
+          "key_fa": "کاپوت رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2377,
+          "key_en": "colored_saghf",
+          "key_fa": "سقف رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2378,
+          "key_en": "colored_sandogh",
+          "key_fa": "صندوق عقب رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2379,
+          "key_en": "colored_door_fl",
+          "key_fa": "درب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2380,
+          "key_en": "colored_door_fr",
+          "key_fa": "درب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2381,
+          "key_en": "colored_door_bl",
+          "key_fa": "درب عقب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2382,
+          "key_en": "colored_door_br",
+          "key_fa": "درب عقب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2383,
+          "key_en": "colored_mudguard_fl",
+          "key_fa": "گلگیر جلوی سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2384,
+          "key_en": "colored_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2385,
+          "key_en": "colored_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2386,
+          "key_en": "colored_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2387,
+          "key_en": "colored_rekab_r",
+          "key_fa": "رکاب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2388,
+          "key_en": "colored_rekab_l",
+          "key_fa": "رکاب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2389,
+          "key_en": "color_less_refinement_kapoot",
+          "key_fa": "کاپوت صافکاری بدون رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2390,
+          "key_en": "color_less_refinement_saghf",
+          "key_fa": "صافکاری بدون رنگ سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2391,
+          "key_en": "color_less_refinement_sandogh",
+          "key_fa": "صافکاری بدون رنگ صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2392,
+          "key_en": "color_less_refinement_bottom_sandogh",
+          "key_fa": "صافکاری بدون رنگ زیر صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2393,
+          "key_en": "color_less_refinement_door_fl",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2394,
+          "key_en": "color_less_refinement_door_fr",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2395,
+          "key_en": "color_less_refinement_door_bl",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2396,
+          "key_en": "color_less_refinement_door_br",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2397,
+          "key_en": "color_less_refinement_mudguard_fl",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2398,
+          "key_en": "color_less_refinement_mudguard_fr",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2399,
+          "key_en": "color_less_refinement_mudguard_bl",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2400,
+          "key_en": "color_less_refinement_mudguard_br",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2401,
+          "key_en": "hit_chassis_fl",
+          "key_fa": "ضربه شاسی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2402,
+          "key_en": "hit_chassis_fr",
+          "key_fa": "ضربه شاسی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2403,
+          "key_en": "hit_chassis_bl",
+          "key_fa": "ضربه شاسی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2404,
+          "key_en": "hit_chassis_br",
+          "key_fa": "ضربه شاسی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2405,
+          "key_en": "hit_sini_fl",
+          "key_fa": "ضربه سینی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2406,
+          "key_en": "hit_sini_fr",
+          "key_fa": "ضربه سینی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2407,
+          "key_en": "hit_sini_bl",
+          "key_fa": "ضربه سینی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2408,
+          "key_en": "hit_sini_br",
+          "key_fa": "ضربه سینی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2409,
+          "key_en": "hit_sotoon_fl",
+          "key_fa": "ضربه ستون جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2410,
+          "key_en": "hit_sotoon_fr",
+          "key_fa": "ضربه ستون جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2411,
+          "key_en": "hit_sotoon_bl",
+          "key_fa": "ضربه ستون عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2412,
+          "key_en": "hit_sotoon_br",
+          "key_fa": "ضربه ستون عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2413,
+          "key_en": "hit_sotoon_ml",
+          "key_fa": "ضربه ستون وسط سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2414,
+          "key_en": "hit_sotoon_mr",
+          "key_fa": "ضربه ستون وسط سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2415,
+          "key_en": "hit_kalaf_l",
+          "key_fa": "ضربه کلاف چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2416,
+          "key_en": "hit_kalaf_r",
+          "key_fa": "ضربه کلاف راست",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2417,
+          "key_en": "rot_kapoot",
+          "key_fa": "پوسیدگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2418,
+          "key_en": "rot_chassis",
+          "key_fa": "پوسیدگی شاسی",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2419,
+          "key_en": "rot_sandogh",
+          "key_fa": "پوسیدگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2420,
+          "key_en": "rot_floor",
+          "key_fa": "پوسیدگی کف",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2421,
+          "key_en": "rot_rekab",
+          "key_fa": "پوسیدگی رکاب",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2422,
+          "key_en": "rot_mudguard",
+          "key_fa": "پوسیدگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2423,
+          "key_en": "sunburn_kapoot",
+          "key_fa": "آفتاب سوختگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2424,
+          "key_en": "sunburn_saghf",
+          "key_fa": "آفتاب سوختگی سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2425,
+          "key_en": "sunburn_sandogh",
+          "key_fa": "آفتاب سوختگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        },
+        {
+          "id": 2426,
+          "key_en": "sunburn_mudguard",
+          "key_fa": "آفتاب سوختگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 73,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 61,
+        "car_id": 73,
+        "estimated": "",
+        "user_suggest": "",
+        "sales_person_upper": "",
+        "sales_person_lower": "",
+        "estimated_in_market": "",
+        "lower_suggest": "",
+        "upper_suggest": "",
+        "final": "",
+        "final_customer": "",
+        "kh_suggest_for_buy": "",
+        "kh_suggest_for_sell": "",
+        "revenue": "",
+        "created_at": "2026-06-02T09:58:28.693367Z",
+        "updated_at": "2026-06-02T09:58:28.693367Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 6,
+        "created_at": "2026-02-16T13:25:59.434036Z",
+        "updated_at": "2026-05-26T14:25:47.344827Z",
+        "deleted_at": null,
+        "first_name": "امیررضا",
+        "last_name": "سالاری",
+        "nickname": "امیر",
+        "email": null,
+        "password": "",
+        "phone": "09117409005",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "MP",
+      "labels": null
+    },
+    {
+      "id": 62,
+      "created_at": "2026-05-26T13:39:51.455383Z",
+      "updated_at": "2026-05-26T13:39:51.455383Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "پژو 206",
+      "description": "",
+      "brand_id": 52,
+      "model_id": 1319,
+      "make_year": 1401,
+      "trim_id": 935,
+      "mileage": 45,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 6,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "890645",
+      "color": "white",
+      "city_id": 301,
+      "lead_score": 95,
+      "badges": [],
+      "admin_id": null,
+      "channel": "MASHINAAA",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 52,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:38:23.915159Z",
+        "deleted_at": null,
+        "name_en": "peugeot",
+        "name_fa": "پژو",
+        "keywords": [
+          "peugeot",
+          "پژو",
+          "دویست و هفت ۲۰۷ 207",
+          "دویست و شش پژو۲۰۶ پژو ٢٠٦",
+          "پرشیا پژوپارس",
+          "چهارصد و پنج پژو405 پژو۴۰۵",
+          "دویست و شش صندوقدار پژو۲۰۶ 206 پژو ٢٠٦ ۲۰۶ اس دی ۲۰۶ اس د ۲۰۶ اس دی پژو اس دی",
+          "دو هزار و هشت 2008 پژو2008",
+          "آر دی",
+          "آر دی ار دی",
+          "چارصد و هفت چهارصد و هفت",
+          "پانصد و هشت پونصد و هشت",
+          "دویست و هفت پژو اس دی 207",
+          "پژو405 پژو۴۰۵",
+          "سیصد و یک",
+          "دویست و شش ۲۰۶ ٢٠٦ 206",
+          "206 روباز",
+          "پونصد و پنج"
+        ],
+        "description": "پژو شرکت خودروسازی فرانسوی است، که در سال 1810 توسط خانوادهٔ پژو جهت ساخت آسیاب‌های قهوه، در شهر فرانش-کنته، فرانسه تأسیس شد ولی ورود رسمی پژو به صنعت خودروسازی با تولید دوچرخه «گراند بای» توسط آرمان پژو در سال 1882 آغاز شد. نخستین خودروی پژو که خودرویی سه‌چرخ بود، در سال 1889 توسط آرمان پژو و با همکاری گوتلیب دایملر تولید شد.",
+        "logo": "peugeot.svg",
+        "priority": 1,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 1319,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "206ir",
+        "name_fa": "206",
+        "keywords": ["دویست و شش پژو۲۰۶ پژو ٢٠٦"],
+        "description": "ندارد",
+        "brand_id": 52,
+        "priority": 2,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": {
+        "id": 935,
+        "created_at": "2024-05-26T14:43:08.645828Z",
+        "updated_at": "2024-05-26T14:43:08.645828Z",
+        "deleted_at": null,
+        "name_en": "type3panorama",
+        "name_fa": "تیپ 3 پانوراما",
+        "keywords": [],
+        "description": "/",
+        "model_id": 1319
+      },
+      "body_condition": [
+        {
+          "id": 1690,
+          "key_en": "colored",
+          "key_fa": "رنگ شدگی",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1691,
+          "key_en": "replaced_room",
+          "key_fa": "اتاق تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1692,
+          "key_en": "replaced_kapoot",
+          "key_fa": "کاپوت تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1693,
+          "key_en": "replaced_saghf",
+          "key_fa": "سقف تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1694,
+          "key_en": "replaced_sandogh",
+          "key_fa": "صندوق عقب تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1695,
+          "key_en": "replaced_sotoon",
+          "key_fa": "ستون تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1696,
+          "key_en": "replaced_door_fl",
+          "key_fa": "درب راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1697,
+          "key_en": "replaced_door_fr",
+          "key_fa": "درب شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1698,
+          "key_en": "replaced_door_bl",
+          "key_fa": "درب عقب سمت راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1699,
+          "key_en": "replaced_door_br",
+          "key_fa": "درب عقب سمت شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1700,
+          "key_en": "replaced_mudguard_fl",
+          "key_fa": "گلگیر جلو سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1701,
+          "key_en": "replaced_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1702,
+          "key_en": "replaced_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1703,
+          "key_en": "replaced_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1704,
+          "key_en": "colored_full",
+          "key_fa": "تمام رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1705,
+          "key_en": "colored_around",
+          "key_fa": "دور رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1706,
+          "key_en": "colored_kapoot",
+          "key_fa": "کاپوت رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1707,
+          "key_en": "colored_saghf",
+          "key_fa": "سقف رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1708,
+          "key_en": "colored_sandogh",
+          "key_fa": "صندوق عقب رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1709,
+          "key_en": "colored_door_fl",
+          "key_fa": "درب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1710,
+          "key_en": "colored_door_fr",
+          "key_fa": "درب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1711,
+          "key_en": "colored_door_bl",
+          "key_fa": "درب عقب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1712,
+          "key_en": "colored_door_br",
+          "key_fa": "درب عقب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1713,
+          "key_en": "colored_mudguard_fl",
+          "key_fa": "گلگیر جلوی سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1714,
+          "key_en": "colored_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1715,
+          "key_en": "colored_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1716,
+          "key_en": "colored_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1717,
+          "key_en": "colored_rekab_r",
+          "key_fa": "رکاب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1718,
+          "key_en": "colored_rekab_l",
+          "key_fa": "رکاب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1719,
+          "key_en": "color_less_refinement_kapoot",
+          "key_fa": "کاپوت صافکاری بدون رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1720,
+          "key_en": "color_less_refinement_saghf",
+          "key_fa": "صافکاری بدون رنگ سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1721,
+          "key_en": "color_less_refinement_sandogh",
+          "key_fa": "صافکاری بدون رنگ صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1722,
+          "key_en": "color_less_refinement_bottom_sandogh",
+          "key_fa": "صافکاری بدون رنگ زیر صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1723,
+          "key_en": "color_less_refinement_door_fl",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1724,
+          "key_en": "color_less_refinement_door_fr",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1725,
+          "key_en": "color_less_refinement_door_bl",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1726,
+          "key_en": "color_less_refinement_door_br",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1727,
+          "key_en": "color_less_refinement_mudguard_fl",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1728,
+          "key_en": "color_less_refinement_mudguard_fr",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1729,
+          "key_en": "color_less_refinement_mudguard_bl",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1730,
+          "key_en": "color_less_refinement_mudguard_br",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1731,
+          "key_en": "hit_chassis_fl",
+          "key_fa": "ضربه شاسی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1732,
+          "key_en": "hit_chassis_fr",
+          "key_fa": "ضربه شاسی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1733,
+          "key_en": "hit_chassis_bl",
+          "key_fa": "ضربه شاسی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1734,
+          "key_en": "hit_chassis_br",
+          "key_fa": "ضربه شاسی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1735,
+          "key_en": "hit_sini_fl",
+          "key_fa": "ضربه سینی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1736,
+          "key_en": "hit_sini_fr",
+          "key_fa": "ضربه سینی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1737,
+          "key_en": "hit_sini_bl",
+          "key_fa": "ضربه سینی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1738,
+          "key_en": "hit_sini_br",
+          "key_fa": "ضربه سینی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1739,
+          "key_en": "hit_sotoon_fl",
+          "key_fa": "ضربه ستون جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1740,
+          "key_en": "hit_sotoon_fr",
+          "key_fa": "ضربه ستون جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1741,
+          "key_en": "hit_sotoon_bl",
+          "key_fa": "ضربه ستون عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1742,
+          "key_en": "hit_sotoon_br",
+          "key_fa": "ضربه ستون عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1743,
+          "key_en": "hit_sotoon_ml",
+          "key_fa": "ضربه ستون وسط سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1744,
+          "key_en": "hit_sotoon_mr",
+          "key_fa": "ضربه ستون وسط سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1745,
+          "key_en": "hit_kalaf_l",
+          "key_fa": "ضربه کلاف چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1746,
+          "key_en": "hit_kalaf_r",
+          "key_fa": "ضربه کلاف راست",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1747,
+          "key_en": "rot_kapoot",
+          "key_fa": "پوسیدگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1748,
+          "key_en": "rot_chassis",
+          "key_fa": "پوسیدگی شاسی",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1749,
+          "key_en": "rot_sandogh",
+          "key_fa": "پوسیدگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1750,
+          "key_en": "rot_floor",
+          "key_fa": "پوسیدگی کف",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1751,
+          "key_en": "rot_rekab",
+          "key_fa": "پوسیدگی رکاب",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1752,
+          "key_en": "rot_mudguard",
+          "key_fa": "پوسیدگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1753,
+          "key_en": "sunburn_kapoot",
+          "key_fa": "آفتاب سوختگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1754,
+          "key_en": "sunburn_saghf",
+          "key_fa": "آفتاب سوختگی سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1755,
+          "key_en": "sunburn_sandogh",
+          "key_fa": "آفتاب سوختگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        },
+        {
+          "id": 1756,
+          "key_en": "sunburn_mudguard",
+          "key_fa": "آفتاب سوختگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 62,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 50,
+        "car_id": 62,
+        "estimated": "",
+        "user_suggest": "",
+        "sales_person_upper": "",
+        "sales_person_lower": "",
+        "estimated_in_market": "",
+        "lower_suggest": "",
+        "upper_suggest": "",
+        "final": "",
+        "final_customer": "",
+        "kh_suggest_for_buy": "",
+        "kh_suggest_for_sell": "",
+        "revenue": "",
+        "created_at": "2026-05-26T13:39:51.463582Z",
+        "updated_at": "2026-05-26T13:39:51.463582Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 6,
+        "created_at": "2026-02-16T13:25:59.434036Z",
+        "updated_at": "2026-05-26T14:25:47.344827Z",
+        "deleted_at": null,
+        "first_name": "امیررضا",
+        "last_name": "سالاری",
+        "nickname": "امیر",
+        "email": null,
+        "password": "",
+        "phone": "09117409005",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "MP",
+      "labels": null
+    },
+    {
+      "id": 58,
+      "created_at": "2026-05-26T09:57:03.565484Z",
+      "updated_at": "2026-05-26T09:57:03.565484Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "پژو 206",
+      "description": "",
+      "brand_id": 52,
+      "model_id": 1319,
+      "make_year": 1401,
+      "trim_id": 935,
+      "mileage": 45,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 6,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "943200",
+      "color": "white",
+      "city_id": 301,
+      "lead_score": 95,
+      "badges": [],
+      "admin_id": null,
+      "channel": "MASHINAAA",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 52,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:38:23.915159Z",
+        "deleted_at": null,
+        "name_en": "peugeot",
+        "name_fa": "پژو",
+        "keywords": [
+          "peugeot",
+          "پژو",
+          "دویست و هفت ۲۰۷ 207",
+          "دویست و شش پژو۲۰۶ پژو ٢٠٦",
+          "پرشیا پژوپارس",
+          "چهارصد و پنج پژو405 پژو۴۰۵",
+          "دویست و شش صندوقدار پژو۲۰۶ 206 پژو ٢٠٦ ۲۰۶ اس دی ۲۰۶ اس د ۲۰۶ اس دی پژو اس دی",
+          "دو هزار و هشت 2008 پژو2008",
+          "آر دی",
+          "آر دی ار دی",
+          "چارصد و هفت چهارصد و هفت",
+          "پانصد و هشت پونصد و هشت",
+          "دویست و هفت پژو اس دی 207",
+          "پژو405 پژو۴۰۵",
+          "سیصد و یک",
+          "دویست و شش ۲۰۶ ٢٠٦ 206",
+          "206 روباز",
+          "پونصد و پنج"
+        ],
+        "description": "پژو شرکت خودروسازی فرانسوی است، که در سال 1810 توسط خانوادهٔ پژو جهت ساخت آسیاب‌های قهوه، در شهر فرانش-کنته، فرانسه تأسیس شد ولی ورود رسمی پژو به صنعت خودروسازی با تولید دوچرخه «گراند بای» توسط آرمان پژو در سال 1882 آغاز شد. نخستین خودروی پژو که خودرویی سه‌چرخ بود، در سال 1889 توسط آرمان پژو و با همکاری گوتلیب دایملر تولید شد.",
+        "logo": "peugeot.svg",
+        "priority": 1,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 1319,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "206ir",
+        "name_fa": "206",
+        "keywords": ["دویست و شش پژو۲۰۶ پژو ٢٠٦"],
+        "description": "ندارد",
+        "brand_id": 52,
+        "priority": 2,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": {
+        "id": 935,
+        "created_at": "2024-05-26T14:43:08.645828Z",
+        "updated_at": "2024-05-26T14:43:08.645828Z",
+        "deleted_at": null,
+        "name_en": "type3panorama",
+        "name_fa": "تیپ 3 پانوراما",
+        "keywords": [],
+        "description": "/",
+        "model_id": 1319
+      },
+      "body_condition": [
+        {
+          "id": 1422,
+          "key_en": "colored",
+          "key_fa": "رنگ شدگی",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1423,
+          "key_en": "replaced_room",
+          "key_fa": "اتاق تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1424,
+          "key_en": "replaced_kapoot",
+          "key_fa": "کاپوت تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1425,
+          "key_en": "replaced_saghf",
+          "key_fa": "سقف تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1426,
+          "key_en": "replaced_sandogh",
+          "key_fa": "صندوق عقب تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1427,
+          "key_en": "replaced_sotoon",
+          "key_fa": "ستون تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1428,
+          "key_en": "replaced_door_fl",
+          "key_fa": "درب راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1429,
+          "key_en": "replaced_door_fr",
+          "key_fa": "درب شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1430,
+          "key_en": "replaced_door_bl",
+          "key_fa": "درب عقب سمت راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1431,
+          "key_en": "replaced_door_br",
+          "key_fa": "درب عقب سمت شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1432,
+          "key_en": "replaced_mudguard_fl",
+          "key_fa": "گلگیر جلو سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1433,
+          "key_en": "replaced_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1434,
+          "key_en": "replaced_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1435,
+          "key_en": "replaced_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1436,
+          "key_en": "colored_full",
+          "key_fa": "تمام رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1437,
+          "key_en": "colored_around",
+          "key_fa": "دور رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1438,
+          "key_en": "colored_kapoot",
+          "key_fa": "کاپوت رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1439,
+          "key_en": "colored_saghf",
+          "key_fa": "سقف رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1440,
+          "key_en": "colored_sandogh",
+          "key_fa": "صندوق عقب رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1441,
+          "key_en": "colored_door_fl",
+          "key_fa": "درب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1442,
+          "key_en": "colored_door_fr",
+          "key_fa": "درب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1443,
+          "key_en": "colored_door_bl",
+          "key_fa": "درب عقب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1444,
+          "key_en": "colored_door_br",
+          "key_fa": "درب عقب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1445,
+          "key_en": "colored_mudguard_fl",
+          "key_fa": "گلگیر جلوی سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1446,
+          "key_en": "colored_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1447,
+          "key_en": "colored_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1448,
+          "key_en": "colored_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1449,
+          "key_en": "colored_rekab_r",
+          "key_fa": "رکاب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1450,
+          "key_en": "colored_rekab_l",
+          "key_fa": "رکاب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1451,
+          "key_en": "color_less_refinement_kapoot",
+          "key_fa": "کاپوت صافکاری بدون رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1452,
+          "key_en": "color_less_refinement_saghf",
+          "key_fa": "صافکاری بدون رنگ سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1453,
+          "key_en": "color_less_refinement_sandogh",
+          "key_fa": "صافکاری بدون رنگ صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1454,
+          "key_en": "color_less_refinement_bottom_sandogh",
+          "key_fa": "صافکاری بدون رنگ زیر صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1455,
+          "key_en": "color_less_refinement_door_fl",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1456,
+          "key_en": "color_less_refinement_door_fr",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1457,
+          "key_en": "color_less_refinement_door_bl",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1458,
+          "key_en": "color_less_refinement_door_br",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1459,
+          "key_en": "color_less_refinement_mudguard_fl",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1460,
+          "key_en": "color_less_refinement_mudguard_fr",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1461,
+          "key_en": "color_less_refinement_mudguard_bl",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1462,
+          "key_en": "color_less_refinement_mudguard_br",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1463,
+          "key_en": "hit_chassis_fl",
+          "key_fa": "ضربه شاسی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1464,
+          "key_en": "hit_chassis_fr",
+          "key_fa": "ضربه شاسی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1465,
+          "key_en": "hit_chassis_bl",
+          "key_fa": "ضربه شاسی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1466,
+          "key_en": "hit_chassis_br",
+          "key_fa": "ضربه شاسی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1467,
+          "key_en": "hit_sini_fl",
+          "key_fa": "ضربه سینی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1468,
+          "key_en": "hit_sini_fr",
+          "key_fa": "ضربه سینی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1469,
+          "key_en": "hit_sini_bl",
+          "key_fa": "ضربه سینی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1470,
+          "key_en": "hit_sini_br",
+          "key_fa": "ضربه سینی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1471,
+          "key_en": "hit_sotoon_fl",
+          "key_fa": "ضربه ستون جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1472,
+          "key_en": "hit_sotoon_fr",
+          "key_fa": "ضربه ستون جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1473,
+          "key_en": "hit_sotoon_bl",
+          "key_fa": "ضربه ستون عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1474,
+          "key_en": "hit_sotoon_br",
+          "key_fa": "ضربه ستون عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1475,
+          "key_en": "hit_sotoon_ml",
+          "key_fa": "ضربه ستون وسط سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1476,
+          "key_en": "hit_sotoon_mr",
+          "key_fa": "ضربه ستون وسط سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1477,
+          "key_en": "hit_kalaf_l",
+          "key_fa": "ضربه کلاف چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1478,
+          "key_en": "hit_kalaf_r",
+          "key_fa": "ضربه کلاف راست",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1479,
+          "key_en": "rot_kapoot",
+          "key_fa": "پوسیدگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1480,
+          "key_en": "rot_chassis",
+          "key_fa": "پوسیدگی شاسی",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1481,
+          "key_en": "rot_sandogh",
+          "key_fa": "پوسیدگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1482,
+          "key_en": "rot_floor",
+          "key_fa": "پوسیدگی کف",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1483,
+          "key_en": "rot_rekab",
+          "key_fa": "پوسیدگی رکاب",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1484,
+          "key_en": "rot_mudguard",
+          "key_fa": "پوسیدگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1485,
+          "key_en": "sunburn_kapoot",
+          "key_fa": "آفتاب سوختگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1486,
+          "key_en": "sunburn_saghf",
+          "key_fa": "آفتاب سوختگی سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1487,
+          "key_en": "sunburn_sandogh",
+          "key_fa": "آفتاب سوختگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        },
+        {
+          "id": 1488,
+          "key_en": "sunburn_mudguard",
+          "key_fa": "آفتاب سوختگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 58,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 0,
+        "car_id": 58,
+        "estimated": "0",
+        "user_suggest": "0",
+        "sales_person_upper": "0",
+        "sales_person_lower": "0",
+        "estimated_in_market": "0",
+        "lower_suggest": "0",
+        "upper_suggest": "0",
+        "final": "0",
+        "final_customer": "0",
+        "kh_suggest_for_buy": "0",
+        "kh_suggest_for_sell": "0",
+        "revenue": "0",
+        "created_at": "0001-01-01T00:00:00Z",
+        "updated_at": "0001-01-01T00:00:00Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 6,
+        "created_at": "2026-02-16T13:25:59.434036Z",
+        "updated_at": "2026-05-26T14:25:47.344827Z",
+        "deleted_at": null,
+        "first_name": "امیررضا",
+        "last_name": "سالاری",
+        "nickname": "امیر",
+        "email": null,
+        "password": "",
+        "phone": "09117409005",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "MP",
+      "labels": null
+    },
+    {
+      "id": 57,
+      "created_at": "2026-05-26T08:44:20.51176Z",
+      "updated_at": "2026-05-26T08:44:20.51176Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "پژو 206",
+      "description": "",
+      "brand_id": 52,
+      "model_id": 1319,
+      "make_year": 1401,
+      "trim_id": 935,
+      "mileage": 45,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 6,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "708355",
+      "color": "white",
+      "city_id": 301,
+      "lead_score": 95,
+      "badges": [],
+      "admin_id": null,
+      "channel": "MASHINAAA",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 52,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:38:23.915159Z",
+        "deleted_at": null,
+        "name_en": "peugeot",
+        "name_fa": "پژو",
+        "keywords": [
+          "peugeot",
+          "پژو",
+          "دویست و هفت ۲۰۷ 207",
+          "دویست و شش پژو۲۰۶ پژو ٢٠٦",
+          "پرشیا پژوپارس",
+          "چهارصد و پنج پژو405 پژو۴۰۵",
+          "دویست و شش صندوقدار پژو۲۰۶ 206 پژو ٢٠٦ ۲۰۶ اس دی ۲۰۶ اس د ۲۰۶ اس دی پژو اس دی",
+          "دو هزار و هشت 2008 پژو2008",
+          "آر دی",
+          "آر دی ار دی",
+          "چارصد و هفت چهارصد و هفت",
+          "پانصد و هشت پونصد و هشت",
+          "دویست و هفت پژو اس دی 207",
+          "پژو405 پژو۴۰۵",
+          "سیصد و یک",
+          "دویست و شش ۲۰۶ ٢٠٦ 206",
+          "206 روباز",
+          "پونصد و پنج"
+        ],
+        "description": "پژو شرکت خودروسازی فرانسوی است، که در سال 1810 توسط خانوادهٔ پژو جهت ساخت آسیاب‌های قهوه، در شهر فرانش-کنته، فرانسه تأسیس شد ولی ورود رسمی پژو به صنعت خودروسازی با تولید دوچرخه «گراند بای» توسط آرمان پژو در سال 1882 آغاز شد. نخستین خودروی پژو که خودرویی سه‌چرخ بود، در سال 1889 توسط آرمان پژو و با همکاری گوتلیب دایملر تولید شد.",
+        "logo": "peugeot.svg",
+        "priority": 1,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 1319,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "206ir",
+        "name_fa": "206",
+        "keywords": ["دویست و شش پژو۲۰۶ پژو ٢٠٦"],
+        "description": "ندارد",
+        "brand_id": 52,
+        "priority": 2,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": {
+        "id": 935,
+        "created_at": "2024-05-26T14:43:08.645828Z",
+        "updated_at": "2024-05-26T14:43:08.645828Z",
+        "deleted_at": null,
+        "name_en": "type3panorama",
+        "name_fa": "تیپ 3 پانوراما",
+        "keywords": [],
+        "description": "/",
+        "model_id": 1319
+      },
+      "body_condition": [
+        {
+          "id": 1355,
+          "key_en": "colored",
+          "key_fa": "رنگ شدگی",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1356,
+          "key_en": "replaced_room",
+          "key_fa": "اتاق تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1357,
+          "key_en": "replaced_kapoot",
+          "key_fa": "کاپوت تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1358,
+          "key_en": "replaced_saghf",
+          "key_fa": "سقف تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1359,
+          "key_en": "replaced_sandogh",
+          "key_fa": "صندوق عقب تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1360,
+          "key_en": "replaced_sotoon",
+          "key_fa": "ستون تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1361,
+          "key_en": "replaced_door_fl",
+          "key_fa": "درب راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1362,
+          "key_en": "replaced_door_fr",
+          "key_fa": "درب شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1363,
+          "key_en": "replaced_door_bl",
+          "key_fa": "درب عقب سمت راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1364,
+          "key_en": "replaced_door_br",
+          "key_fa": "درب عقب سمت شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1365,
+          "key_en": "replaced_mudguard_fl",
+          "key_fa": "گلگیر جلو سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1366,
+          "key_en": "replaced_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1367,
+          "key_en": "replaced_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1368,
+          "key_en": "replaced_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1369,
+          "key_en": "colored_full",
+          "key_fa": "تمام رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1370,
+          "key_en": "colored_around",
+          "key_fa": "دور رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1371,
+          "key_en": "colored_kapoot",
+          "key_fa": "کاپوت رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1372,
+          "key_en": "colored_saghf",
+          "key_fa": "سقف رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1373,
+          "key_en": "colored_sandogh",
+          "key_fa": "صندوق عقب رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1374,
+          "key_en": "colored_door_fl",
+          "key_fa": "درب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1375,
+          "key_en": "colored_door_fr",
+          "key_fa": "درب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1376,
+          "key_en": "colored_door_bl",
+          "key_fa": "درب عقب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1377,
+          "key_en": "colored_door_br",
+          "key_fa": "درب عقب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1378,
+          "key_en": "colored_mudguard_fl",
+          "key_fa": "گلگیر جلوی سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1379,
+          "key_en": "colored_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1380,
+          "key_en": "colored_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1381,
+          "key_en": "colored_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1382,
+          "key_en": "colored_rekab_r",
+          "key_fa": "رکاب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1383,
+          "key_en": "colored_rekab_l",
+          "key_fa": "رکاب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1384,
+          "key_en": "color_less_refinement_kapoot",
+          "key_fa": "کاپوت صافکاری بدون رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1385,
+          "key_en": "color_less_refinement_saghf",
+          "key_fa": "صافکاری بدون رنگ سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1386,
+          "key_en": "color_less_refinement_sandogh",
+          "key_fa": "صافکاری بدون رنگ صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1387,
+          "key_en": "color_less_refinement_bottom_sandogh",
+          "key_fa": "صافکاری بدون رنگ زیر صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1388,
+          "key_en": "color_less_refinement_door_fl",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1389,
+          "key_en": "color_less_refinement_door_fr",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1390,
+          "key_en": "color_less_refinement_door_bl",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1391,
+          "key_en": "color_less_refinement_door_br",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1392,
+          "key_en": "color_less_refinement_mudguard_fl",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1393,
+          "key_en": "color_less_refinement_mudguard_fr",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1394,
+          "key_en": "color_less_refinement_mudguard_bl",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1395,
+          "key_en": "color_less_refinement_mudguard_br",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1396,
+          "key_en": "hit_chassis_fl",
+          "key_fa": "ضربه شاسی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1397,
+          "key_en": "hit_chassis_fr",
+          "key_fa": "ضربه شاسی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1398,
+          "key_en": "hit_chassis_bl",
+          "key_fa": "ضربه شاسی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1399,
+          "key_en": "hit_chassis_br",
+          "key_fa": "ضربه شاسی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1400,
+          "key_en": "hit_sini_fl",
+          "key_fa": "ضربه سینی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1401,
+          "key_en": "hit_sini_fr",
+          "key_fa": "ضربه سینی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1402,
+          "key_en": "hit_sini_bl",
+          "key_fa": "ضربه سینی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1403,
+          "key_en": "hit_sini_br",
+          "key_fa": "ضربه سینی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1404,
+          "key_en": "hit_sotoon_fl",
+          "key_fa": "ضربه ستون جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1405,
+          "key_en": "hit_sotoon_fr",
+          "key_fa": "ضربه ستون جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1406,
+          "key_en": "hit_sotoon_bl",
+          "key_fa": "ضربه ستون عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1407,
+          "key_en": "hit_sotoon_br",
+          "key_fa": "ضربه ستون عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1408,
+          "key_en": "hit_sotoon_ml",
+          "key_fa": "ضربه ستون وسط سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1409,
+          "key_en": "hit_sotoon_mr",
+          "key_fa": "ضربه ستون وسط سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1410,
+          "key_en": "hit_kalaf_l",
+          "key_fa": "ضربه کلاف چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1411,
+          "key_en": "hit_kalaf_r",
+          "key_fa": "ضربه کلاف راست",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1412,
+          "key_en": "rot_kapoot",
+          "key_fa": "پوسیدگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1413,
+          "key_en": "rot_chassis",
+          "key_fa": "پوسیدگی شاسی",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1414,
+          "key_en": "rot_sandogh",
+          "key_fa": "پوسیدگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1415,
+          "key_en": "rot_floor",
+          "key_fa": "پوسیدگی کف",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1416,
+          "key_en": "rot_rekab",
+          "key_fa": "پوسیدگی رکاب",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1417,
+          "key_en": "rot_mudguard",
+          "key_fa": "پوسیدگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1418,
+          "key_en": "sunburn_kapoot",
+          "key_fa": "آفتاب سوختگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1419,
+          "key_en": "sunburn_saghf",
+          "key_fa": "آفتاب سوختگی سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1420,
+          "key_en": "sunburn_sandogh",
+          "key_fa": "آفتاب سوختگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        },
+        {
+          "id": 1421,
+          "key_en": "sunburn_mudguard",
+          "key_fa": "آفتاب سوختگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 57,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 0,
+        "car_id": 57,
+        "estimated": "0",
+        "user_suggest": "0",
+        "sales_person_upper": "0",
+        "sales_person_lower": "0",
+        "estimated_in_market": "0",
+        "lower_suggest": "0",
+        "upper_suggest": "0",
+        "final": "0",
+        "final_customer": "0",
+        "kh_suggest_for_buy": "0",
+        "kh_suggest_for_sell": "0",
+        "revenue": "0",
+        "created_at": "0001-01-01T00:00:00Z",
+        "updated_at": "0001-01-01T00:00:00Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 6,
+        "created_at": "2026-02-16T13:25:59.434036Z",
+        "updated_at": "2026-05-26T14:25:47.344827Z",
+        "deleted_at": null,
+        "first_name": "امیررضا",
+        "last_name": "سالاری",
+        "nickname": "امیر",
+        "email": null,
+        "password": "",
+        "phone": "09117409005",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "MP",
+      "labels": null
+    },
+    {
+      "id": 56,
+      "created_at": "2026-05-26T08:43:44.307896Z",
+      "updated_at": "2026-05-26T08:43:44.307896Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "پژو 206",
+      "description": "",
+      "brand_id": 52,
+      "model_id": 1319,
+      "make_year": 1401,
+      "trim_id": 935,
+      "mileage": 45,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 6,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "819457",
+      "color": "white",
+      "city_id": 301,
+      "lead_score": 95,
+      "badges": [],
+      "admin_id": null,
+      "channel": "MASHINAAA",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 52,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:38:23.915159Z",
+        "deleted_at": null,
+        "name_en": "peugeot",
+        "name_fa": "پژو",
+        "keywords": [
+          "peugeot",
+          "پژو",
+          "دویست و هفت ۲۰۷ 207",
+          "دویست و شش پژو۲۰۶ پژو ٢٠٦",
+          "پرشیا پژوپارس",
+          "چهارصد و پنج پژو405 پژو۴۰۵",
+          "دویست و شش صندوقدار پژو۲۰۶ 206 پژو ٢٠٦ ۲۰۶ اس دی ۲۰۶ اس د ۲۰۶ اس دی پژو اس دی",
+          "دو هزار و هشت 2008 پژو2008",
+          "آر دی",
+          "آر دی ار دی",
+          "چارصد و هفت چهارصد و هفت",
+          "پانصد و هشت پونصد و هشت",
+          "دویست و هفت پژو اس دی 207",
+          "پژو405 پژو۴۰۵",
+          "سیصد و یک",
+          "دویست و شش ۲۰۶ ٢٠٦ 206",
+          "206 روباز",
+          "پونصد و پنج"
+        ],
+        "description": "پژو شرکت خودروسازی فرانسوی است، که در سال 1810 توسط خانوادهٔ پژو جهت ساخت آسیاب‌های قهوه، در شهر فرانش-کنته، فرانسه تأسیس شد ولی ورود رسمی پژو به صنعت خودروسازی با تولید دوچرخه «گراند بای» توسط آرمان پژو در سال 1882 آغاز شد. نخستین خودروی پژو که خودرویی سه‌چرخ بود، در سال 1889 توسط آرمان پژو و با همکاری گوتلیب دایملر تولید شد.",
+        "logo": "peugeot.svg",
+        "priority": 1,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 1319,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "206ir",
+        "name_fa": "206",
+        "keywords": ["دویست و شش پژو۲۰۶ پژو ٢٠٦"],
+        "description": "ندارد",
+        "brand_id": 52,
+        "priority": 2,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": {
+        "id": 935,
+        "created_at": "2024-05-26T14:43:08.645828Z",
+        "updated_at": "2024-05-26T14:43:08.645828Z",
+        "deleted_at": null,
+        "name_en": "type3panorama",
+        "name_fa": "تیپ 3 پانوراما",
+        "keywords": [],
+        "description": "/",
+        "model_id": 1319
+      },
+      "body_condition": [
+        {
+          "id": 1288,
+          "key_en": "colored",
+          "key_fa": "رنگ شدگی",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1289,
+          "key_en": "replaced_room",
+          "key_fa": "اتاق تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1290,
+          "key_en": "replaced_kapoot",
+          "key_fa": "کاپوت تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1291,
+          "key_en": "replaced_saghf",
+          "key_fa": "سقف تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1292,
+          "key_en": "replaced_sandogh",
+          "key_fa": "صندوق عقب تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1293,
+          "key_en": "replaced_sotoon",
+          "key_fa": "ستون تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1294,
+          "key_en": "replaced_door_fl",
+          "key_fa": "درب راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1295,
+          "key_en": "replaced_door_fr",
+          "key_fa": "درب شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1296,
+          "key_en": "replaced_door_bl",
+          "key_fa": "درب عقب سمت راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1297,
+          "key_en": "replaced_door_br",
+          "key_fa": "درب عقب سمت شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1298,
+          "key_en": "replaced_mudguard_fl",
+          "key_fa": "گلگیر جلو سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1299,
+          "key_en": "replaced_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1300,
+          "key_en": "replaced_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1301,
+          "key_en": "replaced_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1302,
+          "key_en": "colored_full",
+          "key_fa": "تمام رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1303,
+          "key_en": "colored_around",
+          "key_fa": "دور رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1304,
+          "key_en": "colored_kapoot",
+          "key_fa": "کاپوت رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1305,
+          "key_en": "colored_saghf",
+          "key_fa": "سقف رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1306,
+          "key_en": "colored_sandogh",
+          "key_fa": "صندوق عقب رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1307,
+          "key_en": "colored_door_fl",
+          "key_fa": "درب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1308,
+          "key_en": "colored_door_fr",
+          "key_fa": "درب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1309,
+          "key_en": "colored_door_bl",
+          "key_fa": "درب عقب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1310,
+          "key_en": "colored_door_br",
+          "key_fa": "درب عقب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1311,
+          "key_en": "colored_mudguard_fl",
+          "key_fa": "گلگیر جلوی سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1312,
+          "key_en": "colored_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1313,
+          "key_en": "colored_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1314,
+          "key_en": "colored_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1315,
+          "key_en": "colored_rekab_r",
+          "key_fa": "رکاب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1316,
+          "key_en": "colored_rekab_l",
+          "key_fa": "رکاب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1317,
+          "key_en": "color_less_refinement_kapoot",
+          "key_fa": "کاپوت صافکاری بدون رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1318,
+          "key_en": "color_less_refinement_saghf",
+          "key_fa": "صافکاری بدون رنگ سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1319,
+          "key_en": "color_less_refinement_sandogh",
+          "key_fa": "صافکاری بدون رنگ صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1320,
+          "key_en": "color_less_refinement_bottom_sandogh",
+          "key_fa": "صافکاری بدون رنگ زیر صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1321,
+          "key_en": "color_less_refinement_door_fl",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1322,
+          "key_en": "color_less_refinement_door_fr",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1323,
+          "key_en": "color_less_refinement_door_bl",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1324,
+          "key_en": "color_less_refinement_door_br",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1325,
+          "key_en": "color_less_refinement_mudguard_fl",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1326,
+          "key_en": "color_less_refinement_mudguard_fr",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1327,
+          "key_en": "color_less_refinement_mudguard_bl",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1328,
+          "key_en": "color_less_refinement_mudguard_br",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1329,
+          "key_en": "hit_chassis_fl",
+          "key_fa": "ضربه شاسی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1330,
+          "key_en": "hit_chassis_fr",
+          "key_fa": "ضربه شاسی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1331,
+          "key_en": "hit_chassis_bl",
+          "key_fa": "ضربه شاسی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1332,
+          "key_en": "hit_chassis_br",
+          "key_fa": "ضربه شاسی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1333,
+          "key_en": "hit_sini_fl",
+          "key_fa": "ضربه سینی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1334,
+          "key_en": "hit_sini_fr",
+          "key_fa": "ضربه سینی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1335,
+          "key_en": "hit_sini_bl",
+          "key_fa": "ضربه سینی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1336,
+          "key_en": "hit_sini_br",
+          "key_fa": "ضربه سینی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1337,
+          "key_en": "hit_sotoon_fl",
+          "key_fa": "ضربه ستون جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1338,
+          "key_en": "hit_sotoon_fr",
+          "key_fa": "ضربه ستون جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1339,
+          "key_en": "hit_sotoon_bl",
+          "key_fa": "ضربه ستون عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1340,
+          "key_en": "hit_sotoon_br",
+          "key_fa": "ضربه ستون عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1341,
+          "key_en": "hit_sotoon_ml",
+          "key_fa": "ضربه ستون وسط سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1342,
+          "key_en": "hit_sotoon_mr",
+          "key_fa": "ضربه ستون وسط سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1343,
+          "key_en": "hit_kalaf_l",
+          "key_fa": "ضربه کلاف چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1344,
+          "key_en": "hit_kalaf_r",
+          "key_fa": "ضربه کلاف راست",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1345,
+          "key_en": "rot_kapoot",
+          "key_fa": "پوسیدگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1346,
+          "key_en": "rot_chassis",
+          "key_fa": "پوسیدگی شاسی",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1347,
+          "key_en": "rot_sandogh",
+          "key_fa": "پوسیدگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1348,
+          "key_en": "rot_floor",
+          "key_fa": "پوسیدگی کف",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1349,
+          "key_en": "rot_rekab",
+          "key_fa": "پوسیدگی رکاب",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1350,
+          "key_en": "rot_mudguard",
+          "key_fa": "پوسیدگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1351,
+          "key_en": "sunburn_kapoot",
+          "key_fa": "آفتاب سوختگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1352,
+          "key_en": "sunburn_saghf",
+          "key_fa": "آفتاب سوختگی سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1353,
+          "key_en": "sunburn_sandogh",
+          "key_fa": "آفتاب سوختگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        },
+        {
+          "id": 1354,
+          "key_en": "sunburn_mudguard",
+          "key_fa": "آفتاب سوختگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 56,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 0,
+        "car_id": 56,
+        "estimated": "0",
+        "user_suggest": "0",
+        "sales_person_upper": "0",
+        "sales_person_lower": "0",
+        "estimated_in_market": "0",
+        "lower_suggest": "0",
+        "upper_suggest": "0",
+        "final": "0",
+        "final_customer": "0",
+        "kh_suggest_for_buy": "0",
+        "kh_suggest_for_sell": "0",
+        "revenue": "0",
+        "created_at": "0001-01-01T00:00:00Z",
+        "updated_at": "0001-01-01T00:00:00Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 6,
+        "created_at": "2026-02-16T13:25:59.434036Z",
+        "updated_at": "2026-05-26T14:25:47.344827Z",
+        "deleted_at": null,
+        "first_name": "امیررضا",
+        "last_name": "سالاری",
+        "nickname": "امیر",
+        "email": null,
+        "password": "",
+        "phone": "09117409005",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "MP",
+      "labels": null
+    },
+    {
+      "id": 55,
+      "created_at": "2026-05-26T08:29:49.647534Z",
+      "updated_at": "2026-05-26T08:29:49.647534Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "پژو 206",
+      "description": "",
+      "brand_id": 52,
+      "model_id": 1319,
+      "make_year": 1401,
+      "trim_id": 935,
+      "mileage": 45,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 6,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "490121",
+      "color": "white",
+      "city_id": 301,
+      "lead_score": 95,
+      "badges": [],
+      "admin_id": null,
+      "channel": "MASHINAAA",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 52,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:38:23.915159Z",
+        "deleted_at": null,
+        "name_en": "peugeot",
+        "name_fa": "پژو",
+        "keywords": [
+          "peugeot",
+          "پژو",
+          "دویست و هفت ۲۰۷ 207",
+          "دویست و شش پژو۲۰۶ پژو ٢٠٦",
+          "پرشیا پژوپارس",
+          "چهارصد و پنج پژو405 پژو۴۰۵",
+          "دویست و شش صندوقدار پژو۲۰۶ 206 پژو ٢٠٦ ۲۰۶ اس دی ۲۰۶ اس د ۲۰۶ اس دی پژو اس دی",
+          "دو هزار و هشت 2008 پژو2008",
+          "آر دی",
+          "آر دی ار دی",
+          "چارصد و هفت چهارصد و هفت",
+          "پانصد و هشت پونصد و هشت",
+          "دویست و هفت پژو اس دی 207",
+          "پژو405 پژو۴۰۵",
+          "سیصد و یک",
+          "دویست و شش ۲۰۶ ٢٠٦ 206",
+          "206 روباز",
+          "پونصد و پنج"
+        ],
+        "description": "پژو شرکت خودروسازی فرانسوی است، که در سال 1810 توسط خانوادهٔ پژو جهت ساخت آسیاب‌های قهوه، در شهر فرانش-کنته، فرانسه تأسیس شد ولی ورود رسمی پژو به صنعت خودروسازی با تولید دوچرخه «گراند بای» توسط آرمان پژو در سال 1882 آغاز شد. نخستین خودروی پژو که خودرویی سه‌چرخ بود، در سال 1889 توسط آرمان پژو و با همکاری گوتلیب دایملر تولید شد.",
+        "logo": "peugeot.svg",
+        "priority": 1,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 1319,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "206ir",
+        "name_fa": "206",
+        "keywords": ["دویست و شش پژو۲۰۶ پژو ٢٠٦"],
+        "description": "ندارد",
+        "brand_id": 52,
+        "priority": 2,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": {
+        "id": 935,
+        "created_at": "2024-05-26T14:43:08.645828Z",
+        "updated_at": "2024-05-26T14:43:08.645828Z",
+        "deleted_at": null,
+        "name_en": "type3panorama",
+        "name_fa": "تیپ 3 پانوراما",
+        "keywords": [],
+        "description": "/",
+        "model_id": 1319
+      },
+      "body_condition": [
+        {
+          "id": 1221,
+          "key_en": "colored",
+          "key_fa": "رنگ شدگی",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1222,
+          "key_en": "replaced_room",
+          "key_fa": "اتاق تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1223,
+          "key_en": "replaced_kapoot",
+          "key_fa": "کاپوت تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1224,
+          "key_en": "replaced_saghf",
+          "key_fa": "سقف تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1225,
+          "key_en": "replaced_sandogh",
+          "key_fa": "صندوق عقب تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1226,
+          "key_en": "replaced_sotoon",
+          "key_fa": "ستون تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1227,
+          "key_en": "replaced_door_fl",
+          "key_fa": "درب راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1228,
+          "key_en": "replaced_door_fr",
+          "key_fa": "درب شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1229,
+          "key_en": "replaced_door_bl",
+          "key_fa": "درب عقب سمت راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1230,
+          "key_en": "replaced_door_br",
+          "key_fa": "درب عقب سمت شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1231,
+          "key_en": "replaced_mudguard_fl",
+          "key_fa": "گلگیر جلو سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1232,
+          "key_en": "replaced_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1233,
+          "key_en": "replaced_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1234,
+          "key_en": "replaced_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1235,
+          "key_en": "colored_full",
+          "key_fa": "تمام رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1236,
+          "key_en": "colored_around",
+          "key_fa": "دور رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1237,
+          "key_en": "colored_kapoot",
+          "key_fa": "کاپوت رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1238,
+          "key_en": "colored_saghf",
+          "key_fa": "سقف رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1239,
+          "key_en": "colored_sandogh",
+          "key_fa": "صندوق عقب رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1240,
+          "key_en": "colored_door_fl",
+          "key_fa": "درب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1241,
+          "key_en": "colored_door_fr",
+          "key_fa": "درب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1242,
+          "key_en": "colored_door_bl",
+          "key_fa": "درب عقب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1243,
+          "key_en": "colored_door_br",
+          "key_fa": "درب عقب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1244,
+          "key_en": "colored_mudguard_fl",
+          "key_fa": "گلگیر جلوی سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1245,
+          "key_en": "colored_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1246,
+          "key_en": "colored_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1247,
+          "key_en": "colored_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1248,
+          "key_en": "colored_rekab_r",
+          "key_fa": "رکاب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1249,
+          "key_en": "colored_rekab_l",
+          "key_fa": "رکاب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1250,
+          "key_en": "color_less_refinement_kapoot",
+          "key_fa": "کاپوت صافکاری بدون رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1251,
+          "key_en": "color_less_refinement_saghf",
+          "key_fa": "صافکاری بدون رنگ سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1252,
+          "key_en": "color_less_refinement_sandogh",
+          "key_fa": "صافکاری بدون رنگ صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1253,
+          "key_en": "color_less_refinement_bottom_sandogh",
+          "key_fa": "صافکاری بدون رنگ زیر صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1254,
+          "key_en": "color_less_refinement_door_fl",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1255,
+          "key_en": "color_less_refinement_door_fr",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1256,
+          "key_en": "color_less_refinement_door_bl",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1257,
+          "key_en": "color_less_refinement_door_br",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1258,
+          "key_en": "color_less_refinement_mudguard_fl",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1259,
+          "key_en": "color_less_refinement_mudguard_fr",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1260,
+          "key_en": "color_less_refinement_mudguard_bl",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1261,
+          "key_en": "color_less_refinement_mudguard_br",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1262,
+          "key_en": "hit_chassis_fl",
+          "key_fa": "ضربه شاسی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1263,
+          "key_en": "hit_chassis_fr",
+          "key_fa": "ضربه شاسی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1264,
+          "key_en": "hit_chassis_bl",
+          "key_fa": "ضربه شاسی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1265,
+          "key_en": "hit_chassis_br",
+          "key_fa": "ضربه شاسی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1266,
+          "key_en": "hit_sini_fl",
+          "key_fa": "ضربه سینی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1267,
+          "key_en": "hit_sini_fr",
+          "key_fa": "ضربه سینی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1268,
+          "key_en": "hit_sini_bl",
+          "key_fa": "ضربه سینی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1269,
+          "key_en": "hit_sini_br",
+          "key_fa": "ضربه سینی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1270,
+          "key_en": "hit_sotoon_fl",
+          "key_fa": "ضربه ستون جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1271,
+          "key_en": "hit_sotoon_fr",
+          "key_fa": "ضربه ستون جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1272,
+          "key_en": "hit_sotoon_bl",
+          "key_fa": "ضربه ستون عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1273,
+          "key_en": "hit_sotoon_br",
+          "key_fa": "ضربه ستون عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1274,
+          "key_en": "hit_sotoon_ml",
+          "key_fa": "ضربه ستون وسط سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1275,
+          "key_en": "hit_sotoon_mr",
+          "key_fa": "ضربه ستون وسط سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1276,
+          "key_en": "hit_kalaf_l",
+          "key_fa": "ضربه کلاف چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1277,
+          "key_en": "hit_kalaf_r",
+          "key_fa": "ضربه کلاف راست",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1278,
+          "key_en": "rot_kapoot",
+          "key_fa": "پوسیدگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1279,
+          "key_en": "rot_chassis",
+          "key_fa": "پوسیدگی شاسی",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1280,
+          "key_en": "rot_sandogh",
+          "key_fa": "پوسیدگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1281,
+          "key_en": "rot_floor",
+          "key_fa": "پوسیدگی کف",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1282,
+          "key_en": "rot_rekab",
+          "key_fa": "پوسیدگی رکاب",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1283,
+          "key_en": "rot_mudguard",
+          "key_fa": "پوسیدگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1284,
+          "key_en": "sunburn_kapoot",
+          "key_fa": "آفتاب سوختگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1285,
+          "key_en": "sunburn_saghf",
+          "key_fa": "آفتاب سوختگی سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1286,
+          "key_en": "sunburn_sandogh",
+          "key_fa": "آفتاب سوختگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        },
+        {
+          "id": 1287,
+          "key_en": "sunburn_mudguard",
+          "key_fa": "آفتاب سوختگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 55,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 0,
+        "car_id": 55,
+        "estimated": "0",
+        "user_suggest": "0",
+        "sales_person_upper": "0",
+        "sales_person_lower": "0",
+        "estimated_in_market": "0",
+        "lower_suggest": "0",
+        "upper_suggest": "0",
+        "final": "0",
+        "final_customer": "0",
+        "kh_suggest_for_buy": "0",
+        "kh_suggest_for_sell": "0",
+        "revenue": "0",
+        "created_at": "0001-01-01T00:00:00Z",
+        "updated_at": "0001-01-01T00:00:00Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 6,
+        "created_at": "2026-02-16T13:25:59.434036Z",
+        "updated_at": "2026-05-26T14:25:47.344827Z",
+        "deleted_at": null,
+        "first_name": "امیررضا",
+        "last_name": "سالاری",
+        "nickname": "امیر",
+        "email": null,
+        "password": "",
+        "phone": "09117409005",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "MP",
+      "labels": null
+    },
+    {
+      "id": 54,
+      "created_at": "2026-05-26T08:07:13.709808Z",
+      "updated_at": "2026-05-26T08:07:13.709808Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "پراید صندوق دار",
+      "description": "",
+      "brand_id": 15,
+      "model_id": 47,
+      "make_year": 1388,
+      "trim_id": null,
+      "mileage": 5555,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 6,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "076116",
+      "color": "white",
+      "city_id": 301,
+      "lead_score": 55,
+      "badges": [],
+      "admin_id": null,
+      "channel": "MASHINAAA",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 15,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:38:44.927512Z",
+        "deleted_at": null,
+        "name_en": "pride",
+        "name_fa": "پراید",
+        "keywords": [
+          "pride",
+          "پراید",
+          "peride",
+          "سدان صندوقدار",
+          "پراید صندوق دار پراید صندوقدار",
+          "پراید وانت وانت پراید",
+          "هاچبک 111",
+          "پراید صندوقدار پراید صندوق دار"
+        ],
+        "description": "پراید (Pride) به قطع شناخته‌شده‌ترین خودرو در ایران است. این خودرو از سال 1372 تا 1399 در انواع مختلف در ایران تولید می‌شد. پلتفرم ابتدایی پراید از خودرو فورد فستیوا (Ford Festiva) یا مزدا 121 (که به سفارش شرکت فورد ساخته شده بود) گرفته شده است. پراید در ابتدا توسط شرکت کیا موتورز کره (Kia Motors) در سال‌های 1987 تا 2000 ساخته می‌شد و پس از آن حق تولید این خودرو به همراه پلتفرم آن، توسط سایپا خریداری شد. از ابتدای شروع تولید پراید در ایران، دو مدل سدان و هاچبک پراید به ترتیب با عناوین صبا و نسیم به فروش می‌رسیدند. این نام‌گذاری پس از افزوده‌شدن مدل‌های بیشتر تغییر کرد که به شرح زیر است: • پراید 131 (سایپا صبا – سدان) • پراید 132 (سدان) • پراید 111 (هاچ‌بک) • پراید 141 (بک‌لیفت – تغییر فقط در ظاهر صندوق عقب) • پراید 151 (وانت پراید)",
+        "logo": "pride.svg",
+        "priority": 2,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 47,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "sedan",
+        "name_fa": "صندوق دار",
+        "keywords": ["سدان صندوقدار"],
+        "description": "ندارد",
+        "brand_id": 15,
+        "priority": 241,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": null,
+      "body_condition": [
+        {
+          "id": 1154,
+          "key_en": "colored",
+          "key_fa": "رنگ شدگی",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1155,
+          "key_en": "replaced_room",
+          "key_fa": "اتاق تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1156,
+          "key_en": "replaced_kapoot",
+          "key_fa": "کاپوت تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1157,
+          "key_en": "replaced_saghf",
+          "key_fa": "سقف تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1158,
+          "key_en": "replaced_sandogh",
+          "key_fa": "صندوق عقب تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1159,
+          "key_en": "replaced_sotoon",
+          "key_fa": "ستون تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1160,
+          "key_en": "replaced_door_fl",
+          "key_fa": "درب راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1161,
+          "key_en": "replaced_door_fr",
+          "key_fa": "درب شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1162,
+          "key_en": "replaced_door_bl",
+          "key_fa": "درب عقب سمت راننده تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1163,
+          "key_en": "replaced_door_br",
+          "key_fa": "درب عقب سمت شاگرد تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1164,
+          "key_en": "replaced_mudguard_fl",
+          "key_fa": "گلگیر جلو سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1165,
+          "key_en": "replaced_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1166,
+          "key_en": "replaced_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1167,
+          "key_en": "replaced_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست تعویض شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1168,
+          "key_en": "colored_full",
+          "key_fa": "تمام رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1169,
+          "key_en": "colored_around",
+          "key_fa": "دور رنگ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1170,
+          "key_en": "colored_kapoot",
+          "key_fa": "کاپوت رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1171,
+          "key_en": "colored_saghf",
+          "key_fa": "سقف رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1172,
+          "key_en": "colored_sandogh",
+          "key_fa": "صندوق عقب رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1173,
+          "key_en": "colored_door_fl",
+          "key_fa": "درب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1174,
+          "key_en": "colored_door_fr",
+          "key_fa": "درب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1175,
+          "key_en": "colored_door_bl",
+          "key_fa": "درب عقب سمت راننده رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1176,
+          "key_en": "colored_door_br",
+          "key_fa": "درب عقب سمت شاگرد رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1177,
+          "key_en": "colored_mudguard_fl",
+          "key_fa": "گلگیر جلوی سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1178,
+          "key_en": "colored_mudguard_fr",
+          "key_fa": "گلگیر جلو سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1179,
+          "key_en": "colored_mudguard_bl",
+          "key_fa": "گلگیر عقب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1180,
+          "key_en": "colored_mudguard_br",
+          "key_fa": "گلگیر عقب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1181,
+          "key_en": "colored_rekab_r",
+          "key_fa": "رکاب سمت راست رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1182,
+          "key_en": "colored_rekab_l",
+          "key_fa": "رکاب سمت چپ رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1183,
+          "key_en": "color_less_refinement_kapoot",
+          "key_fa": "کاپوت صافکاری بدون رنگ شده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1184,
+          "key_en": "color_less_refinement_saghf",
+          "key_fa": "صافکاری بدون رنگ سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1185,
+          "key_en": "color_less_refinement_sandogh",
+          "key_fa": "صافکاری بدون رنگ صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1186,
+          "key_en": "color_less_refinement_bottom_sandogh",
+          "key_fa": "صافکاری بدون رنگ زیر صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1187,
+          "key_en": "color_less_refinement_door_fl",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1188,
+          "key_en": "color_less_refinement_door_fr",
+          "key_fa": "صافکاری بدون رنگ درب جلو سمت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1189,
+          "key_en": "color_less_refinement_door_bl",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت راننده",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1190,
+          "key_en": "color_less_refinement_door_br",
+          "key_fa": "صافکاری بدون رنگ درب عقب پشت شاگرد",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1191,
+          "key_en": "color_less_refinement_mudguard_fl",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1192,
+          "key_en": "color_less_refinement_mudguard_fr",
+          "key_fa": "صافکاری بدون رنگ گلگیر جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1193,
+          "key_en": "color_less_refinement_mudguard_bl",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1194,
+          "key_en": "color_less_refinement_mudguard_br",
+          "key_fa": "صافکاری بدون رنگ گلگیر عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1195,
+          "key_en": "hit_chassis_fl",
+          "key_fa": "ضربه شاسی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1196,
+          "key_en": "hit_chassis_fr",
+          "key_fa": "ضربه شاسی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1197,
+          "key_en": "hit_chassis_bl",
+          "key_fa": "ضربه شاسی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1198,
+          "key_en": "hit_chassis_br",
+          "key_fa": "ضربه شاسی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1199,
+          "key_en": "hit_sini_fl",
+          "key_fa": "ضربه سینی جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1200,
+          "key_en": "hit_sini_fr",
+          "key_fa": "ضربه سینی جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1201,
+          "key_en": "hit_sini_bl",
+          "key_fa": "ضربه سینی عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1202,
+          "key_en": "hit_sini_br",
+          "key_fa": "ضربه سینی عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1203,
+          "key_en": "hit_sotoon_fl",
+          "key_fa": "ضربه ستون جلو سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1204,
+          "key_en": "hit_sotoon_fr",
+          "key_fa": "ضربه ستون جلو سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1205,
+          "key_en": "hit_sotoon_bl",
+          "key_fa": "ضربه ستون عقب سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1206,
+          "key_en": "hit_sotoon_br",
+          "key_fa": "ضربه ستون عقب سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1207,
+          "key_en": "hit_sotoon_ml",
+          "key_fa": "ضربه ستون وسط سمت چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1208,
+          "key_en": "hit_sotoon_mr",
+          "key_fa": "ضربه ستون وسط سمت راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1209,
+          "key_en": "hit_kalaf_l",
+          "key_fa": "ضربه کلاف چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1210,
+          "key_en": "hit_kalaf_r",
+          "key_fa": "ضربه کلاف راست",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1211,
+          "key_en": "rot_kapoot",
+          "key_fa": "پوسیدگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1212,
+          "key_en": "rot_chassis",
+          "key_fa": "پوسیدگی شاسی",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1213,
+          "key_en": "rot_sandogh",
+          "key_fa": "پوسیدگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1214,
+          "key_en": "rot_floor",
+          "key_fa": "پوسیدگی کف",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1215,
+          "key_en": "rot_rekab",
+          "key_fa": "پوسیدگی رکاب",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1216,
+          "key_en": "rot_mudguard",
+          "key_fa": "پوسیدگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1217,
+          "key_en": "sunburn_kapoot",
+          "key_fa": "آفتاب سوختگی کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1218,
+          "key_en": "sunburn_saghf",
+          "key_fa": "آفتاب سوختگی سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1219,
+          "key_en": "sunburn_sandogh",
+          "key_fa": "آفتاب سوختگی صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        },
+        {
+          "id": 1220,
+          "key_en": "sunburn_mudguard",
+          "key_fa": "آفتاب سوختگی گلگیر",
+          "car_submission_id": 0,
+          "car_v2_id": 54,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 0,
+        "car_id": 54,
+        "estimated": "0",
+        "user_suggest": "0",
+        "sales_person_upper": "0",
+        "sales_person_lower": "0",
+        "estimated_in_market": "0",
+        "lower_suggest": "0",
+        "upper_suggest": "0",
+        "final": "0",
+        "final_customer": "0",
+        "kh_suggest_for_buy": "0",
+        "kh_suggest_for_sell": "0",
+        "revenue": "0",
+        "created_at": "0001-01-01T00:00:00Z",
+        "updated_at": "0001-01-01T00:00:00Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 6,
+        "created_at": "2026-02-16T13:25:59.434036Z",
+        "updated_at": "2026-05-26T14:25:47.344827Z",
+        "deleted_at": null,
+        "first_name": "امیررضا",
+        "last_name": "سالاری",
+        "nickname": "امیر",
+        "email": null,
+        "password": "",
+        "phone": "09117409005",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "MP",
+      "labels": null
+    },
+    {
+      "id": 15,
+      "created_at": "2026-02-22T10:34:23.158267Z",
+      "updated_at": "2026-02-22T10:34:23.158267Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "پراید هاچ بک",
+      "description": "",
+      "brand_id": 15,
+      "model_id": 48,
+      "make_year": 1389,
+      "trim_id": null,
+      "mileage": 0,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 2,
+      "status": "WAITING",
+      "step": "INITIAL",
+      "code": "073098",
+      "color": "",
+      "city_id": 301,
+      "lead_score": 53,
+      "badges": [],
+      "admin_id": null,
+      "channel": "OLD",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 15,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:38:44.927512Z",
+        "deleted_at": null,
+        "name_en": "pride",
+        "name_fa": "پراید",
+        "keywords": [
+          "pride",
+          "پراید",
+          "peride",
+          "سدان صندوقدار",
+          "پراید صندوق دار پراید صندوقدار",
+          "پراید وانت وانت پراید",
+          "هاچبک 111",
+          "پراید صندوقدار پراید صندوق دار"
+        ],
+        "description": "پراید (Pride) به قطع شناخته‌شده‌ترین خودرو در ایران است. این خودرو از سال 1372 تا 1399 در انواع مختلف در ایران تولید می‌شد. پلتفرم ابتدایی پراید از خودرو فورد فستیوا (Ford Festiva) یا مزدا 121 (که به سفارش شرکت فورد ساخته شده بود) گرفته شده است. پراید در ابتدا توسط شرکت کیا موتورز کره (Kia Motors) در سال‌های 1987 تا 2000 ساخته می‌شد و پس از آن حق تولید این خودرو به همراه پلتفرم آن، توسط سایپا خریداری شد. از ابتدای شروع تولید پراید در ایران، دو مدل سدان و هاچبک پراید به ترتیب با عناوین صبا و نسیم به فروش می‌رسیدند. این نام‌گذاری پس از افزوده‌شدن مدل‌های بیشتر تغییر کرد که به شرح زیر است: • پراید 131 (سایپا صبا – سدان) • پراید 132 (سدان) • پراید 111 (هاچ‌بک) • پراید 141 (بک‌لیفت – تغییر فقط در ظاهر صندوق عقب) • پراید 151 (وانت پراید)",
+        "logo": "pride.svg",
+        "priority": 2,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 48,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "hatchback",
+        "name_fa": "هاچ بک",
+        "keywords": [],
+        "description": "ندارد",
+        "brand_id": 15,
+        "priority": 247,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": null,
+      "body_condition": [
+        {
+          "id": 239,
+          "key_en": "hood",
+          "key_fa": "کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": true
+        },
+        {
+          "id": 240,
+          "key_en": "chassis_front",
+          "key_fa": "شاسی جلو",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 241,
+          "key_en": "chassis_back",
+          "key_fa": "شاسی عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 242,
+          "key_en": "trunk",
+          "key_fa": "صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 243,
+          "key_en": "roof",
+          "key_fa": "سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": true
+        },
+        {
+          "id": 244,
+          "key_en": "mudguard_fl",
+          "key_fa": "گلگیر جلو چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 245,
+          "key_en": "mudguard_fr",
+          "key_fa": "گلگیر جلو راست",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 246,
+          "key_en": "mudguard_bl",
+          "key_fa": "گلگیر عقب چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 247,
+          "key_en": "mudguard_br",
+          "key_fa": "گلگیر عقب راست",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 248,
+          "key_en": "pillar_fl",
+          "key_fa": "ستون جلو چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 249,
+          "key_en": "pillar_fr",
+          "key_fa": "ستون جلو راست",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 250,
+          "key_en": "pillar_bl",
+          "key_fa": "ستون عقب چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 251,
+          "key_en": "pillar_br",
+          "key_fa": "ستون عقب راست",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 252,
+          "key_en": "door_fl",
+          "key_fa": "درب جلو چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 253,
+          "key_en": "door_fr",
+          "key_fa": "درب جلو راست",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 254,
+          "key_en": "door_bl",
+          "key_fa": "درب عقب چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        },
+        {
+          "id": 255,
+          "key_en": "door_br",
+          "key_fa": "درب عقب راست",
+          "car_submission_id": 0,
+          "car_v2_id": 15,
+          "value": false
+        }
+      ],
+      "audits": null,
+      "reject_reason": "",
+      "gallery": null,
+      "notes": null,
+      "price_record": {
+        "id": 15,
+        "car_id": 15,
+        "estimated": "",
+        "user_suggest": "",
+        "sales_person_upper": "",
+        "sales_person_lower": "",
+        "estimated_in_market": "",
+        "lower_suggest": "",
+        "upper_suggest": "",
+        "final": "",
+        "final_customer": "",
+        "kh_suggest_for_buy": "",
+        "kh_suggest_for_sell": "",
+        "revenue": "",
+        "created_at": "2026-02-22T10:34:23.167476Z",
+        "updated_at": "2026-02-22T10:34:23.167476Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 2,
+        "created_at": "2026-02-15T13:23:16.384496Z",
+        "updated_at": "2026-05-17T10:02:26.317339Z",
+        "deleted_at": null,
+        "first_name": "حسین",
+        "last_name": "طالبی",
+        "nickname": "سید",
+        "email": null,
+        "password": "",
+        "phone": "09924985827",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA", "CARMOOD"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "",
+      "labels": null
+    }
+  ],
+  "error": {},
+  "meta": {
+    "total_items": 10,
+    "page": 1,
+    "size": 10,
+    "total_pages": 1
+  }
+}

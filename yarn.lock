@@ -6772,10 +6772,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.11.10":
-  version: 1.11.10
-  resolution: "dayjs@npm:1.11.10"
-  checksum: 10c0/4de9af50639d47df87f2e15fa36bb07e0f9ed1e9c52c6caa1482788ee9a384d668f1dbd00c54f82aaab163db07d61d2899384b8254da3a9184fc6deca080e2fe
+"dayjs@npm:^1.11.13":
+  version: 1.11.21
+  resolution: "dayjs@npm:1.11.21"
+  checksum: 10c0/bd97dfdc4bfea3c66268635690313828b386faa040fbc1f829ff42a2bd748b72c9d9b3c8f9616ce9e61fcb78923f1461a462c969c54b1084458ae1b715898fb0
   languageName: node
   linkType: hard
 
@@ -9635,6 +9635,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jalaliday@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "jalaliday@npm:3.1.1"
+  peerDependencies:
+    dayjs: ^1.11.13
+  checksum: 10c0/1d5915cb57ca1cf2828c5d93d3ab79bc477e6e9127b7657130f5d81ff2520e02b72354df9d2b87ba6de4398528ff3acd01db5c1a03e8671081df59dadb0e52d2
+  languageName: node
+  linkType: hard
+
 "jest-mock@npm:^27.0.6":
   version: 27.5.1
   resolution: "jest-mock@npm:27.5.1"
@@ -10307,7 +10316,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:^4.2.1"
     autoprefixer: "npm:^10.5.0"
     axios: "npm:^1.6.8"
-    dayjs: "npm:^1.11.10"
+    dayjs: "npm:^1.11.13"
     eslint: "npm:^8.57.0"
     eslint-config-airbnb: "npm:19.0.4"
     eslint-config-airbnb-typescript: "npm:^18.0.0"
@@ -10318,6 +10327,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^4.6.0"
     i18next: "npm:^23.10.1"
     identity-obj-proxy: "npm:^3.0.0"
+    jalaliday: "npm:^3.1.1"
     jsdom: "npm:^24.0.0"
     lottie-web: "npm:^5.12.2"
     mantine-form-yup-resolver: "npm:^2.0.0"

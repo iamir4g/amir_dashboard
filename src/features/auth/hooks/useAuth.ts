@@ -41,8 +41,6 @@ function useAuth() {
   > => {
     try {
       const resp = await signInMutation.mutateAsync(values);
-
-      console.log('aaaa: ', resp);
       if (!resp.data.is_registered) {
         return {
           status: 'failed',

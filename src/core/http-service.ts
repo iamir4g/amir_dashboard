@@ -151,6 +151,21 @@ async function updateData<TModel, TResult>(
   return await apiBase<TResult>(url, options);
 }
 
+async function patchData<TModel, TResult>(
+  url: string,
+  data: TModel,
+  headers?: AxiosRequestHeaders,
+  skipAuth?: boolean
+): Promise<TResult> {
+  const options: AxiosRequestConfig & { skipAuth?: boolean } = {
+    headers: headers,
+    method: 'PATCH',
+    data: JSON.stringify(data),
+    skipAuth: skipAuth,
+  };
+  return await apiBase<TResult>(url, options);
+}
+
 async function deleteData(
   url: string,
   headers?: RawAxiosRequestHeaders,
@@ -164,5 +179,5 @@ async function deleteData(
   return await apiBase(url, options);
 }
 
-// export default httpService;
-export { readData, createData, updateData, deleteData, createFormData };
+export default httpService;
+export { readData, createData, updateData, patchData, deleteData, createFormData };

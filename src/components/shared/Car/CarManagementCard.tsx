@@ -1,56 +1,52 @@
-import {
-  Card,
-  Text,
-  Group,
-  Stack,
-  Badge,
-  Divider,
-  Button,
-  ActionIcon,
-  useMantineTheme,
-} from '@mantine/core';
+import { Card, Text, Group, Stack, Badge, Divider, useMantineTheme } from '@mantine/core';
+import type { CarsStatus } from '@/constants/Car.status';
+import CarManagementCardActions, { type CarManagementAction } from './CarManagementCardActions';
+import { useTranslation } from 'react-i18next';
+import { CarValue } from '@/types/Cars';
 
 // ۱. تعریف Type برای پاپس‌ها (TypeScript)
 interface CarCardProps {
-  carModel: string;
-  plateNumber?: string;
-  ownerName: string;
-  ownerPhone: string;
-  price?: string;
-  // فرض می‌کنیم استاتوس‌ها لیستی از وضعیت‌های سیستم فروش شما هستند
+  car: CarValue;
   statuses: { label: string; color: string }[];
-  onDetailsClick?: () => void;
+  status: CarsStatus;
+  onCardClick?: () => void;
+  onAction?: (action: CarManagementAction) => void;
 }
 
-export function CarManagementCard({
-  carModel,
-  plateNumber = '---',
-  ownerName,
-  ownerPhone,
-  price,
-  statuses,
-  onDetailsClick,
-}: CarCardProps) {
+export function CarManagementCard({ car, statuses, status, onCardClick, onAction }: CarCardProps) {
   const theme = useMantineTheme();
-
+  const { t } = useTranslation();
   return (
-    <Card shadow='sm' padding='lg' radius='md' withBorder style={{ overflow: 'visible' }}>
+    <Card
+      shadow='sm'
+      padding='lg'
+      radius='md'
+      withBorder
+      onClick={onCardClick}
+      style={{
+        overflow: 'visible',
+        cursor: onCardClick ? 'pointer' : 'default',
+      }}
+    >
       {/* بخش اصلی: اطلاعات ماشین و مالک */}
       <Stack gap='sm'>
-        {/* هدر کارت: مدل ماشین و دکمه جزییات */}
+        {/* هدر کارت: */}
         <Group justify='space-between' align='flex-start'>
           <Stack gap={2}>
             <Text fw={700} size='lg' c='blue.7'>
-              {carModel}
+              {`${car.brand?.name_fa ?? ''} ${car.model?.name_fa ?? ''} ${car.make_year ?? ''}`.trim()}
             </Text>
-            {price && (
-              <Text size='sm' fw={500} c='dimmed'>
-                قیمت اعلامی: {price}
-              </Text>
-            )}
+
+            <Text size='sm' fw={500} c='dimmed'>
+              کارکرد: {car.mileage}
+            </Text>
+
+            <Text size='sm' fw={500} c='dimmed'>
+              قیمت اعلامی: {car.price_record?.final}
+            </Text>
           </Stack>
           <Badge variant='light' color='gray' size='md' radius='sm'>
-            {plateNumber}
+            {car.code}
           </Badge>
         </Group>
 
@@ -63,7 +59,7 @@ export function CarManagementCard({
               مالک خودرو
             </Text>
             <Text size='sm' fw={600}>
-              {ownerName}
+              {`${car.user?.first_name ?? ''} ${car.user?.last_name ?? ''}`.trim() || '---'}
             </Text>
           </Stack>
 
@@ -72,7 +68,7 @@ export function CarManagementCard({
               شماره تماس
             </Text>
             <Text size='sm' fw={600} lts='1px'>
-              {ownerPhone}
+              {car.user?.phone ?? '---'}
             </Text>
           </Stack>
         </Group>
@@ -87,32 +83,22 @@ export function CarManagementCard({
       >
         <Stack gap='xs'>
           <Text size='xs' fw={700} c='dimmed'>
-            وضعیت‌های معاملاتی:
+            {t('status.statuses')}
           </Text>
 
           {/* نمایش بچ‌ها کنار هم با قابلیت جابجایی در ریسپانسیو */}
           <Group gap={6} wrap='wrap'>
             {statuses.map((status, index) => (
               <Badge key={index} variant='dot' color={status.color} size='sm' radius='xl'>
-                {status.label}
+                {t(`status.${status.label}`)}
               </Badge>
             ))}
           </Group>
+
+          <Divider variant='dashed' />
+          <CarManagementCardActions status={status} carId={car.id} onAction={onAction} />
         </Stack>
       </Card.Section>
-
-      {/* دکمه عملیاتی انتهای کارت (اختیاری) */}
-      <Button
-        variant='light'
-        color='blue'
-        fullWidth
-        mt='md'
-        radius='md'
-        size='xs'
-        onClick={onDetailsClick}
-      >
-        مدیریت و تغییر وضعیت
-      </Button>
     </Card>
   );
 }

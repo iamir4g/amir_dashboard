@@ -15,53 +15,56 @@ export interface GetCarsQueryParams {
   order?: string;
   channel?: string;
   phone?: string;
+  from_date?: string;
+  to_date?: string;
 }
 
 export type CarResponse = BaseResponse<CarValue>;
 export interface CarValue {
-  admin_id: number;
-  attribute_values: AttributeValue[];
-  audits: Audit[];
-  badges: string[];
-  body_condition: BodyCondition[];
-  brand: Brand;
-  brand_id: number;
-  channel: string;
-  city: City;
-  city_id: number;
-  code: string;
-  color: string;
-  created_at: string;
-  deleted_at: string;
-  description: string;
-  feature_attributes: FeatureAttribute[];
-  gallery: GalleryItem[];
-  garage: Garage;
-  id: number;
-  inbound_type: string;
-  is_collectible: boolean;
-  is_divar: boolean;
-  labels: Label[];
-  lead_score: number;
-  make_year: number;
-  method: string;
-  mileage: number;
-  model: CarModel;
-  model_id: number;
-  name: string;
-  notes: Note[];
-  price_record: PriceRecord;
-  reject_reason: string;
-  sell_type: string;
-  showed_up_at: string;
-  status: string;
-  step: string;
-  trim: Trim;
-  trim_id: number;
-  type: string;
-  updated_at: string;
-  user: User;
-  user_id: number;
+  admin_id?: number | null;
+  attribute_values?: AttributeValue[] | null;
+  audits?: Audit[] | null;
+  badges?: string[] | null;
+  body_condition?: BodyCondition[] | null;
+  brand?: Brand;
+  brand_id?: number;
+  channel?: string;
+  city?: City;
+  city_id?: number;
+  code?: string;
+  color?: string;
+  created_at?: string;
+  deleted_at?: string | null;
+  description?: string;
+  feature_attributes?: FeatureAttribute[] | null;
+  gallery?: GalleryItem[] | null;
+  garage?: Garage | null;
+  id?: number;
+  inbound_type?: string;
+  is_collectible?: boolean;
+  is_divar?: boolean;
+  labels?: Label[] | null;
+  lead_score?: number;
+  make_year?: number;
+  method?: string;
+  mileage?: number;
+  model?: CarModel;
+  model_id?: number;
+  name?: string;
+  notes?: Note[] | null;
+  price_record?: PriceRecord | null;
+  reject_reason?: string;
+  sell_type?: string;
+  showed_up_at?: string | null;
+  status?: string;
+  step?: string;
+  trim?: Trim | null;
+  trim_id?: number | null;
+  type?: string;
+  updated_at?: string;
+  user?: User | null;
+  user_id?: number;
+  vin?: string;
 }
 
 // ---- زیرمجموعه‌های ساختار ماشین (Sub-Interfaces) ----
@@ -71,7 +74,7 @@ interface AttributeValue {
   car_id: number;
   car_v2_id: number;
   created_at: string;
-  deleted_at: string;
+  deleted_at: string | null;
   description: string;
   id: number;
   is_show: boolean;
@@ -90,7 +93,7 @@ interface Audit {
     code: string;
     color: string;
     created_at: string;
-    deleted_at: string;
+    deleted_at: string | null;
     description: string;
     garage_id: number;
     id: number;
@@ -117,7 +120,7 @@ interface Audit {
     vin: string;
   };
   created_at: string;
-  deleted_at: string;
+  deleted_at: string | null;
   id: number;
   meta: {
     admin_id: number;
@@ -143,7 +146,7 @@ interface BodyCondition {
 
 interface Brand {
   created_at: string;
-  deleted_at: string;
+  deleted_at: string | null;
   description: string;
   id: number;
   keywords: string[];
@@ -174,7 +177,7 @@ interface GalleryItem {
   car_id: number;
   car_v2_id: number;
   created_at: string;
-  deleted_at: string;
+  deleted_at: string | null;
   description: string;
   group_gallery_id: number;
   id: number;
@@ -199,7 +202,7 @@ interface Garage {
   capacity: number;
   channel: string;
   created_at: string;
-  deleted_at: string;
+  deleted_at: string | null;
   description: string;
   id: number;
   image_map: string;
@@ -225,7 +228,7 @@ interface Label {
 interface CarModel {
   brand_id: number;
   created_at: string;
-  deleted_at: string;
+  deleted_at: string | null;
   description: string;
   id: number;
   keywords: string[];
@@ -236,11 +239,11 @@ interface CarModel {
   updated_at: string;
 }
 
-interface Note {
-  admin_id: number;
+export interface Note {
+  admin_id: number | null;
   car_v2_id: number;
   created_at: string;
-  deleted_at: string;
+  deleted_at: string | null;
   id: number;
   text: string;
   updated_at: string;
@@ -249,7 +252,7 @@ interface Note {
 interface PriceRecord {
   car_id: number;
   created_at: string;
-  deleted_at: string;
+  deleted_at: string | null;
   estimated: string;
   estimated_in_market: string;
   final: string;
@@ -268,7 +271,7 @@ interface PriceRecord {
 
 interface Trim {
   created_at: string;
-  deleted_at: string;
+  deleted_at: string | null;
   description: string;
   id: number;
   keywords: string[];
@@ -282,8 +285,8 @@ interface User {
   address: string;
   city: string;
   created_at: string;
-  deleted_at: string;
-  email: string;
+  deleted_at: string | null;
+  email: string | null;
   fcm_token: string;
   first_name: string;
   id: number;

@@ -24,6 +24,12 @@ export const protectedRoutes = [
     authority: [],
   },
   {
+    key: 'carDeatils',
+    path: '/car-deatils/:id',
+    component: lazy(() => import('@/features/card-detailes/pages/CarDeatils')),
+    authority: [],
+  },
+  {
     key: 'supplyCenterReservations',
     path: '/supply/center-reservations',
     component: lazy(() => import('@/features/supply/pages/CenterReservations')),
