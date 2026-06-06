@@ -1,5 +1,6 @@
 import { modals } from '@mantine/modals';
 import { Text } from '@mantine/core';
+import type { MouseEvent as ReactMouseEvent } from 'react';
 
 type ConfirmActionModalParams = {
   actionLabel: string;
@@ -12,6 +13,7 @@ export const openConfirmActionModal = ({ actionLabel, onConfirm }: ConfirmAction
     children: <Text size='sm'>آیا از انجام عملیات «{actionLabel}» مطمئنید؟</Text>,
     labels: { confirm: 'بله', cancel: 'خیر' },
     onConfirm,
+    onMouseDown: (e: ReactMouseEvent) => e.stopPropagation(),
+    onClick: (e: ReactMouseEvent) => e.stopPropagation(),
   });
 };
-

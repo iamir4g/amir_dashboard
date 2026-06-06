@@ -62,7 +62,7 @@ export default function CarManagementCardActions({
   if (actions.length === 0) return null;
 
   return (
-    <>
+    <div onMouseDown={(e) => e.stopPropagation()} onClick={(e) => e.stopPropagation()}>
       <Group justify='flex-end' gap='xs' wrap='wrap'>
         {actions.map((action) => (
           <Button
@@ -106,7 +106,6 @@ export default function CarManagementCardActions({
               }
 
               if (status === INSPECTION_BOOKED && action.id === 'show_up') {
-                // e.stopPropagation();
                 setOperatorsOpened(true);
                 return;
               }
@@ -147,6 +146,6 @@ export default function CarManagementCardActions({
           onSuccess={() => onAction?.('show_up')}
         />
       ) : null}
-    </>
+    </div>
   );
 }

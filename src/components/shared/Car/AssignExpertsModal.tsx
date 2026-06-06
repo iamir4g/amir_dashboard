@@ -87,50 +87,55 @@ export default function AssignExpertsModal({
 
   return (
     <Modal opened={opened} onClose={handleClose} title='انتخاب کارشناس‌ها' centered>
-      <form onSubmit={form.onSubmit(handleSubmit)}>
-        <Stack gap='sm'>
-          {error ? (
-            <Text c='red' size='sm'>
-              {error}
-            </Text>
-          ) : null}
+      <div onMouseDown={(e) => e.stopPropagation()} onClick={(e) => e.stopPropagation()}>
+        <form onSubmit={form.onSubmit(handleSubmit)}>
+          <Stack gap='sm'>
+            {error ? (
+              <Text c='red' size='sm'>
+                {error}
+              </Text>
+            ) : null}
 
-          <Select
-            label='کارشناس تامین'
-            placeholder='اختیاری'
-            searchable
-            clearable
-            comboboxProps={{ withinPortal: false }}
-            data={adminsOptions}
-            value={form.values.supply_expert}
-            onChange={(value) => form.setFieldValue('supply_expert', value ?? '')}
-            disabled={adminsQuery.isLoading}
-          />
+            <Select
+              label='کارشناس تامین'
+              placeholder='اختیاری'
+              searchable
+              clearable
+              comboboxProps={{ withinPortal: false }}
+              data={adminsOptions}
+              value={form.values.supply_expert}
+              onChange={(value) => form.setFieldValue('supply_expert', value ?? '')}
+              disabled={adminsQuery.isLoading}
+            />
 
-          <Select
-            label='کارشناس فنی'
-            placeholder='انتخاب کارشناس فنی'
-            withAsterisk
-            searchable
-            clearable
-            comboboxProps={{ withinPortal: false }}
-            data={adminsOptions}
-            value={form.values.technical_expert}
-            onChange={(value) => form.setFieldValue('technical_expert', value ?? '')}
-            error={form.errors.technical_expert}
-            disabled={adminsQuery.isLoading}
-          />
+            <Select
+              label='کارشناس فنی'
+              placeholder='انتخاب کارشناس فنی'
+              withAsterisk
+              searchable
+              clearable
+              comboboxProps={{ withinPortal: false }}
+              data={adminsOptions}
+              value={form.values.technical_expert}
+              onChange={(value) => form.setFieldValue('technical_expert', value ?? '')}
+              error={form.errors.technical_expert}
+              disabled={adminsQuery.isLoading}
+            />
 
-          <Group justify='flex-end'>
-            <Button variant='default' onClick={handleClose}>
-              انصراف
-            </Button>
-            <Button type='submit' loading={postOperatorsMutation.isPending || patchCarMutation.isPending}>
-              ثبت
-            </Button>
-          </Group>
-        </Stack>
-      </form>
+            <Group justify='flex-end'>
+              <Button variant='default' onClick={handleClose}>
+                انصراف
+              </Button>
+              <Button
+                type='submit'
+                loading={postOperatorsMutation.isPending || patchCarMutation.isPending}
+              >
+                ثبت
+              </Button>
+            </Group>
+          </Stack>
+        </form>
+      </div>
     </Modal>
   );
 }

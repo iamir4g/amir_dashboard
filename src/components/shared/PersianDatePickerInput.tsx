@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Popover, TextInput } from '@mantine/core';
-import { DatePicker } from '@mantine/dates';
+import JalaliCalendar from '@/components/shared/JalaliCalendar';
 
 type PersianDatePickerInputProps = {
   label?: string;
@@ -50,7 +50,7 @@ export default function PersianDatePickerInput({
         />
       </Popover.Target>
       <Popover.Dropdown>
-        <DatePicker
+        <JalaliCalendar
           value={value}
           onChange={(next) => {
             onChange(next);

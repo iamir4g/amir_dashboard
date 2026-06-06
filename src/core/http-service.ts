@@ -52,9 +52,9 @@ httpService.interceptors.request.use(
       config.headers[REQUEST_HEADER_AUTH_KEY] = `${TOKEN_TYPE}${tokenToUse}`;
     }
 
-    if (adminIdFromStorage) {
-      config.headers.admin_id = adminIdFromStorage;
-    }
+    // if (adminIdFromStorage) {
+    //   config.headers['x-admin-id'] = adminIdFromStorage;
+    // }
 
     return config;
   },
