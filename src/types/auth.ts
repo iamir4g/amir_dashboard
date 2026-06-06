@@ -29,6 +29,7 @@ export type VerifyOtp = {
   access_token?: string;
   refresh_token?: string;
   user_info?: UserInfo;
+  admin_info?: UserInfo;
 };
 export type VerifyOtpRS = BaseResponse<VerifyOtp>;
 

@@ -92,10 +92,13 @@ function useAuth() {
         };
       }
 
+      const userInfo = resp.data.user_info ?? resp.data.admin_info ?? {};
+      const isDepositVerified = userInfo.is_deposit_verified ?? true;
+
       const authData: AuthStorageData = {
         access_token: resp.data.access_token,
         refresh_token: resp.data.refresh_token,
-        user_info: resp.data.user_info || {},
+        user_info: userInfo,
       };
 
       localStorage.setItem(AUTH_DATA_STORAGE_KEY, JSON.stringify(authData));
@@ -107,27 +110,27 @@ function useAuth() {
         expireTime: 0,
       });
 
-      if (resp.data.user_info?.id !== undefined) {
-        setUserId(String(resp.data.user_info?.id));
+      if (userInfo.id !== undefined) {
+        setUserId(String(userInfo.id));
       }
 
       setUser({
-        id: resp.data.user_info?.id ?? 0,
-        firstName: resp.data.user_info?.first_name,
-        lastName: resp.data.user_info?.last_name,
-        phone: resp.data.user_info?.phone ?? '',
-        nickname: resp.data.user_info?.nickname,
-        type: resp.data.user_info?.type,
-        isDepositVerified: resp.data.user_info?.is_deposit_verified,
-        isDepositLocked: resp.data.user_info?.is_deposit_locked,
-        status: resp.data.user_info?.status,
-        kyc: resp.data.user_info?.kyc,
-        role: resp.data.user_info?.role || [],
+        id: userInfo.id ?? 0,
+        firstName: userInfo.first_name,
+        lastName: userInfo.last_name,
+        phone: userInfo.phone ?? '',
+        nickname: userInfo.nickname,
+        type: userInfo.type,
+        isDepositVerified,
+        isDepositLocked: userInfo.is_deposit_locked ?? false,
+        status: userInfo.status,
+        kyc: userInfo.kyc ?? false,
+        role: userInfo.role ?? [],
       });
 
       const redirectUrl = query.get(REDIRECT_URL_KEY);
       navigate(
-        resp.data.user_info?.is_deposit_verified
+        isDepositVerified
           ? redirectUrl || appConfig.authenticatedEntryPath
           : `/kyc${redirectUrl ? `?${REDIRECT_URL_KEY}=${encodeURIComponent(redirectUrl)}` : ''}`
       );
