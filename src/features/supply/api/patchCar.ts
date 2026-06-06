@@ -4,6 +4,12 @@ import { useMutation, UseMutationResult } from '@tanstack/react-query';
 export type PatchCarBody = {
   admin_id?: number;
   status?: string;
+  brand_id?: number;
+  model_id?: number;
+  trim_id?: number;
+  make_year?: number;
+  color?: string;
+  mileage?: number;
 };
 
 export type PatchCarParams = {

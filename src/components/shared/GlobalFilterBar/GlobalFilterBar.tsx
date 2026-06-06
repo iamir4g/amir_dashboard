@@ -1,9 +1,10 @@
-import { Button, Collapse, Group, Paper, Popover, SimpleGrid, TextInput } from '@mantine/core';
+import { Button, Collapse, Group, Paper, SimpleGrid, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useMediaQuery } from '@mantine/hooks';
-import { DatePicker } from '@mantine/dates';
 import React, { useMemo, useState } from 'react';
 import type { GetCarsQueryParams } from '@/types/Cars'; // رفرنس به فایل تایپ پروژه شما
+import PersianDatePickerInput from '@/components/shared/PersianDatePickerInput';
+import { toEnglishDigits } from '@/utils/digits';
 
 type GlobalFilterBarProps = {
   initialValues?: Partial<GetCarsQueryParams>;
@@ -37,32 +38,17 @@ export default function GlobalFilterBar({ initialValues, onSubmit }: GlobalFilte
 
   const [advancedOpened, setAdvancedOpened] = useState<boolean>(hasAdvancedInitialValues);
 
-  const formatPersianDate = useMemo(() => {
-    const formatter = new Intl.DateTimeFormat('fa-IR-u-ca-persian', {
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-    });
-
-    return (value: Date | null) => (value ? formatter.format(value) : '');
-  }, []);
-
   const parseIsoDate = (value?: string) => {
     if (!value) return null;
-    const date = new Date(value);
-    if (!Number.isFinite(date.getTime())) return null;
-    return date;
+    const normalized = value.trim();
+    if (!normalized) return null;
+    return normalized;
   };
 
-  const toIsoDate = (value: Date) => value.toISOString().slice(0, 10);
-
-  const [fromDate, setFromDate] = useState<Date | null>(() =>
+  const [fromDate, setFromDate] = useState<string | null>(() =>
     parseIsoDate(initialValues?.from_date)
   );
-  const [toDate, setToDate] = useState<Date | null>(() => parseIsoDate(initialValues?.to_date));
-
-  const [fromOpened, setFromOpened] = useState(false);
-  const [toOpened, setToOpened] = useState(false);
+  const [toDate, setToDate] = useState<string | null>(() => parseIsoDate(initialValues?.to_date));
 
   const form = useForm<GetCarsQueryParams>({
     initialValues: {
@@ -89,8 +75,8 @@ export default function GlobalFilterBar({ initialValues, onSubmit }: GlobalFilte
             Object.entries(values).filter(([_, v]) => v !== '' && v !== undefined && v !== 'all')
           ) as GetCarsQueryParams;
 
-          if (fromDate) cleanedFilters.from_date = toIsoDate(fromDate);
-          if (toDate) cleanedFilters.to_date = toIsoDate(toDate);
+          if (fromDate) cleanedFilters.from_date = fromDate;
+          if (toDate) cleanedFilters.to_date = toDate;
 
           onSubmit?.(cleanedFilters);
         })}
@@ -100,6 +86,9 @@ export default function GlobalFilterBar({ initialValues, onSubmit }: GlobalFilte
             label='شماره تماس'
             placeholder='مثلاً 09123456789'
             {...form.getInputProps('phone')}
+            onChange={(event) => {
+              form.setFieldValue('phone', toEnglishDigits(event.currentTarget.value));
+            }}
           />
           <TextInput
             label='کد خودرو (Code)'
@@ -123,17 +112,26 @@ export default function GlobalFilterBar({ initialValues, onSubmit }: GlobalFilte
               label='شناسه پارکینگ (Garage ID)'
               placeholder='کد پارکینگ'
               {...form.getInputProps('garage_id')}
+              onChange={(event) => {
+                form.setFieldValue('garage_id', toEnglishDigits(event.currentTarget.value));
+              }}
             />
 
             <TextInput
               label='شناسه ثبت (Submission ID)'
               placeholder='مثلاً 4567'
               {...form.getInputProps('car_submission_id')}
+              onChange={(event) => {
+                form.setFieldValue('car_submission_id', toEnglishDigits(event.currentTarget.value));
+              }}
             />
             <TextInput
               label='شناسه کاربر (User ID)'
               placeholder='کد کاربر'
               {...form.getInputProps('user_id')}
+              onChange={(event) => {
+                form.setFieldValue('user_id', toEnglishDigits(event.currentTarget.value));
+              }}
             />
             <TextInput
               label='کانال ورودی (Channel)'
@@ -154,53 +152,28 @@ export default function GlobalFilterBar({ initialValues, onSubmit }: GlobalFilte
               label='شناسه‌ها (Ids)'
               placeholder='شناسه‌ها با کاما'
               {...form.getInputProps('ids')}
+              onChange={(event) => {
+                form.setFieldValue('ids', toEnglishDigits(event.currentTarget.value));
+              }}
             />
             <TextInput
               label='مرتب‌سازی (Order)'
               placeholder='نحوه مرتب‌سازی'
               {...form.getInputProps('order')}
             />
-            <Popover opened={fromOpened} onChange={setFromOpened} position='bottom-start' withArrow>
-              <Popover.Target>
-                <TextInput
-                  label='از تاریخ'
-                  placeholder='انتخاب تاریخ'
-                  readOnly
-                  value={formatPersianDate(fromDate)}
-                  onClick={() => setFromOpened(true)}
-                />
-              </Popover.Target>
-              <Popover.Dropdown>
-                <DatePicker
-                  value={fromDate}
-                  onChange={(value) => {
-                    setFromDate(value);
-                    setFromOpened(false);
-                  }}
-                />
-              </Popover.Dropdown>
-            </Popover>
+            <PersianDatePickerInput
+              label='از تاریخ'
+              placeholder='انتخاب تاریخ'
+              value={fromDate}
+              onChange={setFromDate}
+            />
 
-            <Popover opened={toOpened} onChange={setToOpened} position='bottom-start' withArrow>
-              <Popover.Target>
-                <TextInput
-                  label='تا تاریخ'
-                  placeholder='انتخاب تاریخ'
-                  readOnly
-                  value={formatPersianDate(toDate)}
-                  onClick={() => setToOpened(true)}
-                />
-              </Popover.Target>
-              <Popover.Dropdown>
-                <DatePicker
-                  value={toDate}
-                  onChange={(value) => {
-                    setToDate(value);
-                    setToOpened(false);
-                  }}
-                />
-              </Popover.Dropdown>
-            </Popover>
+            <PersianDatePickerInput
+              label='تا تاریخ'
+              placeholder='انتخاب تاریخ'
+              value={toDate}
+              onChange={setToDate}
+            />
           </SimpleGrid>
         </Collapse>
 

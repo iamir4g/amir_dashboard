@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
+  ActionIcon,
   AspectRatio,
   Badge,
   Button,
@@ -17,20 +18,30 @@ import {
   SimpleGrid,
   Stack,
   Text,
+  TextInput,
   Textarea,
   Title,
 } from '@mantine/core';
+import { IconCheck, IconPencil, IconX } from '@tabler/icons-react';
 import { useGetCarsQuery } from '@/features/supply/api/getCars';
 import { useGetAllNoteCarQuery } from '@/features/supply/api/getAllNoteCar';
 import { usePostNoteCarMutation } from '@/features/supply/api/postNoteCar';
 import type { Note } from '@/types/Cars';
 import { AUTH_DATA_STORAGE_KEY } from '@/constants/app.constant';
+import BookingInspectionSection from '@/features/card-detailes/components/BookingInspectionSection';
+import { toEnglishDigits, toPersianDigits } from '@/utils/digits';
+import { useTranslation } from 'react-i18next';
+import { useQueryClient } from '@tanstack/react-query';
+import { usePatchCarMutation } from '@/features/supply/api/patchCar';
 
 export default function CarDeatils() {
   const navigate = useNavigate();
   const { id } = useParams();
   const numericId = Number(id);
   const defaultPageSize = 10;
+  const { t } = useTranslation();
+  const queryClient = useQueryClient();
+  const patchCarMutation = usePatchCarMutation();
 
   const [notesPage, setNotesPage] = useState(1);
   const [noteText, setNoteText] = useState('');
@@ -47,6 +58,12 @@ export default function CarDeatils() {
     }
   }, []);
 
+  type EditableFieldKey = 'brand_id' | 'model_id' | 'trim_id' | 'make_year' | 'color' | 'mileage';
+
+  const [editingField, setEditingField] = useState<EditableFieldKey | null>(null);
+  const [draftValue, setDraftValue] = useState('');
+  const [editError, setEditError] = useState('');
+
   const { data, isLoading } = useGetCarsQuery(
     Number.isFinite(numericId) ? { ids: String(numericId) } : undefined
   );
@@ -61,6 +78,101 @@ export default function CarDeatils() {
       return date.toLocaleString('fa-IR-u-ca-persian');
     };
   }, []);
+
+  const formatPriceValue = useMemo(() => {
+    return (value?: string | null) => {
+      const raw = String(value ?? '').trim();
+      if (!raw) return '---';
+      const normalized = raw.replace(/,/g, '');
+      const n = Number(normalized);
+      if (Number.isFinite(n)) return n.toLocaleString('fa-IR');
+      return toPersianDigits(raw);
+    };
+  }, []);
+
+  const badgeLabel = useMemo(() => {
+    return (value?: string | null) => {
+      const raw = String(value ?? '').trim();
+      if (!raw) return '';
+      const key = raw.startsWith('badge.')
+        ? raw
+        : raw.startsWith('Badge')
+          ? `badge.${raw}`
+          : `badge.Badge${raw}`;
+      const translated = t(key);
+      if (translated && translated !== key) return translated;
+      return raw;
+    };
+  }, [t]);
+
+  const startEdit = (field: EditableFieldKey) => {
+    if (!car) return;
+    const current =
+      field === 'brand_id'
+        ? car.brand_id
+        : field === 'model_id'
+          ? car.model_id
+          : field === 'trim_id'
+            ? car.trim_id
+            : field === 'make_year'
+              ? car.make_year
+              : field === 'mileage'
+                ? car.mileage
+                : car.color;
+    setEditingField(field);
+    setEditError('');
+    setDraftValue(current === undefined || current === null ? '' : String(current));
+  };
+
+  const cancelEdit = () => {
+    setEditingField(null);
+    setDraftValue('');
+    setEditError('');
+  };
+
+  const submitEdit = async () => {
+    if (!car) return;
+    if (!editingField) return;
+    if (!Number.isFinite(adminId)) return;
+
+    setEditError('');
+    const raw = draftValue.trim();
+
+    const numericKeys: EditableFieldKey[] = [
+      'brand_id',
+      'model_id',
+      'trim_id',
+      'make_year',
+      'mileage',
+    ];
+    const isNumeric = numericKeys.includes(editingField);
+
+    const body: Record<string, unknown> = { admin_id: adminId };
+
+    if (isNumeric) {
+      const normalized = toEnglishDigits(raw);
+      const n = Number(normalized);
+      if (!Number.isFinite(n)) {
+        setEditError('مقدار عددی نامعتبر است');
+        return;
+      }
+      body[editingField] = n;
+    } else {
+      if (!raw) {
+        setEditError('مقدار نمی‌تواند خالی باشد');
+        return;
+      }
+      body[editingField] = raw;
+    }
+
+    await patchCarMutation.mutateAsync({
+      id: numericId,
+      body: body as any,
+    });
+
+    await queryClient.invalidateQueries({ queryKey: ['cars', 'list'] });
+    cancelEdit();
+  };
 
   const galleryUrls = useMemo(() => {
     const raw = car?.gallery ?? [];
@@ -206,10 +318,13 @@ export default function CarDeatils() {
             <Title order={4}>
               {car.brand?.name_fa} {car.model?.name_fa} {car.make_year}
             </Title>
-            <Badge variant='light'>{car.status}</Badge>
+            <Badge variant='light'>{car.status ? t(`status.${car.status}`) : ''}</Badge>
           </Group>
+          <Text fw={800} size='lg'>
+            {car.code}
+          </Text>
           <Text size='sm' c='dimmed'>
-            {car.code} • {car.city?.name} • {formatDateTime(car.created_at)}
+            {car.city?.name} • {formatDateTime(car.created_at)}
           </Text>
         </Stack>
         <Button variant='default' onClick={() => navigate(-1)}>
@@ -223,10 +338,212 @@ export default function CarDeatils() {
             <Card withBorder radius='md' p='lg'>
               <Group justify='space-between' align='center'>
                 <Text fw={700}>مشخصات کلی</Text>
-                <Badge variant='outline'>{car.channel}</Badge>
+                <Group gap={6} wrap='wrap' justify='flex-end'>
+                  <Badge variant='outline'>{car.channel}</Badge>
+                  {(car.badges ?? []).map((b) => (
+                    <Badge key={b} variant='light' color='gray'>
+                      {badgeLabel(b)}
+                    </Badge>
+                  ))}
+                </Group>
               </Group>
               <Divider my='md' />
               <SimpleGrid cols={{ base: 1, sm: 2 }} spacing='sm'>
+                <Group justify='space-between' align='flex-start'>
+                  <Text c='dimmed' size='sm'>
+                    برند
+                  </Text>
+                  {editingField === 'brand_id' ? (
+                    <Stack gap={4} align='flex-end'>
+                      <Group gap='xs' wrap='nowrap'>
+                        <TextInput
+                          value={draftValue}
+                          onChange={(e) => setDraftValue(toEnglishDigits(e.currentTarget.value))}
+                          size='xs'
+                          w={140}
+                          inputMode='numeric'
+                        />
+                        <ActionIcon
+                          color='green'
+                          variant='light'
+                          onClick={submitEdit}
+                          loading={patchCarMutation.isPending}
+                        >
+                          <IconCheck size={16} />
+                        </ActionIcon>
+                        <ActionIcon color='red' variant='light' onClick={cancelEdit}>
+                          <IconX size={16} />
+                        </ActionIcon>
+                      </Group>
+                      {editError ? (
+                        <Text c='red' size='xs'>
+                          {editError}
+                        </Text>
+                      ) : null}
+                    </Stack>
+                  ) : (
+                    <Group gap={6} wrap='nowrap'>
+                      <Text fw={600} size='sm'>
+                        {car.brand?.name_fa ?? '---'}
+                        {car.brand_id ? ` (${toPersianDigits(String(car.brand_id))})` : ''}
+                      </Text>
+                      <ActionIcon
+                        variant='subtle'
+                        onClick={() => startEdit('brand_id')}
+                        disabled={!Number.isFinite(adminId)}
+                      >
+                        <IconPencil size={16} />
+                      </ActionIcon>
+                    </Group>
+                  )}
+                </Group>
+
+                <Group justify='space-between' align='flex-start'>
+                  <Text c='dimmed' size='sm'>
+                    مدل
+                  </Text>
+                  {editingField === 'model_id' ? (
+                    <Stack gap={4} align='flex-end'>
+                      <Group gap='xs' wrap='nowrap'>
+                        <TextInput
+                          value={draftValue}
+                          onChange={(e) => setDraftValue(toEnglishDigits(e.currentTarget.value))}
+                          size='xs'
+                          w={140}
+                          inputMode='numeric'
+                        />
+                        <ActionIcon
+                          color='green'
+                          variant='light'
+                          onClick={submitEdit}
+                          loading={patchCarMutation.isPending}
+                        >
+                          <IconCheck size={16} />
+                        </ActionIcon>
+                        <ActionIcon color='red' variant='light' onClick={cancelEdit}>
+                          <IconX size={16} />
+                        </ActionIcon>
+                      </Group>
+                      {editError ? (
+                        <Text c='red' size='xs'>
+                          {editError}
+                        </Text>
+                      ) : null}
+                    </Stack>
+                  ) : (
+                    <Group gap={6} wrap='nowrap'>
+                      <Text fw={600} size='sm'>
+                        {car.model?.name_fa ?? '---'}
+                        {car.model_id ? ` (${toPersianDigits(String(car.model_id))})` : ''}
+                      </Text>
+                      <ActionIcon
+                        variant='subtle'
+                        onClick={() => startEdit('model_id')}
+                        disabled={!Number.isFinite(adminId)}
+                      >
+                        <IconPencil size={16} />
+                      </ActionIcon>
+                    </Group>
+                  )}
+                </Group>
+
+                <Group justify='space-between' align='flex-start'>
+                  <Text c='dimmed' size='sm'>
+                    تریم
+                  </Text>
+                  {editingField === 'trim_id' ? (
+                    <Stack gap={4} align='flex-end'>
+                      <Group gap='xs' wrap='nowrap'>
+                        <TextInput
+                          value={draftValue}
+                          onChange={(e) => setDraftValue(toEnglishDigits(e.currentTarget.value))}
+                          size='xs'
+                          w={140}
+                          inputMode='numeric'
+                        />
+                        <ActionIcon
+                          color='green'
+                          variant='light'
+                          onClick={submitEdit}
+                          loading={patchCarMutation.isPending}
+                        >
+                          <IconCheck size={16} />
+                        </ActionIcon>
+                        <ActionIcon color='red' variant='light' onClick={cancelEdit}>
+                          <IconX size={16} />
+                        </ActionIcon>
+                      </Group>
+                      {editError ? (
+                        <Text c='red' size='xs'>
+                          {editError}
+                        </Text>
+                      ) : null}
+                    </Stack>
+                  ) : (
+                    <Group gap={6} wrap='nowrap'>
+                      <Text fw={600} size='sm'>
+                        {car.trim?.name_fa ?? '---'}
+                        {car.trim_id ? ` (${toPersianDigits(String(car.trim_id))})` : ''}
+                      </Text>
+                      <ActionIcon
+                        variant='subtle'
+                        onClick={() => startEdit('trim_id')}
+                        disabled={!Number.isFinite(adminId)}
+                      >
+                        <IconPencil size={16} />
+                      </ActionIcon>
+                    </Group>
+                  )}
+                </Group>
+
+                <Group justify='space-between' align='flex-start'>
+                  <Text c='dimmed' size='sm'>
+                    سال ساخت
+                  </Text>
+                  {editingField === 'make_year' ? (
+                    <Stack gap={4} align='flex-end'>
+                      <Group gap='xs' wrap='nowrap'>
+                        <TextInput
+                          value={draftValue}
+                          onChange={(e) => setDraftValue(toEnglishDigits(e.currentTarget.value))}
+                          size='xs'
+                          w={140}
+                          inputMode='numeric'
+                        />
+                        <ActionIcon
+                          color='green'
+                          variant='light'
+                          onClick={submitEdit}
+                          loading={patchCarMutation.isPending}
+                        >
+                          <IconCheck size={16} />
+                        </ActionIcon>
+                        <ActionIcon color='red' variant='light' onClick={cancelEdit}>
+                          <IconX size={16} />
+                        </ActionIcon>
+                      </Group>
+                      {editError ? (
+                        <Text c='red' size='xs'>
+                          {editError}
+                        </Text>
+                      ) : null}
+                    </Stack>
+                  ) : (
+                    <Group gap={6} wrap='nowrap'>
+                      <Text fw={600} size='sm'>
+                        {car.make_year ? toPersianDigits(String(car.make_year)) : '---'}
+                      </Text>
+                      <ActionIcon
+                        variant='subtle'
+                        onClick={() => startEdit('make_year')}
+                        disabled={!Number.isFinite(adminId)}
+                      >
+                        <IconPencil size={16} />
+                      </ActionIcon>
+                    </Group>
+                  )}
+                </Group>
+
                 <Group justify='space-between'>
                   <Text c='dimmed' size='sm'>
                     مالک
@@ -259,21 +576,99 @@ export default function CarDeatils() {
                     {car.inbound_type}
                   </Text>
                 </Group>
-                <Group justify='space-between'>
+                <Group justify='space-between' align='flex-start'>
                   <Text c='dimmed' size='sm'>
                     رنگ
                   </Text>
-                  <Text fw={600} size='sm'>
-                    {car.color}
-                  </Text>
+                  {editingField === 'color' ? (
+                    <Stack gap={4} align='flex-end'>
+                      <Group gap='xs' wrap='nowrap'>
+                        <TextInput
+                          value={draftValue}
+                          onChange={(e) => setDraftValue(e.currentTarget.value)}
+                          size='xs'
+                          w={140}
+                        />
+                        <ActionIcon
+                          color='green'
+                          variant='light'
+                          onClick={submitEdit}
+                          loading={patchCarMutation.isPending}
+                        >
+                          <IconCheck size={16} />
+                        </ActionIcon>
+                        <ActionIcon color='red' variant='light' onClick={cancelEdit}>
+                          <IconX size={16} />
+                        </ActionIcon>
+                      </Group>
+                      {editError ? (
+                        <Text c='red' size='xs'>
+                          {editError}
+                        </Text>
+                      ) : null}
+                    </Stack>
+                  ) : (
+                    <Group gap={6} wrap='nowrap'>
+                      <Text fw={600} size='sm'>
+                        {car.color ?? '---'}
+                      </Text>
+                      <ActionIcon
+                        variant='subtle'
+                        onClick={() => startEdit('color')}
+                        disabled={!Number.isFinite(adminId)}
+                      >
+                        <IconPencil size={16} />
+                      </ActionIcon>
+                    </Group>
+                  )}
                 </Group>
-                <Group justify='space-between'>
+
+                <Group justify='space-between' align='flex-start'>
                   <Text c='dimmed' size='sm'>
                     کارکرد
                   </Text>
-                  <Text fw={600} size='sm'>
-                    {Number(car.mileage ?? 0).toLocaleString('fa-IR')} کیلومتر
-                  </Text>
+                  {editingField === 'mileage' ? (
+                    <Stack gap={4} align='flex-end'>
+                      <Group gap='xs' wrap='nowrap'>
+                        <TextInput
+                          value={draftValue}
+                          onChange={(e) => setDraftValue(toEnglishDigits(e.currentTarget.value))}
+                          size='xs'
+                          w={140}
+                          inputMode='numeric'
+                        />
+                        <ActionIcon
+                          color='green'
+                          variant='light'
+                          onClick={submitEdit}
+                          loading={patchCarMutation.isPending}
+                        >
+                          <IconCheck size={16} />
+                        </ActionIcon>
+                        <ActionIcon color='red' variant='light' onClick={cancelEdit}>
+                          <IconX size={16} />
+                        </ActionIcon>
+                      </Group>
+                      {editError ? (
+                        <Text c='red' size='xs'>
+                          {editError}
+                        </Text>
+                      ) : null}
+                    </Stack>
+                  ) : (
+                    <Group gap={6} wrap='nowrap'>
+                      <Text fw={600} size='sm'>
+                        {Number(car.mileage ?? 0).toLocaleString('fa-IR')} کیلومتر
+                      </Text>
+                      <ActionIcon
+                        variant='subtle'
+                        onClick={() => startEdit('mileage')}
+                        disabled={!Number.isFinite(adminId)}
+                      >
+                        <IconPencil size={16} />
+                      </ActionIcon>
+                    </Group>
+                  )}
                 </Group>
               </SimpleGrid>
               <Divider my='md' />
@@ -295,6 +690,116 @@ export default function CarDeatils() {
               </Text>
               <Text size='sm'>{car.description}</Text>
             </Card>
+
+            <Card withBorder radius='md' p='lg'>
+              <Text fw={700}>قیمت</Text>
+              <Divider my='md' />
+              <SimpleGrid cols={{ base: 1, sm: 2 }} spacing='sm'>
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    قیمت نهایی
+                  </Text>
+                  <Text fw={700} size='sm'>
+                    {formatPriceValue(car.price_record?.final)}
+                  </Text>
+                </Group>
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    قیمت نهایی مشتری
+                  </Text>
+                  <Text fw={700} size='sm'>
+                    {formatPriceValue(car.price_record?.final_customer)}
+                  </Text>
+                </Group>
+
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    برآورد
+                  </Text>
+                  <Text fw={600} size='sm'>
+                    {formatPriceValue(car.price_record?.estimated)}
+                  </Text>
+                </Group>
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    برآورد بازار
+                  </Text>
+                  <Text fw={600} size='sm'>
+                    {formatPriceValue(car.price_record?.estimated_in_market)}
+                  </Text>
+                </Group>
+
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    پیشنهاد کاربر
+                  </Text>
+                  <Text fw={600} size='sm'>
+                    {formatPriceValue(car.price_record?.user_suggest)}
+                  </Text>
+                </Group>
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    درآمد
+                  </Text>
+                  <Text fw={600} size='sm'>
+                    {formatPriceValue(car.price_record?.revenue)}
+                  </Text>
+                </Group>
+
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    پیشنهاد پایین
+                  </Text>
+                  <Text fw={700} size='sm' c='green'>
+                    {formatPriceValue(car.price_record?.lower_suggest)}
+                  </Text>
+                </Group>
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    پیشنهاد بالا
+                  </Text>
+                  <Text fw={700} size='sm' c='red'>
+                    {formatPriceValue(car.price_record?.upper_suggest)}
+                  </Text>
+                </Group>
+
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    پیشنهاد فروش خسروانی
+                  </Text>
+                  <Text fw={700} size='sm' c='red'>
+                    {formatPriceValue(car.price_record?.kh_suggest_for_sell)}
+                  </Text>
+                </Group>
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    پیشنهاد خرید خسروانی
+                  </Text>
+                  <Text fw={700} size='sm' c='green'>
+                    {formatPriceValue(car.price_record?.kh_suggest_for_buy)}
+                  </Text>
+                </Group>
+
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    پیشنهاد کارشناس فروش (پایین)
+                  </Text>
+                  <Text fw={700} size='sm' c='green'>
+                    {formatPriceValue(car.price_record?.sales_person_lower)}
+                  </Text>
+                </Group>
+                <Group justify='space-between'>
+                  <Text c='dimmed' size='sm'>
+                    پیشنهاد کارشناس فروش (بالا)
+                  </Text>
+                  <Text fw={700} size='sm' c='red'>
+                    {formatPriceValue(car.price_record?.sales_person_upper)}
+                  </Text>
+                </Group>
+              </SimpleGrid>
+            </Card>
+
+            <BookingInspectionSection carId={numericId} />
 
             <Card withBorder radius='md' p='lg'>
               <Text fw={700} mb='sm'>

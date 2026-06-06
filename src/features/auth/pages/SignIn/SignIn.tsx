@@ -6,6 +6,7 @@ import { useForm, yupResolver } from '@mantine/form';
 import useAuth from '@/features/auth/hooks/useAuth';
 import { usePostLoginMutation } from '../../api/login';
 import { useTranslation } from 'react-i18next';
+import { toEnglishDigits } from '@/utils/digits';
 
 export default function SignIn() {
   // const [loading, setLoading] = useState<boolean>(false);
@@ -32,7 +33,7 @@ export default function SignIn() {
     // setLoading(true);
     // setError('');
     try {
-      const res = await signIn(values);
+      const res = await signIn({ phone: toEnglishDigits(values.phone) });
       // if (res?.status === 'failed') {
       //   setError(res.message);
       // }
@@ -71,6 +72,9 @@ export default function SignIn() {
               placeholder='09xxxxxxxxx'
               size='md'
               inputMode='tel'
+              onChange={(event) => {
+                form.setFieldValue('phone', toEnglishDigits(event.currentTarget.value));
+              }}
             />
             <Button loading={loading} type={'submit'} fullWidth mt='xl' size='md'>
               {'دریافت کد ورود'}

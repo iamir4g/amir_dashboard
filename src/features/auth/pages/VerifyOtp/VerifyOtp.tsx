@@ -4,6 +4,7 @@ import classes from '@/features/auth/pages/SignIn/SignIn.module.css';
 import * as yup from 'yup';
 import { useForm, yupResolver } from '@mantine/form';
 import useAuth from '@/features/auth/hooks/useAuth';
+import { toEnglishDigits } from '@/utils/digits';
 
 export default function VerifyOtp() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -32,7 +33,7 @@ export default function VerifyOtp() {
     setLoading(true);
     setError('');
     try {
-      const res = await verifyOtp(values.code);
+      const res = await verifyOtp(toEnglishDigits(values.code));
       if (res?.status === 'failed') {
         setError(res.message);
       }
@@ -65,6 +66,9 @@ export default function VerifyOtp() {
               size='md'
               inputMode='numeric'
               maxLength={5}
+              onChange={(event) => {
+                form.setFieldValue('code', toEnglishDigits(event.currentTarget.value));
+              }}
             />
             <Button loading={loading} type={'submit'} fullWidth mt='xl' size='md'>
               {'تایید'}

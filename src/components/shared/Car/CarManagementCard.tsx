@@ -42,6 +42,10 @@ export function CarManagementCard({ car, statuses, status, onCardClick, onAction
             </Text>
 
             <Text size='sm' fw={500} c='dimmed'>
+              رنگ: {car.color ?? '---'}
+            </Text>
+
+            <Text size='sm' fw={500} c='dimmed'>
               قیمت اعلامی: {car.price_record?.final}
             </Text>
           </Stack>

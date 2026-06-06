@@ -27,17 +27,23 @@ httpService.interceptors.request.use(
     const { auth } = store.getState();
     const accessToken = auth.session.token;
     let accessTokenFromStorage: string | undefined;
+    let adminIdFromStorage: string | undefined;
 
-    if (!accessToken) {
-      try {
-        const raw = localStorage.getItem(AUTH_DATA_STORAGE_KEY);
-        if (raw) {
-          const parsed = JSON.parse(raw) as { access_token?: string } | null;
-          accessTokenFromStorage = parsed?.access_token;
+    try {
+      const raw = localStorage.getItem(AUTH_DATA_STORAGE_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw) as {
+          access_token?: string;
+          user_info?: { id?: number | string };
+        } | null;
+        accessTokenFromStorage = parsed?.access_token;
+        if (parsed?.user_info?.id !== undefined && parsed?.user_info?.id !== null) {
+          adminIdFromStorage = String(parsed.user_info.id);
         }
-      } catch {
-        accessTokenFromStorage = undefined;
       }
+    } catch {
+      accessTokenFromStorage = undefined;
+      adminIdFromStorage = undefined;
     }
 
     const tokenToUse = accessToken ?? accessTokenFromStorage;
@@ -45,6 +51,11 @@ httpService.interceptors.request.use(
     if (tokenToUse) {
       config.headers[REQUEST_HEADER_AUTH_KEY] = `${TOKEN_TYPE}${tokenToUse}`;
     }
+
+    if (adminIdFromStorage) {
+      config.headers.admin_id = adminIdFromStorage;
+    }
+
     return config;
   },
   (error) => Promise.reject(error)

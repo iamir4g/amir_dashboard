@@ -1,0 +1,308 @@
+{
+  "data": [
+    {
+      "id": 8,
+      "created_at": "2026-02-16T12:04:20.155033Z",
+      "updated_at": "2026-02-16T12:04:59.631431Z",
+      "deleted_at": null,
+      "showed_up_at": null,
+      "name": "تیبا 206 SD",
+      "description": "",
+      "brand_id": 68,
+      "model_id": 1320,
+      "make_year": 1397,
+      "trim_id": 245,
+      "mileage": 5544,
+      "type": "DEFAULT",
+      "sell_type": "",
+      "user_id": 5,
+      "status": "INSPECTION_BOOKED",
+      "step": "INITIAL",
+      "code": "128701",
+      "color": "",
+      "city_id": 301,
+      "lead_score": 65,
+      "badges": [],
+      "admin_id": null,
+      "channel": "OLD",
+      "city": {
+        "id": 301,
+        "created_at": "2025-02-22T10:16:05.993561Z",
+        "updated_at": "2025-02-22T10:16:05.993561Z",
+        "name": "تهران",
+        "slug": "تهران",
+        "province_id": 8,
+        "status": "ACTIVE"
+      },
+      "method": "",
+      "brand": {
+        "id": 68,
+        "created_at": "2024-05-18T15:06:11Z",
+        "updated_at": "2025-09-24T12:41:03.72434Z",
+        "deleted_at": null,
+        "name_en": "tiba",
+        "name_fa": "تیبا",
+        "keywords": ["tiba", "تیبا", "هچ بک"],
+        "description": "ندارد",
+        "logo": "tiba.svg",
+        "priority": 5,
+        "status": "ENABLE"
+      },
+      "model": {
+        "id": 1320,
+        "created_at": "2024-05-10T17:31:29Z",
+        "updated_at": "2024-05-10T17:31:29Z",
+        "deleted_at": null,
+        "name_en": "206sd",
+        "name_fa": "206 SD",
+        "keywords": [
+          "دویست و شش صندوقدار پژو۲۰۶ 206 پژو ٢٠٦ ۲۰۶ اس دی ۲۰۶ اس د ۲۰۶ اس دی پژو اس دی"
+        ],
+        "description": "ندارد",
+        "brand_id": 52,
+        "priority": 5,
+        "status": "ENABLE"
+      },
+      "garage": null,
+      "feature_attributes": null,
+      "trim": {
+        "id": 245,
+        "created_at": "2024-05-26T14:43:16.007851Z",
+        "updated_at": "2024-05-26T14:43:16.007851Z",
+        "deleted_at": null,
+        "name_en": "v8",
+        "name_fa": "V8",
+        "keywords": [],
+        "description": "/",
+        "model_id": 1320
+      },
+      "body_condition": [
+        {
+          "id": 120,
+          "key_en": "hood",
+          "key_fa": "کاپوت",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 121,
+          "key_en": "chassis_front",
+          "key_fa": "شاسی جلو",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 122,
+          "key_en": "chassis_back",
+          "key_fa": "شاسی عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 123,
+          "key_en": "trunk",
+          "key_fa": "صندوق عقب",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 124,
+          "key_en": "roof",
+          "key_fa": "سقف",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": true
+        },
+        {
+          "id": 125,
+          "key_en": "mudguard_fl",
+          "key_fa": "گلگیر جلو چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 126,
+          "key_en": "mudguard_fr",
+          "key_fa": "گلگیر جلو راست",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 127,
+          "key_en": "mudguard_bl",
+          "key_fa": "گلگیر عقب چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 128,
+          "key_en": "mudguard_br",
+          "key_fa": "گلگیر عقب راست",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 129,
+          "key_en": "pillar_fl",
+          "key_fa": "ستون جلو چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 130,
+          "key_en": "pillar_fr",
+          "key_fa": "ستون جلو راست",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 131,
+          "key_en": "pillar_bl",
+          "key_fa": "ستون عقب چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 132,
+          "key_en": "pillar_br",
+          "key_fa": "ستون عقب راست",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 133,
+          "key_en": "door_fl",
+          "key_fa": "درب جلو چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 134,
+          "key_en": "door_fr",
+          "key_fa": "درب جلو راست",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 135,
+          "key_en": "door_bl",
+          "key_fa": "درب عقب چپ",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        },
+        {
+          "id": 136,
+          "key_en": "door_br",
+          "key_fa": "درب عقب راست",
+          "car_submission_id": 0,
+          "car_v2_id": 8,
+          "value": false
+        }
+      ],
+      "audits": [
+        {
+          "id": 28,
+          "created_at": "2026-02-16T12:04:59.652448Z",
+          "updated_at": "2026-02-16T12:04:59.652448Z",
+          "deleted_at": null,
+          "source_column": "status",
+          "source_id": 8,
+          "value_before": "WAITING",
+          "value_after": "INSPECTION_BOOKED",
+          "audit_type": "CAR_V2",
+          "reason": "book inspection created by user",
+          "meta": {
+            "message": "this changes was made by user when user create booking inspection",
+            "title": "the status changed by user id:5",
+            "admin_id": 0
+          },
+          "car": null
+        }
+      ],
+      "reject_reason": "",
+      "gallery": null,
+      "notes": [
+        {
+          "id": 22,
+          "created_at": "2026-06-06T19:19:17.071102Z",
+          "updated_at": "2026-06-06T19:19:17.071102Z",
+          "deleted_at": null,
+          "car_v2_id": 8,
+          "admin_id": 1,
+          "text": "این سقفش آفتاب سوختس به درد عمه اش میخوره"
+        }
+      ],
+      "price_record": {
+        "id": 8,
+        "car_id": 8,
+        "estimated": "",
+        "user_suggest": "",
+        "sales_person_upper": "",
+        "sales_person_lower": "",
+        "estimated_in_market": "",
+        "lower_suggest": "",
+        "upper_suggest": "",
+        "final": "",
+        "final_customer": "",
+        "kh_suggest_for_buy": "",
+        "kh_suggest_for_sell": "",
+        "revenue": "",
+        "created_at": "2026-02-16T12:04:20.206485Z",
+        "updated_at": "2026-02-16T12:04:20.206485Z",
+        "deleted_at": null
+      },
+      "attribute_values": null,
+      "user": {
+        "id": 5,
+        "created_at": "2026-02-16T12:03:20.664457Z",
+        "updated_at": "2026-05-17T12:07:06.648852Z",
+        "deleted_at": null,
+        "first_name": "محمد امین",
+        "last_name": "نیک گفتار",
+        "nickname": "",
+        "email": null,
+        "password": "",
+        "phone": "09300115651",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "status": "ACTIVE",
+        "rating": 0,
+        "type": "CLIENT",
+        "fcm_token": "",
+        "kyc": true,
+        "meta": {
+          "metrix_user_id": "",
+          "badges": ["MASHINAAA"]
+        }
+      },
+      "is_divar": false,
+      "is_collectible": false,
+      "inbound_type": "",
+      "labels": null
+    }
+  ],
+  "error": {},
+  "meta": {
+    "total_items": 1,
+    "page": 1,
+    "size": 10,
+    "total_pages": 1
+  }
+}

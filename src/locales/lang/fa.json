@@ -36,5 +36,11 @@
   "status.PUBLISHED_IN_WEBSITE": "انتشار در سایت",
   "status.SOLD": "فروخته شد",
   "status.FAILED": "ناموفق",
-  "status.FINAL_REJECT": "رد نهایی"
+  "status.FINAL_REJECT": "رد نهایی",
+  "badge.BadgeInspected": "کارشناسی شده",
+  "badge.BadgeContentCreated": "محتوا ایجاد شده",
+  "badge.BadgeChecklistDone": "چکلیست شده",
+  "badge.BadgePricingDone": "قیمت شده",
+  "badge.BadgeSalesPricingDone": "قیمت فروش شده",
+  "badge.BadgeKHPricingDone": "قیمت خسروانی شده"
 }
