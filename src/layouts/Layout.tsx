@@ -1,9 +1,11 @@
 import React, { lazy, Suspense, useMemo } from 'react';
-import useAuth from '@/features/auth/hooks/useAuth';
+// import useAuth from '@/features/auth/hooks/useAuth';
 import useLocale from '@/utils/hooks/useLocale';
 import LoadingScreen from '@/components/shared/LoadingScreen/LoadingScreen';
 import { LayoutTypes } from '@/types/layout';
 import { useAppSelector } from '@/store';
+import useAuth from '@/features/auth/hooks/useAuth';
+// import useAuth from '@/features/auth/hooks/useAuth';
 
 const layouts: any = {
   // LEGACY

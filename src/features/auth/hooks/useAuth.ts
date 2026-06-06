@@ -1,11 +1,4 @@
-import {
-  setUser,
-  signInSuccess,
-  signOutSuccess,
-  useAppSelector,
-  setUserInfo,
-  setUserId,
-} from '@/store';
+import { setUser, signInSuccess, signOutSuccess, useAppSelector, setUserId } from '@/store';
 import appConfig from '@/configs/app.config';
 import {
   AUTH_DATA_STORAGE_KEY,
@@ -114,18 +107,12 @@ function useAuth() {
         expireTime: 0,
       });
 
-      // const fullName =
-      //   [resp.data.user_info?.first_name, resp.data.user_info?.last_name]
-      //     .filter(Boolean)
-      //     .join(' ') ||
-      //   resp.data.user_info?.nickname ||
-      //   '';
-
       if (resp.data.user_info?.id !== undefined) {
         setUserId(String(resp.data.user_info?.id));
       }
 
       setUser({
+        id: resp.data.user_info?.id ?? 0,
         firstName: resp.data.user_info?.first_name,
         lastName: resp.data.user_info?.last_name,
         phone: resp.data.user_info?.phone ?? '',
@@ -162,6 +149,7 @@ function useAuth() {
     localStorage.removeItem(AUTH_OTP_TOKEN_STORAGE_KEY);
 
     setUser({
+      id: 0,
       firstName: '',
       lastName: '',
       phone: '',
@@ -192,4 +180,5 @@ function useAuth() {
   };
 }
 
+export { useAuth };
 export default useAuth;
