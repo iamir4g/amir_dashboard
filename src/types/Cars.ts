@@ -1,5 +1,6 @@
 import { CarsStatus } from '@/constants/Car.status';
 import { BaseResponse } from './global/base-response';
+import type { Admin } from '@/types/Admin';
 
 export interface GetCarsQueryParams {
   page?: number;
@@ -144,7 +145,7 @@ interface BodyCondition {
   value: boolean;
 }
 
-interface Brand {
+export interface Brand {
   created_at: string;
   deleted_at: string | null;
   description: string;
@@ -225,7 +226,7 @@ interface Label {
   updated_at: string;
 }
 
-interface CarModel {
+export interface CarModel {
   brand_id: number;
   created_at: string;
   deleted_at: string | null;
@@ -241,6 +242,7 @@ interface CarModel {
 
 export interface Note {
   admin_id: number | null;
+  admin?: Admin | null;
   car_v2_id: number;
   created_at: string;
   deleted_at: string | null;

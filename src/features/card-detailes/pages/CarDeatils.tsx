@@ -15,6 +15,7 @@ import {
   Loader,
   Pagination,
   ScrollArea,
+  Select,
   SimpleGrid,
   Stack,
   Text,
@@ -29,10 +30,13 @@ import { usePostNoteCarMutation } from '@/features/supply/api/postNoteCar';
 import type { Note } from '@/types/Cars';
 import { AUTH_DATA_STORAGE_KEY } from '@/constants/app.constant';
 import BookingInspectionSection from '@/features/card-detailes/components/BookingInspectionSection';
+import NoteCard from '@/features/card-detailes/components/NoteCard';
 import { toEnglishDigits, toPersianDigits } from '@/utils/digits';
 import { useTranslation } from 'react-i18next';
 import { useQueryClient } from '@tanstack/react-query';
 import { usePatchCarMutation } from '@/features/supply/api/patchCar';
+import { useGetAllBrandQuery } from '@/features/supply/api/getAllBrand';
+import { useGetAllModelsQuery } from '@/features/supply/api/getAllModels';
 
 export default function CarDeatils() {
   const navigate = useNavigate();
@@ -69,6 +73,37 @@ export default function CarDeatils() {
   );
 
   const car = Array.isArray(data) ? data[0] : undefined;
+  const isEditingBrand = editingField === 'brand_id';
+  const isEditingModel = editingField === 'model_id';
+
+  const brandsQuery = useGetAllBrandQuery(undefined, { enabled: isEditingBrand || isEditingModel });
+  const brandOptions = useMemo(
+    () =>
+      (brandsQuery.data ?? [])
+        .map((b) => ({
+          value: String(b.id),
+          label: `${b.name_fa} (${toPersianDigits(String(b.id))})`,
+        }))
+        .sort((a, b) => a.label.localeCompare(b.label, 'fa')),
+    [brandsQuery.data]
+  );
+
+  const modelsQuery = useGetAllModelsQuery(
+    isEditingModel && Number.isFinite(car?.brand_id ?? NaN)
+      ? { brand_id: Number(car?.brand_id), page_size: 0 }
+      : undefined
+  );
+
+  const modelOptions = useMemo(
+    () =>
+      (modelsQuery.data ?? [])
+        .map((m) => ({
+          value: String(m.id),
+          label: `${m.name_fa} (${toPersianDigits(String(m.id))})`,
+        }))
+        .sort((a, b) => a.label.localeCompare(b.label, 'fa')),
+    [modelsQuery.data]
+  );
 
   const formatDateTime = useMemo(() => {
     return (value?: string) => {
@@ -107,6 +142,10 @@ export default function CarDeatils() {
 
   const startEdit = (field: EditableFieldKey) => {
     if (!car) return;
+    if (field === 'model_id' && !Number.isFinite(car.brand_id ?? NaN)) {
+      setEditError('ابتدا برند را انتخاب کنید');
+      return;
+    }
     const current =
       field === 'brand_id'
         ? car.brand_id
@@ -356,12 +395,16 @@ export default function CarDeatils() {
                   {editingField === 'brand_id' ? (
                     <Stack gap={4} align='flex-end'>
                       <Group gap='xs' wrap='nowrap'>
-                        <TextInput
-                          value={draftValue}
-                          onChange={(e) => setDraftValue(toEnglishDigits(e.currentTarget.value))}
+                        <Select
+                          value={draftValue || null}
+                          onChange={(value) => setDraftValue(value ?? '')}
+                          data={brandOptions}
+                          searchable
+                          placeholder='انتخاب برند'
+                          nothingFoundMessage='موردی یافت نشد'
                           size='xs'
-                          w={140}
-                          inputMode='numeric'
+                          w={220}
+                          disabled={brandsQuery.isLoading}
                         />
                         <ActionIcon
                           color='green'
@@ -375,6 +418,11 @@ export default function CarDeatils() {
                           <IconX size={16} />
                         </ActionIcon>
                       </Group>
+                      {brandsQuery.isLoading ? (
+                        <Text c='dimmed' size='xs'>
+                          در حال بارگذاری...
+                        </Text>
+                      ) : null}
                       {editError ? (
                         <Text c='red' size='xs'>
                           {editError}
@@ -405,12 +453,20 @@ export default function CarDeatils() {
                   {editingField === 'model_id' ? (
                     <Stack gap={4} align='flex-end'>
                       <Group gap='xs' wrap='nowrap'>
-                        <TextInput
-                          value={draftValue}
-                          onChange={(e) => setDraftValue(toEnglishDigits(e.currentTarget.value))}
+                        <Select
+                          value={draftValue || null}
+                          onChange={(value) => setDraftValue(value ?? '')}
+                          data={modelOptions}
+                          searchable
+                          placeholder={
+                            Number.isFinite(car.brand_id ?? NaN)
+                              ? 'انتخاب مدل'
+                              : 'ابتدا برند را انتخاب کنید'
+                          }
+                          nothingFoundMessage='موردی یافت نشد'
                           size='xs'
-                          w={140}
-                          inputMode='numeric'
+                          w={220}
+                          disabled={!Number.isFinite(car.brand_id ?? NaN) || modelsQuery.isLoading}
                         />
                         <ActionIcon
                           color='green'
@@ -424,6 +480,11 @@ export default function CarDeatils() {
                           <IconX size={16} />
                         </ActionIcon>
                       </Group>
+                      {modelsQuery.isLoading ? (
+                        <Text c='dimmed' size='xs'>
+                          در حال بارگذاری...
+                        </Text>
+                      ) : null}
                       {editError ? (
                         <Text c='red' size='xs'>
                           {editError}
@@ -799,7 +860,7 @@ export default function CarDeatils() {
               </SimpleGrid>
             </Card>
 
-            <BookingInspectionSection carId={numericId} />
+            <BookingInspectionSection carId={numericId} userId={Number(car.user_id ?? NaN)} />
 
             <Card withBorder radius='md' p='lg'>
               <Text fw={700} mb='sm'>
@@ -900,16 +961,7 @@ export default function CarDeatils() {
                     یادداشتی ثبت نشده
                   </Text>
                 ) : (
-                  notesItems.map((note) => (
-                    <Card key={note.id} withBorder radius='md' p='sm'>
-                      <Group justify='space-between' align='center' mb={6}>
-                        <Text size='xs' c='dimmed'>
-                          {formatDateTime(note.created_at)}
-                        </Text>
-                      </Group>
-                      <Text size='sm'>{note.text}</Text>
-                    </Card>
-                  ))
+                  notesItems.map((note) => <NoteCard key={note.id} note={note} />)
                 )}
               </Stack>
             </ScrollArea>

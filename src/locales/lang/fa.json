@@ -38,9 +38,9 @@
   "status.FAILED": "ناموفق",
   "status.FINAL_REJECT": "رد نهایی",
   "badge.BadgeInspected": "کارشناسی شده",
-  "badge.BadgeContentCreated": "محتوا ایجاد شده",
-  "badge.BadgeChecklistDone": "چکلیست شده",
-  "badge.BadgePricingDone": "قیمت شده",
-  "badge.BadgeSalesPricingDone": "قیمت فروش شده",
-  "badge.BadgeKHPricingDone": "قیمت خسروانی شده"
+  "badge.BadgeContentCreated": "تولید محتوا",
+  "badge.BadgeChecklistDone": "چک لیست",
+  "badge.BadgePricingDone": "قیمت گذاری",
+  "badge.BadgeSalesPricingDone": "فروش قیمتگذاری",
+  "badge.BadgeKHPricingDone": "خسروانی قیمت گذاری"
 }

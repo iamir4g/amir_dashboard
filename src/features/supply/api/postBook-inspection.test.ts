@@ -24,15 +24,15 @@ describe('postBookInspection', () => {
       date: '2026-06-06',
       start_time: '10:00',
       end_time: '10:30',
+      user_id: 6,
     });
 
     expect(result.id).toBe(10);
     expect(createData).toHaveBeenCalledWith(
       '/booking-inspection',
-      expect.objectContaining({ status: 'WAITING', car_id: 2, garage_id: 3 }),
+      expect.objectContaining({ status: 'WAITING', car_id: 2, garage_id: 3, user_id: 6 }),
       undefined,
       false
     );
   });
 });
-

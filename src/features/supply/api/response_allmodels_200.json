@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "id": 1520,
+      "created_at": "2024-05-10T17:31:29Z",
+      "updated_at": "2024-05-10T17:31:29Z",
+      "deleted_at": null,
+      "name_en": "manualr",
+      "name_fa": "دنده ای R",
+      "keywords": [],
+      "description": "ندارد",
+      "brand_id": 126,
+      "priority": 300,
+      "status": "ENABLE"
+    },
+    {
+      "id": 1507,
+      "created_at": "2024-05-10T17:31:29Z",
+      "updated_at": "2024-05-10T17:31:29Z",
+      "deleted_at": null,
+      "name_en": "manual",
+      "name_fa": "دنده ای",
+      "keywords": [],
+      "description": "ندارد",
+      "brand_id": 126,
+      "priority": 301,
+      "status": "ENABLE"
+    },
+    {
+      "id": 1540,
+      "created_at": "2024-05-10T17:31:29Z",
+      "updated_at": "2024-05-10T17:31:29Z",
+      "deleted_at": null,
+      "name_en": "manuals",
+      "name_fa": "دنده ای S",
+      "keywords": [],
+      "description": "ندارد",
+      "brand_id": 126,
+      "priority": 302,
+      "status": "ENABLE"
+    },
+    {
+      "id": 1667,
+      "created_at": "2024-05-10T17:31:29Z",
+      "updated_at": "2024-05-10T17:31:29Z",
+      "deleted_at": null,
+      "name_en": "sr",
+      "name_fa": "SR",
+      "keywords": [],
+      "description": "ندارد",
+      "brand_id": 126,
+      "priority": 303,
+      "status": "ENABLE"
+    },
+    {
+      "id": 1443,
+      "created_at": "2024-05-10T17:31:29Z",
+      "updated_at": "2024-05-10T17:31:29Z",
+      "deleted_at": null,
+      "name_en": "atfullplus",
+      "name_fa": "اتوماتیک پلاس",
+      "keywords": [],
+      "description": "ندارد",
+      "brand_id": 126,
+      "priority": 304,
+      "status": "ENABLE"
+    },
+    {
+      "id": 1686,
+      "created_at": "2024-05-10T17:31:29Z",
+      "updated_at": "2024-05-10T17:31:29Z",
+      "deleted_at": null,
+      "name_en": "gx",
+      "name_fa": "GX",
+      "keywords": [],
+      "description": "ندارد",
+      "brand_id": 126,
+      "priority": 305,
+      "status": "ENABLE"
+    },
+    {
+      "id": 1552,
+      "created_at": "2024-05-10T17:31:29Z",
+      "updated_at": "2024-05-10T17:31:29Z",
+      "deleted_at": null,
+      "name_en": "manualrplus",
+      "name_fa": "R پلاس",
+      "keywords": [],
+      "description": "ندارد",
+      "brand_id": 126,
+      "priority": 306,
+      "status": "ENABLE"
+    },
+    {
+      "id": 1704,
+      "created_at": "2024-05-10T17:31:29Z",
+      "updated_at": "2024-05-10T17:31:29Z",
+      "deleted_at": null,
+      "name_en": "gxr",
+      "name_fa": "GXR",
+      "keywords": [],
+      "description": "ندارد",
+      "brand_id": 126,
+      "priority": 307,
+      "status": "ENABLE"
+    },
+    {
+      "id": 1442,
+      "created_at": "2024-05-10T17:31:29Z",
+      "updated_at": "2024-05-10T17:31:29Z",
+      "deleted_at": null,
+      "name_en": "atfull",
+      "name_fa": "اتوماتیک",
+      "keywords": [],
+      "description": "ندارد",
+      "brand_id": 126,
+      "priority": 308,
+      "status": "ENABLE"
+    }
+  ],
+  "error": {},
+  "meta": {
+    "total_items": 9,
+    "page": 1,
+    "size": 0,
+    "total_pages": 1
+  }
+}

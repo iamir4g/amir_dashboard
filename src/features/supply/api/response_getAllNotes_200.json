@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 23,
+      "created_at": "2026-06-07T09:39:17.455404Z",
+      "updated_at": "2026-06-07T09:39:17.455404Z",
+      "deleted_at": null,
+      "car_v2_id": 78,
+      "admin_id": 1,
+      "text": "یارو مالکش قفلیه!",
+      "admin": {
+        "id": 1,
+        "email": "",
+        "first_name": "Amir",
+        "last_name": "Farahani",
+        "nickname": "",
+        "phone": "09353344537",
+        "status": "ACTIVE",
+        "created_at": "2026-05-31T16:23:26.236299Z",
+        "updated_at": "2026-05-31T16:23:26.236299Z",
+        "deleted_at": null
+      }
+    },
+    {
+      "id": 19,
+      "created_at": "2026-06-06T13:33:56.090476Z",
+      "updated_at": "2026-06-06T13:33:56.090476Z",
+      "deleted_at": null,
+      "car_v2_id": 78,
+      "admin_id": 1,
+      "text": "بابا مالک فروشنده نیست ولش کنین",
+      "admin": {
+        "id": 1,
+        "email": "",
+        "first_name": "Amir",
+        "last_name": "Farahani",
+        "nickname": "",
+        "phone": "09353344537",
+        "status": "ACTIVE",
+        "created_at": "2026-05-31T16:23:26.236299Z",
+        "updated_at": "2026-05-31T16:23:26.236299Z",
+        "deleted_at": null
+      }
+    },
+    {
+      "id": 18,
+      "created_at": "2026-06-06T13:33:42.350934Z",
+      "updated_at": "2026-06-06T13:33:42.350934Z",
+      "deleted_at": null,
+      "car_v2_id": 78,
+      "admin_id": 1,
+      "text": "سلام سلام",
+      "admin": {
+        "id": 1,
+        "email": "",
+        "first_name": "Amir",
+        "last_name": "Farahani",
+        "nickname": "",
+        "phone": "09353344537",
+        "status": "ACTIVE",
+        "created_at": "2026-05-31T16:23:26.236299Z",
+        "updated_at": "2026-05-31T16:23:26.236299Z",
+        "deleted_at": null
+      }
+    }
+  ],
+  "error": {},
+  "meta": {
+    "total_items": 3,
+    "page": 1,
+    "size": 0,
+    "total_pages": 1
+  }
+}

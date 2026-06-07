@@ -15,6 +15,7 @@ import { formatDateOnly, formatPersianDateLong, toTimeHHmm } from '@/utils/date'
 
 type BookingInspectionSectionProps = {
   carId: number;
+  userId: number;
 };
 
 type BookingFormValues = {
@@ -27,7 +28,7 @@ const isInventoryAvailable = (inv: GarageInventory): boolean => {
   return inv.status === 'AVAILABLE' && inv.consumer_id === null && inv.reserved_at === null;
 };
 
-export default function BookingInspectionSection({ carId }: BookingInspectionSectionProps) {
+export default function BookingInspectionSection({ carId, userId }: BookingInspectionSectionProps) {
   const queryClient = useQueryClient();
   const [opened, setOpened] = useState(false);
 
@@ -149,6 +150,7 @@ export default function BookingInspectionSection({ carId }: BookingInspectionSec
     if (!Number.isFinite(garageIdNumber)) return;
     if (!values.date) return;
     if (!Number.isFinite(adminId)) return;
+    if (!Number.isFinite(userId)) return;
 
     const pickedInventory = values.time
       ? timeSlots.firstAvailableInventoryByKey.get(values.time)
@@ -164,6 +166,7 @@ export default function BookingInspectionSection({ carId }: BookingInspectionSec
       date: pickedInventory.date,
       start_time: pickedInventory.start_time,
       end_time: pickedInventory.end_time,
+      user_id: userId,
     });
 
     await queryClient.invalidateQueries({ queryKey: ['booking-inspection', 'list'] });

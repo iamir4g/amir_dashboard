@@ -52,9 +52,9 @@ httpService.interceptors.request.use(
       config.headers[REQUEST_HEADER_AUTH_KEY] = `${TOKEN_TYPE}${tokenToUse}`;
     }
 
-    // if (adminIdFromStorage) {
-    //   config.headers['x-admin-id'] = adminIdFromStorage;
-    // }
+    if (adminIdFromStorage) {
+      config.headers['admin_id'] = adminIdFromStorage;
+    }
 
     return config;
   },
@@ -125,9 +125,9 @@ async function createData<TModel, TResult>(
   skipAuth?: boolean
 ): Promise<TResult> {
   const options: AxiosRequestConfig & { skipAuth?: boolean } = {
-    headers: headers,
+    headers: { Accept: 'application/json', 'Content-Type': 'application/json', ...(headers ?? {}) },
     method: 'POST',
-    data: JSON.stringify(data),
+    data,
     skipAuth: skipAuth,
   };
   return await apiBase<TResult>(url, options);
@@ -154,9 +154,9 @@ async function updateData<TModel, TResult>(
   skipAuth?: boolean
 ): Promise<TResult> {
   const options: AxiosRequestConfig & { skipAuth?: boolean } = {
-    headers: headers,
+    headers: { Accept: 'application/json', 'Content-Type': 'application/json', ...(headers ?? {}) },
     method: 'PUT',
-    data: JSON.stringify(data),
+    data,
     skipAuth: skipAuth,
   };
   return await apiBase<TResult>(url, options);
@@ -169,9 +169,9 @@ async function patchData<TModel, TResult>(
   skipAuth?: boolean
 ): Promise<TResult> {
   const options: AxiosRequestConfig & { skipAuth?: boolean } = {
-    headers: headers,
+    headers: { Accept: 'application/json', 'Content-Type': 'application/json', ...(headers ?? {}) },
     method: 'PATCH',
-    data: JSON.stringify(data),
+    data,
     skipAuth: skipAuth,
   };
   return await apiBase<TResult>(url, options);

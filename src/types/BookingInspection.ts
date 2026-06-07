@@ -62,7 +62,7 @@ export type CreateBookingInspectionRQ = {
   post_id?: number;
   start_time?: string;
   status: string;
-  user_id?: number;
+  user_id: number;
 };
 
 export type CreateBookingInspectionRS = BaseResponse<BookingInspection>;
