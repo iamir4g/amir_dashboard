@@ -17,14 +17,14 @@ export default function CenterReservations() {
 
   const queryParams = useMemo<GetBookInspectionByDateQueryParams>(
     () => ({
-      // from: params.from_date,
-      // to: params.to_date,
-      // phone: params.phone,
-      // code: params.code,
-      // order: params.order,
-      // garage_id: '',
-      // status: '',
-      // is_admin: true,
+      from: params.from_date,
+      to: params.to_date,
+      phone: params.phone,
+      code: params.code,
+      order: params.order,
+      garage_id: params.garage_id ? Number(params.garage_id) : undefined,
+      // status: 'INSPECTION_BOOKED',
+      is_admin: true,
     }),
     [params]
   );
@@ -97,10 +97,10 @@ export default function CenterReservations() {
                             key={`${dateKey}-${inspectionId}`}
                             car={car!}
                             onCardClick={() => navigate(`/car-deatils/${car!.id}`)}
-                            status={(car!.status ?? INSPECTION_BOOKED) as CarsStatus}
+                            status={INSPECTION_BOOKED as CarsStatus}
                             statuses={[
                               {
-                                label: car!.status ?? '',
+                                label: INSPECTION_BOOKED,
                                 color:
                                   car!.status === SOLD
                                     ? 'green'

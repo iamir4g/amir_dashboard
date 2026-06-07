@@ -24,7 +24,7 @@ vi.mock('../api/getBookinspectionByDate', () => ({
             mileage: 1000,
             color: 'navy-blue',
             code: '800838',
-            status: 'INSPECTION_BOOKED',
+            status: 'USER_RESERVED',
             user: { first_name: 'امیر', last_name: 'سالاری', phone: '0912' },
             price_record: { final: '100' },
           },
@@ -50,5 +50,7 @@ describe('CenterReservations', () => {
 
     await user.click(screen.getByText('1405-03-17'));
     expect(screen.getByText('تست مدل 1400')).toBeInTheDocument();
+    expect(screen.getByText('حضور')).toBeInTheDocument();
+    expect(screen.getByText('حضور نیافته')).toBeInTheDocument();
   });
 });
