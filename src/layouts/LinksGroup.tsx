@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, rem } from '@mantine/core';
+import { Badge, Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, rem } from '@mantine/core';
 import { IconChevronLeft } from '@tabler/icons-react';
 import classes from './LinksGroup.module.css';
 import { useNavigate } from 'react-router-dom';
+import { useAppSelector } from '@/store';
 
 interface LinksGroupProps {
   icon: React.FC<any>;
@@ -16,6 +17,7 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
   const [opened, setOpened] = useState(initiallyOpened || false);
   const navigate = useNavigate();
   const [active, setActive] = useState('');
+  const salesRequestsWaitingCount = useAppSelector((state) => state.base.common.salesRequestsWaitingCount);
   const openedRotation = 'rotate(90deg)';
 
   useEffect(() => {
@@ -24,6 +26,8 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
   }, [location.pathname]);
 
   const items = (hasLinks ? links : []).map((link) => {
+    const shouldShowBadge =
+      link.link === '/supply/sales-requests' && (salesRequestsWaitingCount ?? 0) > 0;
     return (
       <Text<'a'>
         component='a'
@@ -36,7 +40,14 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
           event.preventDefault();
         }}
       >
-        {link.label}
+        <Group justify='space-between' align='center' wrap='nowrap'>
+          <span>{link.label}</span>
+          {shouldShowBadge ? (
+            <Badge color='red' variant='filled' size='sm' radius='xl'>
+              {salesRequestsWaitingCount}
+            </Badge>
+          ) : null}
+        </Group>
       </Text>
     );
   });

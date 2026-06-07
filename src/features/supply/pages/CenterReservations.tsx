@@ -1,12 +1,13 @@
 import React, { useMemo, useState } from 'react';
-import { Center, Divider, Group, Loader, SimpleGrid, Stack, Text } from '@mantine/core';
+import { Accordion, Center, Divider, Group, Loader, SimpleGrid, Stack, Text } from '@mantine/core';
 import GlobalFilterBar from '@/components/shared/GlobalFilterBar/GlobalFilterBar';
 import { CarManagementCard } from '@/components/shared/Car/CarManagementCard';
 import { useNavigate } from 'react-router-dom';
-import { useGetCarsQuery } from '../api/getCars';
 import type { GetCarsQueryParams } from '@/types/Cars';
 import type { CarsStatus } from '@/constants/Car.status';
 import { ADMIN_REJECTED, INSPECTION_BOOKED, SOLD } from '@/constants/Car.status';
+import { useGetBookInspectionByDateQuery } from '../api/getBookinspectionByDate';
+import type { GetBookInspectionByDateQueryParams } from '@/types/BookingInspection';
 
 export default function CenterReservations() {
   const navigate = useNavigate();
@@ -14,16 +15,31 @@ export default function CenterReservations() {
   const defaultParams: GetCarsQueryParams = { page: 1, page_size: 10, status: INSPECTION_BOOKED };
   const [params, setParams] = useState<GetCarsQueryParams>(defaultParams);
 
-  const queryParams = useMemo<GetCarsQueryParams>(
+  const queryParams = useMemo<GetBookInspectionByDateQueryParams>(
     () => ({
-      ...params,
-      status: INSPECTION_BOOKED as CarsStatus,
+      // from: params.from_date,
+      // to: params.to_date,
+      // phone: params.phone,
+      // code: params.code,
+      // order: params.order,
+      // garage_id: '',
+      // status: '',
+      // is_admin: true,
     }),
     [params]
   );
 
-  const { data, isLoading } = useGetCarsQuery(queryParams);
-  const items = Array.isArray(data) ? data : [];
+  const { data, isLoading } = useGetBookInspectionByDateQuery(queryParams);
+
+  const dateKeys = useMemo(() => {
+    const keys = Object.keys(data ?? {});
+    return keys.sort((a, b) => a.localeCompare(b));
+  }, [data]);
+
+  const totalItemsCount = useMemo(
+    () => dateKeys.reduce((sum, key) => sum + (data?.[key]?.length ?? 0), 0),
+    [data, dateKeys]
+  );
 
   return (
     <div className='w-full'>
@@ -38,7 +54,7 @@ export default function CenterReservations() {
       <Group justify='space-between' align='center' mb='md'>
         <Text fw={600}>رزرو های سنتر</Text>
         <Text size='sm' c='dimmed'>
-          {items.length} مورد
+          {totalItemsCount} مورد
         </Text>
       </Group>
 
@@ -46,33 +62,62 @@ export default function CenterReservations() {
         <Center py='xl'>
           <Loader />
         </Center>
-      ) : items.length === 0 ? (
+      ) : totalItemsCount === 0 ? (
         <Center py='xl'>
           <Text c='dimmed'>موردی پیدا نشد</Text>
         </Center>
       ) : (
         <Stack gap='md'>
-          <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing='md'>
-            {items.map((car) => (
-              <CarManagementCard
-                key={car.id}
-                car={car}
-                onCardClick={() => navigate(`/car-deatils/${car.id}`)}
-                status={car.status as CarsStatus}
-                statuses={[
-                  {
-                    label: car.status ?? '',
-                    color:
-                      car.status === SOLD
-                        ? 'green'
-                        : car.status === ADMIN_REJECTED
-                          ? 'red'
-                          : 'blue',
-                  },
-                ]}
-              />
-            ))}
-          </SimpleGrid>
+          <Accordion multiple variant='separated'>
+            {dateKeys.map((dateKey) => {
+              const inspections = data?.[dateKey] ?? [];
+              const carItems = inspections
+                .map((x) => ({ inspectionId: x.id, car: x.car }))
+                .filter((x) => Boolean(x.car?.id));
+
+              return (
+                <Accordion.Item key={dateKey} value={dateKey}>
+                  <Accordion.Control>
+                    <Group justify='space-between' align='center' w='100%'>
+                      <Text fw={600}>{dateKey}</Text>
+                      <Text size='sm' c='dimmed'>
+                        {carItems.length} مورد
+                      </Text>
+                    </Group>
+                  </Accordion.Control>
+                  <Accordion.Panel>
+                    {carItems.length === 0 ? (
+                      <Center py='md'>
+                        <Text c='dimmed'>موردی پیدا نشد</Text>
+                      </Center>
+                    ) : (
+                      <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing='md'>
+                        {carItems.map(({ inspectionId, car }) => (
+                          <CarManagementCard
+                            key={`${dateKey}-${inspectionId}`}
+                            car={car!}
+                            onCardClick={() => navigate(`/car-deatils/${car!.id}`)}
+                            status={(car!.status ?? INSPECTION_BOOKED) as CarsStatus}
+                            statuses={[
+                              {
+                                label: car!.status ?? '',
+                                color:
+                                  car!.status === SOLD
+                                    ? 'green'
+                                    : car!.status === ADMIN_REJECTED
+                                      ? 'red'
+                                      : 'blue',
+                              },
+                            ]}
+                          />
+                        ))}
+                      </SimpleGrid>
+                    )}
+                  </Accordion.Panel>
+                </Accordion.Item>
+              );
+            })}
+          </Accordion>
         </Stack>
       )}
     </div>

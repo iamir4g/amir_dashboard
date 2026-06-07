@@ -232,8 +232,12 @@ export const setUserId = (userId: string) => {
 
 export const setNotificationCount = (notificationCount: number) => {
   useAppStore.setState((state) => ({
-    auth: {
-      ...state.auth,
+    base: {
+      ...state.base,
+      common: {
+        ...state.base.common,
+        notificationCount,
+      },
     },
   }));
 };
@@ -253,6 +257,18 @@ export const setCurrentRouteKey = (currentRouteKey: string) => {
       common: {
         ...state.base.common,
         currentRouteKey,
+      },
+    },
+  }));
+};
+
+export const setSalesRequestsWaitingCount = (salesRequestsWaitingCount: number) => {
+  useAppStore.setState((state) => ({
+    base: {
+      ...state.base,
+      common: {
+        ...state.base.common,
+        salesRequestsWaitingCount,
       },
     },
   }));

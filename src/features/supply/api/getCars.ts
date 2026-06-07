@@ -44,10 +44,9 @@ const normalizeCarsListResponse = (raw: unknown): CarValue[] => {
   return [];
 };
 
-export const getCarsList = async (params?: GetCarsQueryParams): Promise<CarValue[]> => {
+const buildCarsUrl = (params?: GetCarsQueryParams): string => {
   let url = `/cars`;
 
-  // در صورتی که فیلتر یا پارامتری پاس داده شده باشد، آن‌ها را به کوئری استرینگ تبدیل می‌کند
   if (params) {
     const searchParams = new URLSearchParams();
     Object.entries(params).forEach(([key, value]) => {
@@ -62,9 +61,29 @@ export const getCarsList = async (params?: GetCarsQueryParams): Promise<CarValue
     }
   }
 
+  return url;
+};
+
+export const getCarsList = async (params?: GetCarsQueryParams): Promise<CarValue[]> => {
+  const url = buildCarsUrl(params);
+
   // فرستادن درخواست بدون skipAuth چون لیست ماشین‌های پنل ادمین توکن می‌خواهد
   const raw = await readData<unknown>(url, undefined, 'Base');
   return normalizeCarsListResponse(raw);
+};
+
+const normalizeCarsTotalItems = (raw: unknown): number => {
+  if (!isObject(raw)) return 0;
+  const meta = (raw as Record<string, unknown>).meta;
+  if (!isObject(meta)) return 0;
+  const totalItems = (meta as Record<string, unknown>).total_items;
+  return typeof totalItems === 'number' ? totalItems : 0;
+};
+
+export const getCarsTotalItems = async (params?: GetCarsQueryParams): Promise<number> => {
+  const url = buildCarsUrl(params);
+  const raw = await readData<unknown>(url, undefined, 'Base');
+  return normalizeCarsTotalItems(raw);
 };
 
 // ۲. هوک سفارشی با useQuery برای استفاده در کامپوننت‌های ری‌اکت
